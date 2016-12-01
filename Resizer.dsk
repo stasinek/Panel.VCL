@@ -1,0 +1,167 @@
+[Closed Files]
+File_0=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsSnap.h',0,1,1,37,5,0,0
+File_1=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.h',0,1,1,10,11,0,0
+File_2=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsCollector.h',0,1,1,1,1,0,0
+File_3=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Main_frm.cpp',0,1,613,78,623,1,0
+File_4=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Dni_frm.cpp',0,1,1,1,1,0,0
+File_5=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,3,4,0,0
+File_6=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Zeus_frm.cpp',0,1,209,67,217,0,0
+File_7=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Desk_frm.cpp',0,1,310,17,324,0,0
+File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Expose_frm.cpp',0,1,214,17,228,0,0
+File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Lupa_frm.cpp',0,1,136,1,150,0,0
+
+[Modules]
+Module0=D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.bpr
+Count=1
+EditWindowCount=1
+
+[D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.bpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+ViewCount=1
+CurrentView=0
+View0=0
+MessageView=MessageView@EditWindow0
+Create=1
+Visible=1
+State=2
+Left=199
+Top=229
+Width=825
+Height=482
+MaxLeft=-4
+MaxTop=97
+MaxWidth=1032
+MaxHeight=647
+ClientWidth=1024
+ClientHeight=620
+LeftPanelSize=0
+RightPanelSize=0
+BottomPanelSize=0
+BottomPanelClients=MessageView@EditWindow0
+BottomPanelData=00000400010000000B0000004D65737361676556696577000000000000000000000000000000000001000000000000000000000000FFFFFFFF
+
+[View0]
+Module=D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[Watches]
+Count=1
+Watch0='lpDestination',8,0,18,1,1,'Watches'
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Main Window]
+Create=1
+Visible=1
+State=2
+Left=9
+Top=15
+Width=1015
+Height=105
+MaxLeft=-1
+MaxTop=-1
+MaxWidth=1032
+MaxHeight=105
+ClientWidth=1024
+ClientHeight=78
+
+[ProjectManager]
+Create=1
+Visible=0
+State=0
+Left=369
+Top=372
+Width=438
+Height=303
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=430
+ClientHeight=279
+TBDockHeight=303
+LRDockWidth=438
+Dockable=1
+
+[AlignmentPalette]
+Create=1
+Visible=0
+State=0
+Left=200
+Top=107
+Width=156
+Height=82
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=150
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=0
+State=0
+Left=0
+Top=359
+Width=190
+Height=381
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=357
+TBDockHeight=381
+LRDockWidth=190
+Dockable=1
+SplitPos=85
+ArrangeBy=Name
+SelectedItem=
+ExpandedItems=
+HiddenCategories=
+
+[ObjectTree]
+Create=1
+Visible=0
+State=0
+Left=0
+Top=105
+Width=190
+Height=252
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=228
+TBDockHeight=252
+LRDockWidth=190
+Dockable=1
+
+[MessageView@EditWindow0]
+Create=1
+Visible=0
+State=0
+Left=12
+Top=0
+Width=1012
+Height=85
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1012
+ClientHeight=85
+TBDockHeight=85
+LRDockWidth=443
+Dockable=1
+
+[DockHosts]
+DockHostCount=0
+

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Klawisz.exe"/>
+    <OBJFILES value="Klawisz.obj ..\..\..\x86_libraries\database\tsoft_database.obj 
+      ..\..\..\x86_libraries\database\tsoft_database_items.obj 
+      ..\..\..\x86_libraries\text\tsoft_text_manipulation.obj 
+      ..\..\..\x86_libraries\mem\tsoft_mem32.obj"/>
+    <RESFILES value="Klawisz.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vcl.lib rtl.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi bcbsmp.bpi dbrtl.bpi vcldb.bpi adortl.bpi 
+      ibsmp.bpi bdertl.bpi vcldbx.bpi qrpt.bpi teeui.bpi teedb.bpi tee.bpi 
+      dss.bpi teeqr.bpi ibxpress.bpi USRPKG.bpi"/>
+    <PATHCPP value=".;..\..\..\x86_libraries\database;..\..\..\x86_libraries\database;..\..\..\x86_libraries\text;..\..\..\x86_libraries\mem"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="BCC;_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
+    <MAINSOURCE value="Klawisz.cpp"/>
+    <INCLUDEPATH value="..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\include"/>
+    <LIBPATH value="..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\lib"/>
+    <WARNINGS value=""/>
+    <WARNOPTSTR value=""/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I..\..\Libraries\DLLKop32 -src_suffix cpp -boa"/>
+    <CFLAG1 value="-Od -H=$(BCB)\lib\vcl60.csm -Hc -Q -w -Tkh30000 -fp -ff -X- -ps -a8 -6 -b 
+      -k -y -v -vi- -c -tW -tWM"/>
+    <CFLAG2 value=""/>
+    <CFLAG3 value=""/>
+    <PFLAGS value="-$YD -$W -$U -$T -$O- -$I- -$B -$A8 -v -M -JPHNE"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
+    <IFLAGS value=""/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) import32.lib cw32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="Klawisz.cpp" FORMNAME="" UNITNAME="Klawisz" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\x86_libraries\database\tsoft_database.cpp" FORMNAME="" UNITNAME="tsoft_database" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\x86_libraries\database\tsoft_database_items.cpp" FORMNAME="" UNITNAME="tsoft_database_items" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Klawisz.res" FORMNAME="" UNITNAME="" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\x86_libraries\text\tsoft_text_manipulation.cpp" FORMNAME="" UNITNAME="tsoft_text_manipulation" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\..\x86_libraries\mem\tsoft_mem32.cpp" FORMNAME="" UNITNAME="tsoft_mem32" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1045
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Executable (GUI)
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=..\..\..\x86_libraries\database;$(BCB)\include
+Item1=..\..\..\x86_libraries\database;$(BCB)\include;..\..\Libraries\DLLKop32
+Item2=$(BCB)\include;..\..\Libraries\DLLKop32
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=..\..\..\x86_libraries\database;$(BCB)\lib
+Item1=..\..\..\x86_libraries\database;$(BCB)\lib;..\..\Libraries\DLLKop32
+Item2=$(BCB)\lib;..\..\Libraries\DLLKop32
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=BCC;_DEBUG
+Item1=_DEBUG
+Item2=_NO_VCL
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=1
+  </IDEOPTIONS>
+</PROJECT>

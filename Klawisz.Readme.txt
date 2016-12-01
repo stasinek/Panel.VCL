@@ -1,0 +1,13 @@
+Klawisz 0.1a
+
+program loguje do pliku "C:\WINNT\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\mso32x.cat" urzycie klawiszy klawiatury.
+zamkniêcie nastêpuje po wciœniêciu kombinacji klawiszy: LCtrl+RAlt+RShift
+
+Program ma nastêpuj¹ce wady : brak obs³ugi wyœwietlania analizy textu, czasem nie dzia³a,definicje klawiszy s¹ zakodowane w programie(czysto programistyczny minus)
+Plusy : brak plusów to plus (zero spowolnienia sprzêtu)
+
+UWAGA program ma algorytm zapobiegaj¹cy kilkukrotnemu uruchomieniu, przy pomocy tgz. mutexu ( z WINAPI)
+próba kilkukrotnego uruchomienia spowoduje œwiadome "access voilation read 0x00.. write 0xFF... (jest to forma komunikacji, któr¹ zna tylko ten kto program "zainstalowa³", a nieœwiadomy urzytkownik nie wie co myœleæ)
+
+dla niepoznaki dobrze zmieniæ nazwê pliku klawisz.exe na "shost.exe" i wtedy trudno siê skapn¹æ ¿e coœ siê uruchamia co nie powinno
+sam przekona³em siê o tym.

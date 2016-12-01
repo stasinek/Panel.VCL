@@ -1,0 +1,66 @@
+object Atab_form: TAtab_form
+  Left = 408
+  Top = 187
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'CTRL+ALT+TAB'
+  ClientHeight = 350
+  ClientWidth = 390
+  Color = clBtnFace
+  DefaultMonitor = dmMainForm
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Default'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel2: TPanel
+    Left = 0
+    Top = 0
+    Width = 390
+    Height = 313
+    Align = alTop
+    BevelOuter = bvLowered
+    UseDockManager = False
+    FullRepaint = False
+    Locked = True
+    ParentColor = True
+    TabOrder = 0
+    object Image2: TImage
+      Left = 16
+      Top = 16
+      Width = 360
+      Height = 240
+    end
+    object Image1: TImage
+      Left = 16
+      Top = 264
+      Width = 360
+      Height = 42
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 325
+    Width = 390
+    Height = 25
+    Align = alBottom
+    Alignment = taLeftJustify
+    BevelOuter = bvLowered
+    Font.Charset = EASTEUROPE_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Default'
+    Font.Style = [fsBold]
+    Locked = True
+    ParentFont = False
+    TabOrder = 1
+  end
+end
