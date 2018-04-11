@@ -4756,7 +4756,7 @@ object Form3: TForm3
   object Label1: TLabel
     Left = 28
     Top = 396
-    Width = 31
+    Width = 32
     Height = 13
     Caption = 'Label1'
   end
@@ -5340,15 +5340,16 @@ object Form3: TForm3
     Top = 338
     Width = 249
     Height = 21
+    PasswordChar = '*'
     TabOrder = 8
-    Text = 'Mmaso*Q@*@34w342345@#@'
+    Text = '*****'
   end
   object CheckBox4: TCheckBox
     Left = 24
     Top = 314
     Width = 129
     Height = 17
-    Caption = 'Chronione has'#322'em'
+    Caption = 'Chronione haslem'
     TabOrder = 9
   end
   object TrackBar1: TTrackBar

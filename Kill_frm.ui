@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ZeusForm</class>
+ <widget class="QWidget" name="ZeusForm">
+  <property name="geometry">
+   <rect>
+    <x>185</x>
+    <y>136</y>
+    <width>576</width>
+    <height>316</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Okno boskiej mocy :]</string>
+  </property>
+  <widget class="QGraphicsView" name="Image3">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>168</y>
+     <width>297</width>
+     <height>105</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image1">
+   <property name="geometry">
+    <rect>
+     <x>536</x>
+     <y>168</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image2">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>4</y>
+     <width>250</width>
+     <height>302</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label1">
+   <property name="geometry">
+    <rect>
+     <x>384</x>
+     <y>0</y>
+     <width>32</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label1</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit1">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>136</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit1</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>136</y>
+     <width>149</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit2</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText1">
+   <property name="geometry">
+    <rect>
+     <x>268</x>
+     <y>116</y>
+     <width>94</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>THIS class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText2">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>116</y>
+     <width>60</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>THIS title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BitBtn1">
+   <property name="geometry">
+    <rect>
+     <x>544</x>
+     <y>4</y>
+     <width>25</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit3">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>84</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit3</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit4">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>84</y>
+     <width>149</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit4</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText3">
+   <property name="geometry">
+    <rect>
+     <x>276</x>
+     <y>64</y>
+     <width>103</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Parent class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText4">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>64</y>
+     <width>69</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Parent title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText5">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>16</y>
+     <width>89</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText6">
+   <property name="geometry">
+    <rect>
+     <x>424</x>
+     <y>16</y>
+     <width>55</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit5">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>36</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit5</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit6">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>36</y>
+     <width>149</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit6</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button1">
+   <property name="geometry">
+    <rect>
+     <x>272</x>
+     <y>280</y>
+     <width>297</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>JESTEM BOGIEM!</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>4</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu1">
+   <property name="geometry">
+    <rect>
+     <x>296</x>
+     <y>4</y>
+     <width>576</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <widget class="QMenu" name="Window1">
+    <property name="title">
+     <string>&amp;Okna</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <addaction name="Kill1"/>
+    <addaction name="separator"/>
+    <addaction name="Cascade1"/>
+    <addaction name="Tile2"/>
+    <addaction name="Tile1"/>
+    <addaction name="separator"/>
+    <addaction name="Hide1"/>
+   </widget>
+   <addaction name="Window1"/>
+   <widget class="QMenu" name="N2">
+    <property name="title">
+     <string>&amp;?</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="N2"/>
+  </widget>
+  <action name="Kill1">
+   <property name="text">
+    <string>AKTYWUJ BOSKIE FUNKCJE!</string>
+   </property>
+  </action>
+  <action name="Cascade1">
+   <property name="text">
+    <string>Rozmie'#347#263' okna &amp;kaskadowo</string>
+   </property>
+  </action>
+  <action name="Tile2">
+   <property name="text">
+    <string>Rozmie'#347#263' okna w pozio&amp;mie</string>
+   </property>
+  </action>
+  <action name="Tile1">
+   <property name="text">
+    <string>Rozmie'#347#263' okna w pio&amp;nie</string>
+   </property>
+  </action>
+  <action name="Hide1">
+   <property name="text">
+    <string>&amp;Hide</string>
+   </property>
+  </action>
+ </widget>
+</ui>

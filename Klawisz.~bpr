@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="Klawisz.exe"/>
+    <OBJFILES value="Klawisz.obj"/>
+    <RESFILES value=""/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vcl.lib"/>
+    <SPARELIBS value="vcl.lib"/>
+    <PACKAGES value="db.bpi vcldb.bpi ado.bpi ibsmp.bpi bde.bpi vcldbx.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi ibxpress.bpi USRPKG.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="BCC;_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL"/>
+    <MAINSOURCE value="Klawisz.cpp"/>
+    <INCLUDEPATH value="..\Koperek.VCL\LIB\DLLIO;..\Koperek.VCL\LIB\DLLDatabase;..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\include"/>
+    <LIBPATH value="..\Koperek.VCL\LIB\DLLIO;..\Koperek.VCL\LIB\DLLDatabase;..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\lib"/>
+    <WARNINGS value=""/>
+    <WARNOPTSTR value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I..\..\Libraries\DLLKop32 -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Q -w -Vx -Ve -xf -xp -Vmp -Tkh30000 -VF 
+      -C -ff -X- -ps -a8 -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
+    <CFLAG2 value=""/>
+    <CFLAG3 value=""/>
+    <PFLAGS value="-$YD -$W -$U -$R -$Q -$A8 -v -M -JPHNE"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -M -v"/>
+    <IFLAGS value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) import32.lib cw32mt.lib"/>
+  </LINKER>
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1045
+CodePage=1250
+
+[Version Info Keys]
+CompanyName=
+FileDescription=Executable (GUI)
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=4
+Item0=..\Koperek.VCL\LIB\DLLIO;..\Koperek.VCL\LIB\DLLDatabase;..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\include
+Item1=..\..\..\x86_libraries\database;$(BCB)\include
+Item2=..\..\..\x86_libraries\database;$(BCB)\include;..\..\Libraries\DLLKop32
+Item3=$(BCB)\include;..\..\Libraries\DLLKop32
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=..\Koperek.VCL\LIB\DLLIO;..\Koperek.VCL\LIB\DLLDatabase;..\..\..\x86_libraries\mem;..\..\..\x86_libraries\text;..\..\..\x86_libraries\database;$(BCB)\lib
+Item1=..\..\..\x86_libraries\database;$(BCB)\lib
+Item2=..\..\..\x86_libraries\database;$(BCB)\lib;..\..\Libraries\DLLKop32
+Item3=$(BCB)\lib;..\..\Libraries\DLLKop32
+
+[HistoryLists\hlConditionals]
+Count=3
+Item0=BCC;_DEBUG
+Item1=_DEBUG
+Item2=_NO_VCL
+
+[Debugging]
+DebugSourceDirs=
+
+[Parameters]
+RunParams=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=1
+LinkDebugVcl=1
+  </IDEOPTIONS>
+</PROJECT>

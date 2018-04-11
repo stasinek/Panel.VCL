@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form3</class>
+ <widget class="QWidget" name="Form3">
+  <property name="geometry">
+   <rect>
+    <x>192</x>
+    <y>103</y>
+    <width>660</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Kursor bez granic</string>
+  </property>
+  <widget class="QGraphicsView" name="Image1">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>42</y>
+     <width>173</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image2">
+   <property name="geometry">
+    <rect>
+     <x>244</x>
+     <y>42</y>
+     <width>173</width>
+     <height>117</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image3">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>42</y>
+     <width>173</width>
+     <height>117</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Label1">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>396</y>
+     <width>31</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label1</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton1">
+   <property name="geometry">
+    <rect>
+     <x>152</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton2">
+   <property name="geometry">
+    <rect>
+     <x>176</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton3">
+   <property name="geometry">
+    <rect>
+     <x>372</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton4">
+   <property name="geometry">
+    <rect>
+     <x>396</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton5">
+   <property name="geometry">
+    <rect>
+     <x>584</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton6">
+   <property name="geometry">
+    <rect>
+     <x>608</x>
+     <y>248</y>
+     <width>23</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton7">
+   <property name="geometry">
+    <rect>
+     <x>476</x>
+     <y>288</y>
+     <width>157</width>
+     <height>73</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>   Ustawienia</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel1">
+   <property name="frameShape">
+    <enum>QFrame::HLine</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>363</y>
+     <width>621</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="ListBox1">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>174</y>
+     <width>173</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <item>
+    <property name="text">
+     <string>192.168.1.101</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TC11</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QListWidget" name="ListBox2">
+   <property name="geometry">
+    <rect>
+     <x>244</x>
+     <y>174</y>
+     <width>173</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <item>
+    <property name="text">
+     <string>192.168.1.203</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>DC7600</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QListWidget" name="ListBox3">
+   <property name="geometry">
+    <rect>
+     <x>456</x>
+     <y>174</y>
+     <width>173</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <item>
+    <property name="text">
+     <string>127.0.0.1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>153.122.5.112</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>212.1.223.129</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>DX5150</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCheckBox" name="CheckBox1">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>254</y>
+     <width>97</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>AKTYWNY</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CheckBox2">
+   <property name="geometry">
+    <rect>
+     <x>244</x>
+     <y>254</y>
+     <width>97</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>AKTYWNY</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CheckBox3">
+   <property name="geometry">
+    <rect>
+     <x>456</x>
+     <y>254</y>
+     <width>97</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>AKTYWNY</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button1">
+   <property name="geometry">
+    <rect>
+     <x>476</x>
+     <y>390</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button2">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>390</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="MaskEdit1">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>338</y>
+     <width>249</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mmaso*Q@*@34w342345@#@</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="CheckBox4">
+   <property name="geometry">
+    <rect>
+     <x>24</x>
+     <y>314</y>
+     <width>129</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Chronione hasBem</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="TrackBar1">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>8</y>
+     <width>613</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>3</number>
+   </property>
+   <property name="value">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::TicksBelow</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

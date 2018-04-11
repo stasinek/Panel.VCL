@@ -1,31 +1,17 @@
 object Form6: TForm6
-  Left = 192
-  Top = 106
+  Left = 684
+  Top = 162
   Width = 339
   Height = 188
-  Caption = 'Zamknij po bezczynno'#347'ci przez..'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'MS Sans Serif'
   Font.Style = []
-  OldCreateOrder = False
+  OldCreateOrder = True
   PixelsPerInch = 96
   TextHeight = 13
-  object Label1: TLabel
-    Left = 160
-    Top = 54
-    Width = 29
-    Height = 54
-    Caption = ':'
-    Font.Charset = EASTEUROPE_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -48
-    Font.Name = 'Courier New'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object Label2: TLabel
     Left = 36
     Top = 14
@@ -63,7 +49,7 @@ object Form6: TForm6
     Left = 34
     Top = 52
     Width = 67
-    Height = 55
+    Height = 62
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -48
@@ -77,7 +63,7 @@ object Form6: TForm6
     Left = 198
     Top = 52
     Width = 69
-    Height = 57
+    Height = 62
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -48
@@ -102,5 +88,6 @@ object Form6: TForm6
     Height = 25
     Caption = 'Never mind..'
     TabOrder = 5
+    OnClick = Button2Click
   end
 end

@@ -8,7 +8,6 @@
 #include "Desk_frm.h"
 #include "Main_frm.h"
 #include "Move_frm.h"
-#include "Info_frm.h"
 #include "Dni_frm.h"
 #include "Zeus_frm.h"
 #include "Clock_frm.h"
@@ -26,16 +25,22 @@ USEFORM("Atab_frm.cpp", Atab_form);
 USEFORM("Move_frm.cpp", Move_form);
 USEFORM("Size_frm.cpp", Size_form);
 USEFORM("Expose_frm.cpp", Expose_form);
-USEFORM("Info_frm.cpp", Info_form);
+USEFORM("./../../FORM_TEMPLATES/About_frm.cpp", AboutForm);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
-USEFORM("Unit2.cpp", Form2);
 USEFORM("Unit1.cpp", Form1);
 USEFORM("Unit3.cpp", Form3);
 USEFORM("Unit4.cpp", Uruchom);
-USEFORM("Unit5.cpp", Form5);
+USEFORM("Unit5.cpp", Alarm_form);
 USEFORM("Idle_frm.cpp", Form6);
 USEFORM("Idlecheck_frm.cpp", Form7);
+USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
+USERES("Panel.res");
+USEUNIT("Core.cpp");
 //---------------------------------------------------------------------------
 #pragma resource "manifest.res"
 //---------------------------------------------------------------------------
@@ -259,12 +264,11 @@ return true;
 case VK_LWIN: // ctose this app
 //------------------------------------
 //
-Tips_form->Execute("Panel: ZMYKAM.. ADIOS AMIGO! ",true,true);
+Tips_form->Execute("Panel: Appliacation is being closed. Hope to see You later! ",true,true);
 Main_form->tform_Save();
 Desk_form->tform_Save();
 Lupa_form->tform_Save();
-
-Sleep(500);
+Sleep(600);
 Application->Terminate();
 return true;
 // nic nie znaleziono, koniec
@@ -367,10 +371,10 @@ return false;
 
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
-HANDLE hMutex = ::CreateMutex(NULL,TRUE,"sstsoft_Panel-VCL_mutex");
+HANDLE hMutex = ::CreateMutex(NULL,TRUE,"sstsoft::mutex::Panel.VCL");
 if  (GetLastError()==ERROR_ALREADY_EXISTS)
-	{return MessageBox(0,"Próbujesz uruchomiæ kilkakrotnie, to nie ma sensu",
-					   "sstsoft.Panel-VCL",
+	{return MessageBox(0,"Próbujesz uruchomic kilkakrotnie, to nie ma sensu",
+					   "SSTSOFT.Panel.VCL",
 				   MB_OK|MB_ICONERROR|MB_SYSTEMMODAL);
 	 }
 //------------------------------------
@@ -388,11 +392,11 @@ SetPriorityClass(GetCurrentProcess(),HIGH_PRIORITY_CLASS);
 //------------------------------------
 try
 	  {
-		Application->Title = "sstsoft.Panel_VCL";
-         Application->HintPause = 300;
+		Application->Title = "Panel.VCL";
+		Application->HintPause = 300;
 		Application->HintHidePause = 30000;
 		Application->CreateForm(__classid(TTips_form), &Tips_form);
-         Application->CreateForm(__classid(TZoom_form), &Zoom_form);
+        Application->CreateForm(__classid(TZoom_form), &Zoom_form);
          Application->CreateForm(__classid(TSize_form), &Size_form);
          Application->CreateForm(__classid(TLupa_form), &Lupa_form);
          Application->CreateForm(__classid(TDesk_form), &Desk_form);
@@ -400,16 +404,15 @@ try
          Application->CreateForm(__classid(TAtab_form), &Atab_form);
          Application->CreateForm(__classid(TMove_form), &Move_form);
          Application->CreateForm(__classid(TSize_form), &Size_form);
-         Application->CreateForm(__classid(TInfo_form), &Info_form);
+         Application->CreateForm(__classid(TAboutForm), &AboutForm);
          Application->CreateForm(__classid(TDni_form), &Dni_form);
          Application->CreateForm(__classid(TExpose_form), &Expose_form);
          Application->CreateForm(__classid(TZeus_form), &Zeus_form);
          Application->CreateForm(__classid(TClock_form), &Clock_form);
-         Application->CreateForm(__classid(TForm2), &Form2);
          Application->CreateForm(__classid(TForm1), &Form1);
          Application->CreateForm(__classid(TForm3), &Form3);
          Application->CreateForm(__classid(TUruchom), &Uruchom);
-         Application->CreateForm(__classid(TForm5), &Form5);
+         Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
          Application->CreateForm(__classid(TForm6), &Form6);
          Application->CreateForm(__classid(TForm7), &Form7);
          Application->ShowMainForm = false;
@@ -417,7 +420,6 @@ try
 		Lupa_form->tform_Initialize();
 		Desk_form->tform_Initialize();
 		Zeus_form->tform_Initialize();
-
 		Application->Run();
 	  }
 catch (Exception &exception)
@@ -428,7 +430,6 @@ catch (Exception &exception)
 delete Desktop;
 UnhookWindowsHookEx(llkbdhhook);
 CloseHandle(hMutex);
-
 //UnhookWindowsHookEx(cbthhook);
 //------------------------------------
 return 0;

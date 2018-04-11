@@ -20,6 +20,7 @@ __published:	// IDE-managed Components
     TButton *Button2;
     TLabel *Label1;
     TLabel *Label2;
+    void __fastcall Button2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
     __fastcall TForm6(TComponent* Owner);

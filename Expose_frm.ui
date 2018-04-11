@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Expose_form</class>
+ <widget class="QWidget" name="Expose_form">
+  <property name="geometry">
+   <rect>
+    <x>169</x>
+    <y>99</y>
+    <width>625</width>
+    <height>487</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Expose...</string>
+  </property>
+  <widget class="QScrollBar" name="ScrollBar1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>444</y>
+     <width>617</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+ </widget>
+</ui>

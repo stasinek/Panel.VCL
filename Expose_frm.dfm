@@ -1,14 +1,14 @@
 object Expose_form: TExpose_form
-  Left = 394
-  Top = 287
-  Width = 800
-  Height = 600
+  Left = 169
+  Top = 99
+  Width = 625
+  Height = 487
   Caption = 'Expose...'
   Color = clBackground
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   Icon.Data = {
     0000010006001010100001000400280100006600000010100000010008006805
@@ -342,8 +342,8 @@ object Expose_form: TExpose_form
   TextHeight = 13
   object ScrollBar1: TScrollBar
     Left = 0
-    Top = 557
-    Width = 792
+    Top = 444
+    Width = 617
     Height = 16
     Align = alBottom
     PageSize = 0

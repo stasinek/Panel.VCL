@@ -9,15 +9,17 @@
 #include <dos.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "bargraph.h"
-#include "systray.h"
-#include "framepan.h"
+#include ".\\..\\..\\PACKAGES\\BARGRAPH.h"
+#include ".\\..\\..\\PACKAGES\\SYSTRAY.h"
+#include ".\\..\\..\\PACKAGES\\FRAMEPAN.h"
 #include <Buttons.hpp>
 #include <ExtCtrls.hpp>
 #include <Menus.hpp>
 #include "Core.h"
 #include <ScktComp.hpp>
 #include <Graphics.hpp>
+#include "framepan.h"
+#include "systray.h"
 //---------------------------------------------------------------------------
 class TMain_form : public TForm
 {

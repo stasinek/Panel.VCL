@@ -1,6 +1,6 @@
 object Zeus_form: TZeus_form
-  Left = 248
-  Top = 106
+  Left = 437
+  Top = 172
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'YOU GOD THE POWER :]'
@@ -122,7 +122,7 @@ object Zeus_form: TZeus_form
       Caption = '&Okna'
       OnClick = Window1Click
       object Kill1: TMenuItem
-        Caption = 'Jeste'#347' bogiem!'
+        Caption = 'Jestem bogiem!'
         ShortCut = 49242
         OnClick = Kill1Click
       end

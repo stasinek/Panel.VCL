@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form1</class>
+ <widget class="QWidget" name="Form1">
+  <property name="geometry">
+   <rect>
+    <x>38</x>
+    <y>122</y>
+    <width>365</width>
+    <height>233</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Zmiana parametrów ekranu.</string>
+  </property>
+  <widget class="QLabel" name="Panel1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>365</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QPushButton" name="SpeedButton1">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>2</y>
+      <width>29</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>Zwin/rozwin okno.</string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Label2">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>14</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hz</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton2">
+    <property name="geometry">
+     <rect>
+      <x>328</x>
+      <y>2</y>
+      <width>31</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>USTAW</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton3">
+    <property name="geometry">
+     <rect>
+      <x>296</x>
+      <y>2</y>
+      <width>29</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>?</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>POMOC</string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="ComboBox4">
+    <property name="geometry">
+     <rect>
+      <x>221</x>
+      <y>5</y>
+      <width>44</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string>Hz</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>50</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>60</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>65</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>70</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>75</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>80</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>85</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>90</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>100</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>110</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>120</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="ComboBox3">
+    <property name="geometry">
+     <rect>
+      <x>173</x>
+      <y>5</y>
+      <width>44</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string>8,16,24,32 bit</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>16</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>24</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>32</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="ComboBox1">
+    <property name="geometry">
+     <rect>
+      <x>88</x>
+      <y>5</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string>X*Y pixeli</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>320x200</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>320x240</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>400x300</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>512x384</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>600x800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>640x400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>640x480</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>720x480</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>720x576</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>768x1024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>800x600</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>800x800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>960x540</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>960x720</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1024x576</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1024x768</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1024x1024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1152x864</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1280x768</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1280x800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1280x960</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1280x1024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1280x1080</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1440x900</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1440x960</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1440x1024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1440x1080</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1600x1024</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1600x1200</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1600x900</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1920x1080</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2048x1556</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2560x1080</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2560x1440</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2560x1600</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2560x1920</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2880x1800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3200x1800</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3200x2400</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3656x2664</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4096x2304</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>4096x3112</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="ComboBox2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>5</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string>Monitor nr.</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="Panel2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>33</y>
+     <width>366</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <widget class="QGraphicsView" name="Image1">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>18</y>
+      <width>334</width>
+      <height>135</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SpeedButton4">
+    <property name="geometry">
+     <rect>
+      <x>16</x>
+      <y>16</y>
+      <width>57</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>LISTA</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>Poka| liste</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button2">
+    <property name="geometry">
+     <rect>
+      <x>213</x>
+      <y>164</y>
+      <width>67</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>NI{SZA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button3">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>164</y>
+      <width>67</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>></string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>WY{SZA</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+</ui>

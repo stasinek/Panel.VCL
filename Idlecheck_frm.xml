@@ -1,0 +1,48 @@
+<guiRoot>
+ <guiObject>
+  <name>Form7</name>
+  <class>TForm7</class>
+  <Left>192</Left>
+  <Top>106</Top>
+  <Width>373</Width>
+  <Height>460</Height>
+  <Caption>'Lista auto ubijania po czasie..'</Caption>
+  <Color>clBtnFace</Color>
+  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-11</Font.Height>
+  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Style>[]</Font.Style>
+  <OldCreateOrder>False</OldCreateOrder>
+  <PixelsPerInch>96</PixelsPerInch>
+  <TextHeight>13</TextHeight>
+  <guiObject>
+   <name>Button1</name>
+   <class>TButton</class>
+   <Left>268</Left>
+   <Top>390</Top>
+   <Width>75</Width>
+   <Height>25</Height>
+   <Caption>'OK'</Caption>
+   <TabOrder>0</TabOrder>
+  </guiObject>
+  <guiObject>
+   <name>ValueListEditor1</name>
+   <class>TValueListEditor</class>
+   <Left>14</Left>
+   <Top>6</Top>
+   <Width>331</Width>
+   <Height>371</Height>
+   <Options>[goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRowSelect, goThumbTracking]</Options>
+   <TabOrder>1</TabOrder>
+   <TitleCaptions.Strings>
+    <item>Nazwa</item>
+    <item>Op#243#378nienie minut</item>
+   </TitleCaptions.Strings>
+   <ColWidths>
+    <item>207</item>
+    <item>118</item>
+   </ColWidths>
+  </guiObject>
+ </guiObject>
+</guiRoot>

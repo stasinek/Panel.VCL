@@ -15,6 +15,8 @@
 #include <Grids.hpp>
 #include "../../../x86_win32_classes/tsoft_WindowsMover.h"
 #include "advbar.h"
+#include "BARGRAPH.h"
+#include "ADVBAR.h"
 //---------------------------------------------------------------------------
 typedef struct __wpis
 { int session;
@@ -25,14 +27,11 @@ typedef struct __wpis
 class TDni_form : public TForm
 {
 __published:	// IDE-managed Components
-    TTimer *Timer1;
-    TPopupMenu *PopupMenu1;
-    TMenuItem *MenuItem11;
-    TMenuItem *MenuItem12;
     TBarGraph *BarGraph1;
-    TAdvancedBar *AdvancedBar1;
     TListBox *ListBox1;
-        TRamka *Ramka1;
+    TTimer *Timer1;
+    TAdvancedBar *AdvancedBar1;
+    TButton *Button1;
     void __fastcall Timer1Timer(TObject *Sender);
     void __fastcall MenuItem11Click(TObject *Sender);
     void __fastcall FormCreate(TObject *Sender);
@@ -42,6 +41,7 @@ __published:	// IDE-managed Components
 	void __fastcall MenuItem12Click(TObject *Sender);
         void __fastcall ListBox1MouseUp(TObject *Sender,
           TMouseButton Button, TShiftState Shift, int X, int Y);
+    void __fastcall Button1Click(TObject *Sender);
     
 private:	// User declarations
 //---------------------------------------------------------------------------

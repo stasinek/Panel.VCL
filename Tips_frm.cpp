@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
 #pragma hdrstop
+//---------------------------------------------------------------------------
 #include <commctrl.h>
 //---------------------------------------------------------------------------
 #include "Tips_frm.h"
@@ -12,6 +13,7 @@
 #pragma link "framepan"
 #pragma link "framepan"
 #pragma link "framepan"
+#pragma link "FRAMEPAN"
 #pragma resource "*.dfm"
 TTips_form *Tips_form;
 //---------------------------------------------------------------------------

@@ -1,21 +1,22 @@
 object Form1: TForm1
-  Left = 46
-  Top = 89
+  Left = 96
+  Top = 122
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
-  Caption = 'Zmiana parametr'#243'w ekranu.'
+  Caption = 'Zmiana parametrów ekranu.'
   ClientHeight = 233
   ClientWidth = 365
   Color = clBtnFace
-  ParentFont = True
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
   OldCreateOrder = False
   Position = poDefault
   OnClose = FormClose
   OnPaint = FormPaint
   OnShow = FormShow
-  DesignSize = (
-    365
-    233)
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -27,9 +28,6 @@ object Form1: TForm1
     BevelOuter = bvNone
     FullRepaint = False
     TabOrder = 0
-    DesignSize = (
-      365
-      33)
     object SpeedButton1: TSpeedButton
       Left = 6
       Top = 2
@@ -199,7 +197,6 @@ object Form1: TForm1
       Width = 81
       Height = 21
       Hint = 'X*Y pixeli'
-      AutoComplete = False
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -214,15 +211,19 @@ object Form1: TForm1
         '320x240'
         '400x300'
         '512x384'
+        '600x800'
         '640x400'
         '640x480'
         '720x480'
         '720x576'
+        '768x1024'
         '800x600'
+        '800x800'
         '960x540'
         '960x720'
         '1024x576'
         '1024x768'
+        '1024x1024'
         '1152x864'
         '1280x768'
         '1280x800'
@@ -275,9 +276,6 @@ object Form1: TForm1
     BevelOuter = bvLowered
     FullRepaint = False
     TabOrder = 1
-    DesignSize = (
-      366
-      200)
     object Image1: TImage
       Left = 16
       Top = 18
@@ -290,15 +288,16 @@ object Form1: TForm1
       Top = 16
       Width = 57
       Height = 22
-      Hint = 'Poka'#380' liste'
+      Hint = 'Pokaz liste'
       Caption = 'LISTA'
+      Enabled = False
     end
     object Button2: TButton
       Left = 213
       Top = 164
       Width = 67
       Height = 22
-      Hint = 'NI'#379'SZA'
+      Hint = 'NIZSZA'
       Anchors = [akRight, akBottom]
       Caption = '<'
       TabOrder = 0
@@ -309,7 +308,7 @@ object Form1: TForm1
       Top = 164
       Width = 67
       Height = 22
-      Hint = 'WY'#379'SZA'
+      Hint = 'WYZSZA'
       Anchors = [akRight, akBottom]
       Caption = '>'
       TabOrder = 1

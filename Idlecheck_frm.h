@@ -8,13 +8,11 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <Grids.hpp>
-#include <ValEdit.hpp>
 //---------------------------------------------------------------------------
 class TForm7 : public TForm
 {
 __published:	// IDE-managed Components
     TButton *Button1;
-    TValueListEditor *ValueListEditor1;
 private:	// User declarations
 public:		// User declarations
     __fastcall TForm7(TComponent* Owner);

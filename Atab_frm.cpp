@@ -159,7 +159,7 @@ Image1->Canvas->Brush->Color = clBtnFace;
 Image1->Repaint();
       //skalowanie okna aby zmieœcilo sie w obrazku
 if (LetPrintWindow==true) {
-        ::PrintWindow(apps.Windows[curicon],screen.Bitmap->Canvas->Handle,0);
+      //  ::PrintWindow(apps.Windows[curicon],screen.Bitmap->Canvas->Handle,0);
       ::GetWindowRect(apps.Windows[curicon],&temprect);
 }
 else {temprect.left=0; temprect.top=0; temprect.bottom=Image2->Height;temprect.right=Image2->Width;

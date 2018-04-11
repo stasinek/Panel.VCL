@@ -18,7 +18,6 @@ __published:	// IDE-managed Components
     TEdit *Edit2;
     TButton *Button1;
     TButton *Button2;
-    TLabel *Label1;
     TLabel *Label2;
     void __fastcall Button2Click(TObject *Sender);
 private:	// User declarations

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form7</class>
+ <widget class="QWidget" name="Form7">
+  <property name="geometry">
+   <rect>
+    <x>192</x>
+    <y>106</y>
+    <width>373</width>
+    <height>460</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Lista auto ubijania po czasie..</string>
+  </property>
+  <widget class="QPushButton" name="Button1">
+   <property name="geometry">
+    <rect>
+     <x>268</x>
+     <y>390</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="ValueListEditor1">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>6</y>
+     <width>331</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

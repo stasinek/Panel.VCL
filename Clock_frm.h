@@ -15,6 +15,7 @@ __published:	// IDE-managed Components
 	TTimer *Timer1;
 	TPanel *Panel1;
 	TPanel *Panel2;
+	void __fastcall Timer1Timer(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TClock_form(TComponent* Owner);

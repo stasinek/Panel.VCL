@@ -1,15 +1,15 @@
 object Clock_form: TClock_form
-  Left = 678
-  Top = 235
+  Left = 143
+  Top = 201
   BorderStyle = bsToolWindow
-  Caption = 'Clock_form'
+  Caption = 'Clock'
   ClientHeight = 138
-  ClientWidth = 270
+  ClientWidth = 320
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   PixelsPerInch = 96
@@ -17,11 +17,11 @@ object Clock_form: TClock_form
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 270
+    Width = 320
     Height = 89
     Align = alTop
     BevelOuter = bvNone
-    Caption = '12:10'
+    Caption = '12:10:00'
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -64
@@ -33,13 +33,14 @@ object Clock_form: TClock_form
   object Panel2: TPanel
     Left = 0
     Top = 90
-    Width = 270
+    Width = 320
     Height = 48
     Align = alBottom
     TabOrder = 1
   end
   object Timer1: TTimer
-    Left = 4
-    Top = 4
+    OnTimer = Timer1Timer
+    Left = 12
+    Top = 8
   end
 end

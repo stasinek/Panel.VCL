@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KillForm</class>
+ <widget class="QWidget" name="KillForm">
+  <property name="geometry">
+   <rect>
+    <x>250</x>
+    <y>195</y>
+    <width>430</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>KillForm</string>
+  </property>
+  <widget class="QGraphicsView" name="Image1">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>120</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="Image2">
+   <property name="geometry">
+    <rect>
+     <x>352</x>
+     <y>28</y>
+     <width>74</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit1">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>128</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit1</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit2">
+   <property name="geometry">
+    <rect>
+     <x>204</x>
+     <y>128</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit2</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText1">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>108</y>
+     <width>94</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>THIS class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText2">
+   <property name="geometry">
+    <rect>
+     <x>204</x>
+     <y>108</y>
+     <width>57</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>THIS title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BitBtn1">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>172</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Koniec</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit3">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>76</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit3</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>76</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit4</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText3">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>56</y>
+     <width>100</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Parent class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>56</y>
+     <width>63</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Parent title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText5">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>8</y>
+     <width>88</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top class name...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="StaticText6">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>8</y>
+     <width>51</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Top title...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit5">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>28</y>
+     <width>145</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit5</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Edit6">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>28</y>
+     <width>193</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Edit6</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Button1">
+   <property name="geometry">
+    <rect>
+     <x>212</x>
+     <y>172</y>
+     <width>107</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>364</x>
+     <y>4</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu1">
+   <property name="geometry">
+    <rect>
+     <x>392</x>
+     <y>4</y>
+     <width>430</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <widget class="QMenu" name="Window1">
+    <property name="title">
+     <string>&amp;Okna</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <addaction name="Kill1"/>
+    <addaction name="separator"/>
+    <addaction name="Cascade1"/>
+    <addaction name="Tile2"/>
+    <addaction name="Tile1"/>
+    <addaction name="separator"/>
+    <addaction name="Hide1"/>
+    <addaction name="Show1"/>
+   </widget>
+   <addaction name="Window1"/>
+   <widget class="QMenu" name="N2">
+    <property name="title">
+     <string>&amp;?</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="N2"/>
+  </widget>
+  <action name="Kill1">
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="Cascade1">
+   <property name="text">
+    <string>Okna &amp;kaskadowo</string>
+   </property>
+  </action>
+  <action name="Tile2">
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="Tile1">
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="Hide1">
+   <property name="text">
+    <string>&amp;Hide</string>
+   </property>
+  </action>
+  <action name="Show1">
+   <property name="text">
+    <string>&amp;Show...</string>
+   </property>
+  </action>
+ </widget>
+</ui>

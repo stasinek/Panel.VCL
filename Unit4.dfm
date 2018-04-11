@@ -1,16 +1,16 @@
 object Uruchom: TUruchom
-  Left = 187
-  Top = 135
+  Left = 69
+  Top = 131
   BorderStyle = bsToolWindow
   Caption = 'Uruchom'
   ClientHeight = 68
   ClientWidth = 683
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
-  Font.Style = []
+  Font.Name = 'Tahoma'
+  Font.Style = [fsBold]
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13

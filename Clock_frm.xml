@@ -1,0 +1,56 @@
+<guiRoot>
+ <guiObject>
+  <name>Clock_form</name>
+  <class>TClock_form</class>
+  <Left>556</Left>
+  <Top>256</Top>
+  <BorderStyle>bsToolWindow</BorderStyle>
+  <Caption>'Clock'</Caption>
+  <ClientHeight>138</ClientHeight>
+  <ClientWidth>320</ClientWidth>
+  <Color>clBtnFace</Color>
+  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-11</Font.Height>
+  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Style>[]</Font.Style>
+  <OldCreateOrder>False</OldCreateOrder>
+  <PixelsPerInch>96</PixelsPerInch>
+  <TextHeight>13</TextHeight>
+  <guiObject>
+   <name>Panel1</name>
+   <class>TPanel</class>
+   <Left>0</Left>
+   <Top>0</Top>
+   <Width>320</Width>
+   <Height>89</Height>
+   <Align>alTop</Align>
+   <BevelOuter>bvNone</BevelOuter>
+   <Caption>'12:10:00'</Caption>
+   <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
+   <Font.Color>clWindowText</Font.Color>
+   <Font.Height>-64</Font.Height>
+   <Font.Name>'Arial Black'</Font.Name>
+   <Font.Style>[fsBold]</Font.Style>
+   <ParentFont>False</ParentFont>
+   <TabOrder>0</TabOrder>
+  </guiObject>
+  <guiObject>
+   <name>Panel2</name>
+   <class>TPanel</class>
+   <Left>0</Left>
+   <Top>90</Top>
+   <Width>320</Width>
+   <Height>48</Height>
+   <Align>alBottom</Align>
+   <TabOrder>1</TabOrder>
+  </guiObject>
+  <guiObject>
+   <name>Timer1</name>
+   <class>TTimer</class>
+   <OnTimer>Timer1Timer</OnTimer>
+   <Left>12</Left>
+   <Top>8</Top>
+  </guiObject>
+ </guiObject>
+</guiRoot>

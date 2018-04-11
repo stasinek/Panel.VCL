@@ -1,0 +1,47 @@
+<guiRoot>
+ <guiObject>
+  <name>Uruchom</name>
+  <class>TUruchom</class>
+  <Left>243</Left>
+  <Top>380</Top>
+  <BorderStyle>bsToolWindow</BorderStyle>
+  <Caption>'Uruchom'</Caption>
+  <ClientHeight>68</ClientHeight>
+  <ClientWidth>683</ClientWidth>
+  <Color>clBtnFace</Color>
+  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-11</Font.Height>
+  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Style>[]</Font.Style>
+  <OldCreateOrder>False</OldCreateOrder>
+  <PixelsPerInch>96</PixelsPerInch>
+  <TextHeight>13</TextHeight>
+  <guiObject>
+   <name>TabControl1</name>
+   <class>TTabControl</class>
+   <Left>0</Left>
+   <Top>0</Top>
+   <Width>683</Width>
+   <Height>68</Height>
+   <Align>alClient</Align>
+   <MultiLine>True</MultiLine>
+   <RaggedRight>True</RaggedRight>
+   <ScrollOpposite>True</ScrollOpposite>
+   <TabOrder>0</TabOrder>
+   <TabPosition>tpBottom</TabPosition>
+   <Tabs.Strings>
+    <item>AKCESORIA</item>
+    <item>2D</item>
+    <item>3D</item>
+    <item>BIURO</item>
+    <item>C++</item>
+    <item>MULTIMEDIA</item>
+    <item>INTERNET</item>
+    <item>SYSTEMOWE</item>
+   </Tabs.Strings>
+   <TabIndex>0</TabIndex>
+   <TabWidth>80</TabWidth>
+  </guiObject>
+ </guiObject>
+</guiRoot>

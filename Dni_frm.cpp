@@ -46,6 +46,8 @@ else
 #pragma link "framepan"
 #pragma link "advbar"
 #pragma link "advbar"
+#pragma link "BARGRAPH"
+#pragma link "ADVBAR"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TDni_form *Dni_form;
@@ -258,8 +260,8 @@ return time;
 void __fastcall TDni_form::MenuItem12Click(TObject *Sender)
 {
 Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",false);
-
-for (int margin = true, i = ListBox1->Items->Count-1; i >= 0; i--)
+int margin,i;
+for (margin = true, i = ListBox1->Items->Count-1; i >= 0; i--)
     {if (ListBox1->Selected[i] ? true : (BarGraph1->Data[i][clRed]==0 && margin==true))
         {if (i!=ListBox1->Items->Count-1)
             {ListBox1->Items->Strings[i] = ListBox1->Items->Strings[i].SubString(1,10)+" = __:__";
@@ -273,7 +275,7 @@ for (int margin = true, i = ListBox1->Items->Count-1; i >= 0; i--)
         }
     else margin = false;
    }
-for (int margin = true, i = 0; i <= ListBox1->Items->Count-1; i++)
+for (margin = true, i = 0; i <= ListBox1->Items->Count-1; i++)
     {if (BarGraph1->Data[i][clRed]==0)
         {Klucz->DeleteValue(ListBox1->Items->Strings[i].SubString(1,10));
          if (margin==true)
@@ -310,6 +312,12 @@ for (int p = 0; p <= AdvancedBar1->Max; p++)
         }
     }
 AdvancedBar1->Position = 0;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TDni_form::Button1Click(TObject *Sender)
+{
+Close();    
 }
 //---------------------------------------------------------------------------
 

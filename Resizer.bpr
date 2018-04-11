@@ -4,17 +4,18 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Resizer.exe"/>
-    <OBJFILES value="Resizer.obj Unit1.obj Unit2.obj"/>
-    <RESFILES value="Resizer.res"/>
+    <OBJFILES value="Resizer.obj Unit1.obj ..\..\FORM_TEMPLATES\About_frm.obj"/>
+    <RESFILES value=""/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Unit1.dfm Unit2.dfm"/>
+    <RESDEPEN value="$(RESFILES) Unit1.dfm ..\..\FORM_TEMPLATES\About_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="vcl.lib rtl.lib"/>
-    <SPARELIBS value="rtl.lib vcl.lib"/>
-    <PACKAGES value="rtl.bpi vcl.bpi vclx.bpi"/>
-    <PATHCPP value=".;"/>
+    <LIBRARIES value="dclusr50.lib Vcl50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib Vcl50.lib dclusr50.lib"/>
+    <PACKAGES value="Vcl50.bpi dclusr50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi 
+      bcb2kaxserver50.bpi"/>
+    <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -24,44 +25,33 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Resizer.cpp"/>
-    <INCLUDEPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
-    <LIBPATH value="&quot;C:\Program Files\Borland\CBuilder6\Projects&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <INCLUDEPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES"/>
+    <LIBPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\lib\obj;$(BCB)\lib;..\..\PACKAGES"/>
     <WARNINGS value="-w-par"/>
-    <OTHERFILES value=""/>
   </MACROS>
   <OPTIONS>
     <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
-    <CFLAG1 value="-O2 -Vx -Ve -X- -ps -a8 -6 -b- -d -k -y -v -vi- -c -tW -tWM"/>
-    <PFLAGS value="-$Y+ -$W -$R -$Q -$A8 -v -JPHNE -M"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -Vmp -VF -C -ff -X- -ps 
+      -a8 -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
+    <PFLAGS value="-$YD -$W -$R -$Q -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mx /w2 /zi"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn -v"/>
-    <OTHERFILES value=""/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -s -M -v"/>
   </OPTIONS>
   <LINKER>
     <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
     <ALLRES value="$(RESFILES)"/>
     <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
-    <OTHERFILES value=""/>
   </LINKER>
-  <FILELIST>
-      <FILE FILENAME="Resizer.cpp" FORMNAME="" UNITNAME="Resizer" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="Resizer.res" FORMNAME="" UNITNAME="Resizer.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="Unit2.cpp" FORMNAME="Form2" UNITNAME="Unit2" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-  </FILELIST>
-  <BUILDTOOLS>
-  </BUILDTOOLS>
-
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=0
+IncludeVerInfo=1
 AutoIncBuild=0
-MajorVer=1
+MajorVer=2
 MinorVer=0
 Release=0
 Build=0
-Debug=0
+Debug=1
 PreRelease=0
 Special=0
 Private=0
@@ -70,34 +60,49 @@ Locale=1045
 CodePage=1250
 
 [Version Info Keys]
-CompanyName=
+CompanyName=SSTSOFT.pl
 FileDescription=
-FileVersion=1.0.0.0
-InternalName=
-LegalCopyright=
+FileVersion=2.0.0.0
+InternalName=Resizer.VCL
+LegalCopyright=Stanislaw Stasiak
 LegalTrademarks=
 OriginalFilename=
 ProductName=
 ProductVersion=1.0.0.0
 Comments=
 
+[HistoryLists\hlIncludePath]
+Count=3
+Item0=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
 [Debugging]
 DebugSourceDirs=$(BCB)\source\vcl
 
 [Parameters]
 RunParams=
-Launcher=
-UseLauncher=0
-DebugCWD=
 HostApplication=
 RemoteHost=
 RemotePath=
-RemoteLauncher=
-RemoteCWD=
 RemoteDebug=0
 
 [Compiler]
-ShowInfoMsgs=0
+ShowInfoMsgs=1
 LinkDebugVcl=0
   </IDEOPTIONS>
 </PROJECT>

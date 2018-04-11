@@ -1,16 +1,15 @@
 //---------------------------------------------------------------------------
-
 #include <vcl.h>
 #pragma hdrstop
-
+//---------------------------------------------------------------------------
 #include "Zeus_frm.h"
 #include "Lupa_frm.h"
 #include "Desk_frm.h"
 #include "Zoom_frm.h"
 #include "Move_frm.h"
 #include "Main_frm.h"
-#include "Info_frm.h"
 #include "Tips_frm.h"
+#include "./../../FORM_TEMPLATES/About_frm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -169,7 +168,7 @@ ArrangeIconicWindows(GetDesktopWindow());
 void __fastcall TZeus_form::N2Click(TObject *Sender)
 {
 Timer1->Enabled=false;
-Info_form->ShowModal();
+AboutForm->ShowModal();
 Timer1->Enabled=true;
 }
 //---------------------------------------------------------------------------
@@ -392,7 +391,7 @@ LocalFree(top_title_text);
 
 RECT temprect;
 if (LetPrintWindow==true) {
-        ::PrintWindow(hwnd_top,Desktop->Screen->Context->Hdc,0);
+   //     ::PrintWindow(hwnd_top,Desktop->Screen->Context->Hdc,0);
       ::GetWindowRect(hwnd_top,&temprect);
 }
 else {   temprect.left=0; temprect.top=0; temprect.bottom=Image2->Height;temprect.right=Image2->Width;
@@ -413,7 +412,6 @@ if (skalax > skalaimagex)
 else
 {ow = (int)(ih*skalax);
  oh = ih;}
-
 //Label1->Caption = "sw="+FloatToStr(sw)+",sh="+FloatToStr(sh)+",ow="+FloatToStr(ow)+",oh="+FloatToStr(oh);
 Image2->Picture->Bitmap->Canvas->Brush->Color = clBtnFace;
 Image2->Picture->Bitmap->Canvas->FillRect(Image2->ClientRect);
@@ -431,7 +429,6 @@ if (LetPrintWindow==true) {
 else
     {
 ///alternatywna zawartoœæ
-
 }
 Image2->Repaint();
 //HICON hicon =(HICON)GetClassLong(hwnd_top, GCL_HICON);//HICON hicon = (HICON)SendMessage(hwnd_top,WM_GETICON,ICON_BIG,0);
@@ -441,10 +438,7 @@ Image2->Repaint();
 //hicon,32,32,0,Image1->Canvas->Brush->Handle,DI_NORMAL);
 //if (hicon!=NULL) DeleteObject(hicon);
 //Image1->Repaint();
-
-
    }
-
 }
 //---------------------------------------------------------------------------
 
@@ -454,14 +448,12 @@ DWORD dwProcessId;
 GetWindowThreadProcessId(HandleFromPoint,&dwProcessId);
  if (GetCurrentProcessId()==dwProcessId)
     {goto EXIT_KILL;
-     return;
     }
 HANDLE hProcess;
  if ((hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, dwProcessId))!=NULL)
     {TerminateProcess(hProcess, -1);
     }
 EXIT_KILL:
-        
 }
 //---------------------------------------------------------------------------
 
@@ -478,7 +470,6 @@ void __fastcall TZeus_form::FormDestroy(TObject *Sender)
 {
 delete Ruszacz;
 delete KluczRejestuSystemuWindows;
-        
 }
 //---------------------------------------------------------------------------
 

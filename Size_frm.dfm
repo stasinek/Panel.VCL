@@ -1,5 +1,5 @@
 object Size_form: TSize_form
-  Left = 304
+  Left = 586
   Top = 345
   BorderIcons = [biSystemMenu]
   BorderStyle = bsToolWindow
@@ -7,10 +7,10 @@ object Size_form: TSize_form
   ClientHeight = 162
   ClientWidth = 306
   Color = clBtnFace
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = True
   Position = poDefault

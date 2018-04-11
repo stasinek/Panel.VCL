@@ -1,26 +1,26 @@
 [Closed Files]
-File_0=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsSnap.h',0,1,1,37,5,0,0
-File_1=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.h',0,1,1,10,11,0,0
-File_2=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsCollector.h',0,1,1,1,1,0,0
-File_3=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Main_frm.cpp',0,1,613,78,623,1,0
-File_4=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Dni_frm.cpp',0,1,1,1,1,0,0
-File_5=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,3,4,0,0
-File_6=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Zeus_frm.cpp',0,1,209,67,217,0,0
-File_7=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Desk_frm.cpp',0,1,310,17,324,0,0
-File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Expose_frm.cpp',0,1,214,17,228,0,0
-File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Lupa_frm.cpp',0,1,136,1,150,0,0
+File_0=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp',0,1,1,1,8,1,0
+File_1=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Unit2.cpp',0,1,1,1,1,1,0
+File_2=SourceModule,'D:\stasiek\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Unit2.cpp',0,1,1,1,1,0,1
+File_3=SourceModule,'C:\Documents and Settings\stasiek.TC12\My Documents\prc++\OBSOLETE\PROGS\Panel.VCL\Core.cpp',0,1,1,1,1,0,0
+File_4=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsSnap.h',0,1,1,37,5,0,0
+File_5=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.h',0,1,1,10,11,0,0
+File_6=SourceModule,'D:\My Projects\aktualne prc++\CPP_win32_classes\tsoft_WindowsCollector.h',0,1,1,1,1,0,0
+File_7=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Main_frm.cpp',0,1,613,78,623,1,0
+File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Dni_frm.cpp',0,1,1,1,1,0,0
+File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,3,4,0,0
 
 [Modules]
-Module0=D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.bpr
+Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
 Count=1
 EditWindowCount=1
 
-[D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.bpr]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\ProjectGroup1.bpg]
+[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -34,22 +34,22 @@ Visible=1
 State=2
 Left=199
 Top=229
-Width=825
+Width=1081
 Height=482
 MaxLeft=-4
-MaxTop=97
-MaxWidth=1032
-MaxHeight=647
-ClientWidth=1024
-ClientHeight=620
+MaxTop=100
+MaxWidth=1288
+MaxHeight=676
+ClientWidth=1280
+ClientHeight=649
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=0
+BottomPanelSize=85
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400010000000B0000004D65737361676556696577000000000000000000000000000000000001000000000000000000000000FFFFFFFF
+BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=D:\My Documents\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Rozdz\Resizer.cpp
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.cpp
 CursorX=1
 CursorY=1
 TopLine=1
@@ -57,7 +57,7 @@ LeftCol=1
 
 [Watches]
 Count=1
-Watch0='lpDestination',8,0,18,1,1,'Watches'
+Watch0='lpDestination',8,0,18,1,1
 
 [Breakpoints]
 Count=0
@@ -71,13 +71,13 @@ Visible=1
 State=2
 Left=9
 Top=15
-Width=1015
+Width=1271
 Height=105
 MaxLeft=-1
 MaxTop=-1
-MaxWidth=1032
+MaxWidth=1288
 MaxHeight=105
-ClientWidth=1024
+ClientWidth=1280
 ClientHeight=78
 
 [ProjectManager]
@@ -96,6 +96,23 @@ TBDockHeight=303
 LRDockWidth=438
 Dockable=1
 
+[CPUWindow]
+Create=1
+Visible=0
+State=0
+Left=373
+Top=223
+Width=533
+Height=353
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=525
+ClientHeight=326
+DumpPane=79
+DisassemblyPane=187
+RegisterPane=231
+FlagPane=64
+
 [AlignmentPalette]
 Create=1
 Visible=0
@@ -111,7 +128,7 @@ ClientHeight=60
 
 [PropertyInspector]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=0
 Top=359
@@ -119,8 +136,8 @@ Width=190
 Height=381
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=182
-ClientHeight=357
+ClientWidth=180
+ClientHeight=355
 TBDockHeight=381
 LRDockWidth=190
 Dockable=1
@@ -129,34 +146,19 @@ ArrangeBy=Name
 SelectedItem=
 ExpandedItems=
 HiddenCategories=
-
-[ObjectTree]
-Create=1
-Visible=0
-State=0
-Left=0
-Top=105
-Width=190
-Height=252
-MaxLeft=-1
-MaxTop=-1
-ClientWidth=182
-ClientHeight=228
-TBDockHeight=252
-LRDockWidth=190
-Dockable=1
+ShowStatusBar=1
 
 [MessageView@EditWindow0]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=12
 Top=0
-Width=1012
+Width=1268
 Height=85
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=1012
+ClientWidth=1268
 ClientHeight=85
 TBDockHeight=85
 LRDockWidth=443

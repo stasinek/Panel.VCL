@@ -6,11 +6,10 @@
 #include "Desk_frm.h"
 #include "Zeus_frm.h"
 #include "Expose_frm.h"
-#include "Info_frm.h"
+#include "./../../FORM_TEMPLATES/About_frm.h"
 #include "Dni_frm.h"
 #include "Clock_frm.h"
 #include "Unit1.h"
-#include "Unit2.h"
 #include "Unit3.h"
 #include "Unit4.h"
 #include "Unit5.h"
@@ -21,6 +20,12 @@
 #pragma link "systray"
 #pragma link "framepan"
 #pragma package(smart_init)
+#pragma link "framepan"
+#pragma link "systray"
+#pragma link "framepan"
+#pragma link "systray"
+#pragma link "framepan"
+#pragma link "systray"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 
@@ -158,7 +163,7 @@ hInst = (HINSTANCE)HInstance;
 ::SetStretchBltMode(this->Canvas->Handle, STRETCH_DELETESCANS);
 Ruszacz = new ts::WindowsMover();
 KluczRejestuSystemuWindows = new TRegistry;
-MainSysTray->Icon->Handle = LoadIcon(hInst,"MAINICON");
+MainSysTray->Icon->Handle = LoadIcon(hInst,"MAINICON1");
 MainSysTray->AddIcon();
 MainTimer->Enabled = true;
 }
@@ -570,7 +575,7 @@ SetForegroundWindow(Main_form->Handle);
 
 void __fastcall TMain_form::MenuItemInfoClick(TObject*)
 {
-Info_form->ShowModal();
+AboutForm->ShowModal();
 }
 //---------------------------------------------------------------------------
 
@@ -676,7 +681,7 @@ Form3->Visible = SpeedButton6->Down;
 
 void __fastcall TMain_form::SpeedButton1Click(TObject *Sender)
 {
-Form5->Visible = SpeedButton1->Down;
+Alarm_form->Visible = SpeedButton1->Down;
 }
 //---------------------------------------------------------------------------
 

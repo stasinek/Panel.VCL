@@ -3,9 +3,9 @@
 #include "windows.h"
 #include "wingdi.h"
 #include "winuser.h"
-#include "\\..\\..\\x86_win32_classes\\tsoft_WindowsMover.h"
-#include "\\..\\..\\x86_win32_classes\\tsoft_WindowsCollector.h"
-#include "\\..\\..\\x86_win32_classes\\tsoft_WindowsTile.h"
+#include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsMover.h"
+#include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsCollector.h"
+#include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsTile.h"
 //---------------------------------------------------------------------------
 extern ts::WindowsCOLLECTOR *Desktop;
 extern ts::WindowsTILES *Tiles;

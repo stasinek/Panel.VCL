@@ -7,11 +7,21 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm5 *Form5;
+TAlarm_form *Alarm_form;
 //---------------------------------------------------------------------------
-__fastcall TForm5::TForm5(TComponent* Owner)
+__fastcall TAlarm_form::TAlarm_form(TComponent* Owner)
 	: TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------
- 
+
+void __fastcall TAlarm_form::Button2Click(TObject *Sender)
+{
+Close();	
+}
+//---------------------------------------------------------------------------
+void __fastcall TAlarm_form::Button1Click(TObject *Sender)
+{
+Close();	
+}
+//---------------------------------------------------------------------------

@@ -7,6 +7,7 @@
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
 #include "framepan.h"
+#include "FRAMEPAN.h"
 //#include "framepan.h"
 //---------------------------------------------------------------------------
 class TTips_form : public TForm

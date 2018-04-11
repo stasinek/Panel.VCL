@@ -3,9 +3,9 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "Main_frm.h"
+//#include "Main_frm.h"
 #include "Unit1.h"
-#include "Unit2.h"
+#include "./../../FORM_TEMPLATES/About_frm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -119,7 +119,7 @@ if (ChangeDisplaySettingsEx(dev,&DevMode,NULL,CDS_TEST,NULL)==DISP_CHANGE_SUCCES
 
 void __fastcall TForm1::SpeedButton3Click(TObject *Sender)
 {
-Form2->ShowModal();
+AboutForm->ShowModal();
 }
 //---------------------------------------------------------------------------
 
@@ -160,7 +160,7 @@ ComboBox2Change(Sender);
 
 void __fastcall TForm1::FormClose(TObject *Sender, TCloseAction &Action)
 {
-Main_form->SpeedButton3->Down = false;
+Form1->SpeedButton3->Down = false;
 }
 //---------------------------------------------------------------------------
 
