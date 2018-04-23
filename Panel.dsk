@@ -1,142 +1,54 @@
 [Closed Files]
-File_0=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\CORE.cpp',0,1,1,1,1,0,0
-File_1=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp',0,1,1,1,1,0,0
-File_2=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp',0,1,1,1,1,0,0
-File_3=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp',0,1,1,1,1,0,0
-File_4=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp',0,1,1,1,1,0,0
-File_5=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp',0,1,1,1,1,0,0
-File_6=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp',0,1,1,1,1,0,0
-File_7=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp',0,1,1,1,1,0,0
-File_8=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Lupa_frm.cpp',0,1,1,1,1,0,0
-File_9=SourceModule,'K:\My Projects\prc++\OBSOLETE\PROGS\Panel.VCL\Info_frm.cpp',0,1,1,1,1,0,0
+File_0=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp',0,1,17,1,45,0,0
+File_1=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp',0,1,1,1,1,0,0
+File_2=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp',0,1,1,1,1,0,0
+File_3=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp',0,1,1,1,1,0,0
+File_4=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp',0,1,1,1,1,0,0
+File_5=SourceModule,'D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp',0,1,133,1,134,1,0
+File_6=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp',0,1,5,2,21,1,0
+File_7=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp',0,1,1,1,1,1,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
-Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr
-Module2=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
-Module3=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\CORE.H
-Module4=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
-Module5=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
-Module6=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp
-Module7=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp
-Module8=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
-Module9=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp
-Module10=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Lupa_frm.cpp
-Module11=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idlecheck_frm.cpp
-Module12=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp
-Module13=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp
-Module14=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
-Module15=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp
-Module16=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Clock_frm.cpp
-Module17=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Expose_frm.cpp
-Module18=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp
-Module19=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
-Module20=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp
-Count=21
+Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
+Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
+Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp
+Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
+Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
+Module5=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
+Count=6
 EditWindowCount=1
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp]
 ModuleType=SourceModule
-FormState=0
+FormState=1
 FormOnTop=0
 
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp]
 ModuleType=SourceModule
-FormState=0
-FormOnTop=0
+FormState=1
+FormOnTop=1
 
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\CORE.H]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp]
 ModuleType=SourceModule
-FormState=0
-FormOnTop=0
+FormState=1
+FormOnTop=1
 
 [C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Lupa_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idlecheck_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Clock_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Expose_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp]
-ModuleType=SourceModule
-FormState=0
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp]
-ModuleType=SourceModule
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
 FormState=0
 FormOnTop=0
 
@@ -145,29 +57,14 @@ FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=21
-CurrentView=14
+ViewCount=6
+CurrentView=5
 View0=0
 View1=1
 View2=2
 View3=3
 View4=4
 View5=5
-View6=6
-View7=7
-View8=8
-View9=9
-View10=10
-View11=11
-View12=12
-View13=13
-View14=14
-View15=15
-View16=16
-View17=17
-View18=18
-View19=19
-View20=20
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -189,150 +86,45 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
-CursorX=1
-CursorY=1
+Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
+CursorX=18
+CursorY=6
 TopLine=1
 LeftCol=1
 
 [View1]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
 [View2]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Clock_frm.cpp
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
 [View3]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp
 CursorX=1
 CursorY=1
 TopLine=1
 LeftCol=1
 
 [View4]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp
-CursorX=9
-CursorY=320
-TopLine=317
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
+CursorX=1
+CursorY=657
+TopLine=654
 LeftCol=1
 
 [View5]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Expose_frm.cpp
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
 CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View6]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View7]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View8]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\CORE.H
-CursorX=45
-CursorY=7
-TopLine=1
-LeftCol=1
-
-[View9]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View10]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Idlecheck_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View11]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Lupa_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View12]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
-CursorX=26
-CursorY=11
-TopLine=1
-LeftCol=1
-
-[View13]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.cpp
-CursorX=39
-CursorY=71
-TopLine=391
-LeftCol=1
-
-[View14]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
-CursorX=27
-CursorY=11
-TopLine=91
-LeftCol=1
-
-[View15]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View16]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View17]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View18]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp
-CursorX=1
-CursorY=1
-TopLine=1
-LeftCol=1
-
-[View19]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
-CursorX=1
-CursorY=45
-TopLine=17
-LeftCol=1
-
-[View20]
-Module=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
-CursorX=72
-CursorY=27
-TopLine=1
+CursorY=30
+TopLine=29
 LeftCol=1
 
 [Watches]
@@ -352,8 +144,8 @@ Left=42
 Top=15
 Width=1238
 Height=105
-MaxLeft=-1
-MaxTop=-1
+MaxLeft=-4
+MaxTop=-4
 MaxWidth=1288
 MaxHeight=105
 ClientWidth=1280
@@ -394,7 +186,7 @@ FlagPane=64
 
 [AlignmentPalette]
 Create=1
-Visible=0
+Visible=1
 State=0
 Left=200
 Top=107
@@ -409,8 +201,8 @@ ClientHeight=60
 Create=1
 Visible=1
 State=0
-Left=928
-Top=230
+Left=916
+Top=261
 Width=190
 Height=381
 MaxLeft=-1
@@ -420,10 +212,10 @@ ClientHeight=355
 TBDockHeight=381
 LRDockWidth=190
 Dockable=1
-SplitPos=85
+SplitPos=72
 ArrangeBy=Name
-SelectedItem=Icon
-ExpandedItems=
+SelectedItem=Anchors.akLeft
+ExpandedItems=Anchors,Constraints
 HiddenCategories=
 ShowStatusBar=1
 

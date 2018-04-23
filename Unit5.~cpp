@@ -25,3 +25,6 @@ void __fastcall TAlarm_form::Button1Click(TObject *Sender)
 Close();	
 }
 //---------------------------------------------------------------------------
+
+
+

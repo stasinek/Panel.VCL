@@ -5,10 +5,10 @@ object Expose_form: TExpose_form
   Height = 487
   Caption = 'Expose...'
   Color = clBackground
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'MS Sans Serif'
+  Font.Name = 'Tahoma'
   Font.Style = []
   Icon.Data = {
     0000010006001010100001000400280100006600000010100000010008006805

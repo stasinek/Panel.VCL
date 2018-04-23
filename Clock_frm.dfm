@@ -1,9 +1,9 @@
 object Clock_form: TClock_form
-  Left = 143
-  Top = 201
-  BorderStyle = bsToolWindow
+  Left = 921
+  Top = 566
+  BorderStyle = bsDialog
   Caption = 'Clock'
-  ClientHeight = 138
+  ClientHeight = 123
   ClientWidth = 320
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -18,8 +18,8 @@ object Clock_form: TClock_form
     Left = 0
     Top = 0
     Width = 320
-    Height = 89
-    Align = alTop
+    Height = 85
+    Align = alClient
     BevelOuter = bvNone
     Caption = '12:10:00'
     Font.Charset = EASTEUROPE_CHARSET
@@ -32,9 +32,9 @@ object Clock_form: TClock_form
   end
   object Panel2: TPanel
     Left = 0
-    Top = 90
+    Top = 85
     Width = 320
-    Height = 48
+    Height = 38
     Align = alBottom
     TabOrder = 1
   end

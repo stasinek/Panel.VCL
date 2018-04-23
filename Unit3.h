@@ -40,6 +40,9 @@ __published:	// IDE-managed Components
 	TBevel *Bevel1;
 	TTrackBar *TrackBar1;
 	void __fastcall Button2Click(TObject *Sender);
+    void __fastcall SpeedButton2Click(TObject *Sender);
+    void __fastcall SpeedButton4Click(TObject *Sender);
+    void __fastcall SpeedButton6Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);

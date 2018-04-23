@@ -87,8 +87,8 @@ void __fastcall TMain_form::tform_Load(void)
 {
 KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Main",true);
 
-#define des_height 34
-#define des_width 594
+#define des_height 36
+#define des_width 466
 
 if (KluczRejestuSystemuWindows->ValueExists("clientrect"))
    {KluczRejestuSystemuWindows->ReadBinaryData("clientrect",&options.clientrect, sizeof(RECT));
@@ -648,7 +648,7 @@ void __fastcall TMain_form::EXPERIMENTALExpose1Click(TObject *Sender)
 
 void __fastcall TMain_form::SpeedButton2Click(TObject *Sender)
 {
-Dni_form->Visible = SpeedButton2->Down;
+//Dni_form->Visible = SpeedButton2->Down;
 }
 //---------------------------------------------------------------------------
 
@@ -675,19 +675,42 @@ MenuItemCloseClick(Sender);
 
 void __fastcall TMain_form::SpeedButton6Click(TObject *Sender)
 {
-Form3->Visible = SpeedButton6->Down;
+//Form3->Visible = SpeedButton6->Down;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::SpeedButton1Click(TObject *Sender)
 {
-Alarm_form->Visible = SpeedButton1->Down;
+//Alarm_form->Visible = SpeedButton1->Down;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::ShowResolution1Click(TObject *Sender)
 {
 Form1->Visible = true;	
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain_form::SpeedButton7Click(TObject *Sender)
+{
+POINT cur;
+GetCursorPos(&cur);
+MainPopupMenu->Popup(cur.x,cur.y);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TMain_form::SpeedButtonMinimalizeClick(TObject *Sender)
+{
+Zeus_form->Visible=!Zeus_form->Visible;
+SetForegroundWindow(Zeus_form->Handle);
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TMain_form::Alarm1Click(TObject *Sender)
+{
+Alarm_form->Show();
 }
 //---------------------------------------------------------------------------
 

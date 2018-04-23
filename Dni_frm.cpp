@@ -81,9 +81,10 @@ else Left = Main_form->Left + Main_form->Width - this->Width;
 if (Main_form->Top + Main_form->Height + this->Height < deskRect.bottom)
      Top = Main_form->Top + Main_form->Height;
 else Top = Main_form->Top - this->Height;
-*/ShowWindow(Application->Handle,SW_SHOWNA);
-if (Main_form!=NULL ? Main_form->SpeedButton2!=NULL : false)
-	 Main_form->SpeedButton2->Down = true;
+*/
+ShowWindow(Application->Handle,SW_SHOWNA);
+//if (Main_form!=NULL ? Main_form->SpeedButton2!=NULL : false)
+//	 Main_form->SpeedButton2->Down = true;
 }
 //---------------------------------------------------------------------------
 
@@ -233,7 +234,7 @@ sprintf(tempChar,"DZIŒ=%02d:%02d, CA£OŒÆ=%02d godz %02d min",
         PassedTimeDzien.wMinute%60,
         PassedTime.wMinute/60,
         PassedTime.wMinute%60);
-Main_form->SpeedButton2->Hint = tempChar;
+//Main_form->SpeedButton2->Hint = tempChar;
 }
 //---------------------------------------------------------------------------
 

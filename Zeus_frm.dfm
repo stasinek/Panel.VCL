@@ -1,9 +1,9 @@
 object Zeus_form: TZeus_form
-  Left = 437
-  Top = 172
+  Left = 229
+  Top = 135
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = 'YOU GOD THE POWER :]'
+  Caption = 'ZEUS'
   ClientHeight = 416
   ClientWidth = 504
   Color = clBtnFace
@@ -14,6 +14,8 @@ object Zeus_form: TZeus_form
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poDefault
+  Scaled = False
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDestroy = FormDestroy

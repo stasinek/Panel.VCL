@@ -454,7 +454,6 @@ HANDLE hProcess;
     {TerminateProcess(hProcess, -1);
     }
 EXIT_KILL:
-        
 }
 //---------------------------------------------------------------------------
 
@@ -471,7 +470,6 @@ void __fastcall TZeus_form::FormDestroy(TObject *Sender)
 {
 delete Ruszacz;
 delete KluczRejestuSystemuWindows;
-        
 }
 //---------------------------------------------------------------------------
 
