@@ -203,7 +203,7 @@ void __fastcall TDesk_form::tform_Calculate_Rect()
 options.deskrect[0].bottom = options.clientrect.bottom  - 4;
 
   options.deskrect[1].left = 4;
- options.deskrect[1].right = options.deskrect[1].left   + (options.clientrect.right  - 16)/3;
+ options.deskrect[1].right = options.deskrect[1].left + (options.clientrect.right  - 16)/3;
    options.deskrect[1].top = 4;
 options.deskrect[1].bottom = options.deskrect[1].top + options.clientrect.bottom - 4;
 
@@ -216,6 +216,11 @@ options.deskrect[2].bottom = options.deskrect[1].bottom;
  options.deskrect[3].right = options.deskrect[3].left + (options.clientrect.right  - 16)/3;
    options.deskrect[3].top = options.deskrect[1].top;
 options.deskrect[3].bottom = options.deskrect[1].bottom;
+
+  options.deskrect[4].left = options.deskrect[3].right  + 4;
+ options.deskrect[4].right = options.deskrect[4].left + (options.clientrect.right  - 16)/3;
+   options.deskrect[4].top = options.deskrect[1].top;
+options.deskrect[4].bottom = options.deskrect[1].bottom;
 }
 //---------------------------------------------------------------------------
 
@@ -242,8 +247,8 @@ if (KluczRejestuSystemuWindows->ValueExists("clientrect"))
    {KluczRejestuSystemuWindows->ReadBinaryData("clientrect",&options.clientrect, sizeof(RECT));
    }
 else
-   {options.clientrect.right = 2*96+12;
-    options.clientrect.bottom = 2*72+12;
+   {options.clientrect.right = 4*96+12;
+    options.clientrect.bottom = 1*72+12;
    }
 if (KluczRejestuSystemuWindows->ValueExists("rect"))
    {KluczRejestuSystemuWindows->ReadBinaryData("rect",&options.rect, sizeof(RECT));
@@ -446,6 +451,8 @@ case 2: Main_form->SpeedButtonDesk2->Down = true;
 break;
 case 3: Main_form->SpeedButtonDesk3->Down = true;
 break;
+case 4: Main_form->SpeedButtonDesk4->Down = true;
+break;
 }
 if (redraw) tform_Redraw();
 return newDesk;
@@ -464,6 +471,9 @@ case '2':
 break;
 case '3':
 	Desktop_Switch(3,true);
+break;
+case '4':
+	Desktop_Switch(4,true);
 break;
 case '0':
 	Desktop_Switch(0,true);
@@ -613,35 +623,35 @@ N801->Checked = true;
 
 void __fastcall TDesk_form::SubMenuSizeClick(TObject *Sender)
 {
-if (options.clientrect.right==2*384+12 && options.clientrect.bottom==2*256+12)
+if (options.clientrect.right==4*384+12 && options.clientrect.bottom==1*256+12)
    {MenuItemSize384->Checked  = true;
    }
 else
-if (options.clientrect.right==2*256+12 && options.clientrect.bottom==2*192+12)
+if (options.clientrect.right==4*256+12 && options.clientrect.bottom==1*192+12)
    {MenuItemSize256->Checked  = true;
    }
 else
-if (options.clientrect.right==2*192+12 && options.clientrect.bottom==2*144+12)
+if (options.clientrect.right==4*192+12 && options.clientrect.bottom==1*144+12)
    {MenuItemSize192->Checked  = true;
    }
 else
-if (options.clientrect.right==2*144+12 && options.clientrect.bottom==2*108+12)
+if (options.clientrect.right==4*144+12 && options.clientrect.bottom==1*108+12)
    {MenuItemSize144->Checked  = true;
    }
 else
-if (options.clientrect.right==2*96+12 && options.clientrect.bottom==2*72+12)
+if (options.clientrect.right==4*96+12 && options.clientrect.bottom==1*72+12)
    {MenuItemSize96->Checked   = true;
    }
 else
-if (options.clientrect.right==2*64+12 && options.clientrect.bottom==2*48+12)
+if (options.clientrect.right==4*64+12 && options.clientrect.bottom==1*48+12)
    {MenuItemSize64->Checked   = true;
    }
 else
-if (options.clientrect.right==2*48+12 && options.clientrect.bottom==2*36+12)
+if (options.clientrect.right==4*48+12 && options.clientrect.bottom==1*36+12)
    {MenuItemSize48->Checked   = true;
    }
 else
-if (options.clientrect.right==2*32+12 && options.clientrect.bottom==2*24+12)
+if (options.clientrect.right==4*32+12 && options.clientrect.bottom==1*24+12)
    {MenuItemSize32->Checked   = true;
    }
 else
@@ -666,56 +676,56 @@ options.zorder = acc;
 
 void __fastcall TDesk_form::MenuItemSize32Click(TObject *Sender)
 {
-options.clientrect.right = 3*24+16; options.clientrect.bottom = 24+8;
+options.clientrect.right = 4*24+16; options.clientrect.bottom = 24+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize48Click(TObject *Sender)
 {
-options.clientrect.right = 3*48+12; options.clientrect.bottom = 48+8;
+options.clientrect.right = 4*48+12; options.clientrect.bottom = 48+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize64Click(TObject *Sender)
 {
-options.clientrect.right = 3*64+12; options.clientrect.bottom = 64+8;
+options.clientrect.right = 4*64+12; options.clientrect.bottom = 64+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize96Click(TObject *Sender)
 {
-options.clientrect.right = 3*96+12; options.clientrect.bottom = 96+8;
+options.clientrect.right = 4*96+12; options.clientrect.bottom = 96+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize144Click(TObject *Sender)
 {
-options.clientrect.right = 3*144+12; options.clientrect.bottom = 144+8;
+options.clientrect.right = 4*144+12; options.clientrect.bottom = 144+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize192Click(TObject *Sender)
 {
-options.clientrect.right = 3*192+12; options.clientrect.bottom = 192+8;
+options.clientrect.right = 4*192+12; options.clientrect.bottom = 192+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize256Click(TObject *Sender)
 {
-options.clientrect.right = 3*256+12; options.clientrect.bottom = 256+8;
+options.clientrect.right = 4*256+12; options.clientrect.bottom = 256+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TDesk_form::MenuItemSize384Click(TObject *Sender)
 {
-options.clientrect.right = 3*384+12; options.clientrect.bottom = 384+8;
+options.clientrect.right = 4*384+12; options.clientrect.bottom = 384+8;
 tform_Resize();
 }
 //---------------------------------------------------------------------------

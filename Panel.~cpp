@@ -25,7 +25,7 @@ USEFORM("Atab_frm.cpp", Atab_form);
 USEFORM("Move_frm.cpp", Move_form);
 USEFORM("Size_frm.cpp", Size_form);
 USEFORM("Expose_frm.cpp", Expose_form);
-USEFORM("./../../FORM_TEMPLATES/About_frm.cpp", AboutForm);
+USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
 USEFORM("Unit1.cpp", Form1);
@@ -41,6 +41,7 @@ USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
 USERES("Panel.res");
 USEUNIT("Core.cpp");
+USEFORM("Unit2.cpp", Form2);
 //---------------------------------------------------------------------------
 #pragma resource "manifest.res"
 //---------------------------------------------------------------------------
@@ -96,55 +97,61 @@ switch (aCode) {
 case VK_END: // kill application on top
 //------------------------------------
 if (Desktop->Action(KILL_PROCESS,GetForegroundWindow(),0,0))
-	 Tips_form->Execute("Proces: UBI£EM DZIADA!",true,false);
+	 Tips_form->Execute("Process: KILLED!",true,false);
 return true;
 //------------------------------------
 case VK_F5: // idle app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),IDLE_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET NISKI",true,true);
+	 Tips_form->Execute("Process: PRIORYTET NISKI",true,true);
 return true;
 //------------------------------------
 case VK_F6: // normal app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),NORMAL_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET NORMALNY",true,true);
+	 Tips_form->Execute("Process: PRIORYTET NORMALNY",true,true);
 return true;
 //------------------------------------
 case VK_F7: // high app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),HIGH_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET WYSOKI",true,true);
+	 Tips_form->Execute("Process: PRIORYTET WYSOKI",true,true);
 return true;
 //------------------------------------
 case VK_F8: // realtime app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),REALTIME_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET - CZAS RZECZYWISTY",true,true);
+	 Tips_form->Execute("Process: PRIORYTET - CZAS RZECZYWISTY",true,true);
 return true;
 //------------------------------------
 case '1': // switch to desk 1
 //------------------------------------
 Desk_form->Desktop_Switch(1,true);
-Tips_form->Execute("Biurko: 1",true,false);
+Tips_form->Execute("Desktop: 1",true,false);
 return true;
 //------------------------------------
 case '2': // switch to desk 2
 //------------------------------------
 Desk_form->Desktop_Switch(2,true);
-Tips_form->Execute("Biurko: 2",true,false);
+Tips_form->Execute("Desktop: 2",true,false);
 return true;
 //------------------------------------
 case '3': // switch to desk 3
 //------------------------------------
 Desk_form->Desktop_Switch(3,true);
-Tips_form->Execute("Biurko: 3",true,false);
+Tips_form->Execute("Desktop: 3",true,false);
 return true;
 //------------------------------------
-case '4': // switch to desk share
+case '4': // switch to desk 3
+//------------------------------------
+Desk_form->Desktop_Switch(4,true);
+Tips_form->Execute("Desktop: 4",true,false);
+return true;
+//------------------------------------
+case '5': // switch to desk share
 //------------------------------------
 Desk_form->Desktop_Switch(0,true);
-Tips_form->Execute("Biurko: *",true,false);
+Tips_form->Execute("Desktop: *",true,false);
 return true;
 //------------------------------------
 case VK_ADD: // increse zoom factor
@@ -396,7 +403,7 @@ try
 		Application->HintPause = 300;
 		Application->HintHidePause = 30000;
 		Application->CreateForm(__classid(TTips_form), &Tips_form);
-        Application->CreateForm(__classid(TZoom_form), &Zoom_form);
+         Application->CreateForm(__classid(TZoom_form), &Zoom_form);
          Application->CreateForm(__classid(TSize_form), &Size_form);
          Application->CreateForm(__classid(TLupa_form), &Lupa_form);
          Application->CreateForm(__classid(TDesk_form), &Desk_form);
@@ -415,6 +422,7 @@ try
          Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
          Application->CreateForm(__classid(TForm6), &Form6);
          Application->CreateForm(__classid(TForm7), &Form7);
+         Application->CreateForm(__classid(TForm2), &Form2);
          Application->ShowMainForm = false;
 		Main_form->tform_Initialize();
 		Lupa_form->tform_Initialize();

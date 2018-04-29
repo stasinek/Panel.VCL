@@ -4,24 +4,29 @@ File_1=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\
 File_2=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp',0,1,1,1,1,0,0
 File_3=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Size_frm.cpp',0,1,1,1,1,0,0
 File_4=SourceModule,'C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp',0,1,1,1,1,0,0
-File_5=SourceModule,'D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp',0,1,133,1,134,1,0
-File_6=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp',0,1,5,2,21,1,0
-File_7=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp',0,1,1,1,1,1,0
+File_5=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit3.cpp',0,1,5,2,21,1,0
 
 [Modules]
 Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
 Module1=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
 Module2=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp
-Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
-Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
-Module5=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
-Count=6
+Module3=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp
+Module4=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp
+Module5=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+Module6=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
+Module7=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp
+Module8=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr
+Module9=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Core.cpp
+Module10=C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp
+Module11=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp
+Module12=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp
+Count=13
 EditWindowCount=1
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=0
+FormOnTop=1
 
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp]
 ModuleType=SourceModule
@@ -31,40 +36,80 @@ FormOnTop=0
 [D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Idle_frm.cpp]
 ModuleType=SourceModule
 FormState=1
+FormOnTop=1
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp]
+ModuleType=SourceModule
+FormState=1
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=1
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp]
+[D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
 ModuleType=SourceModule
 FormState=1
-FormOnTop=1
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Core.cpp]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
 
 [C:\Program Files\Borland\CBuilder5\Projects\OBSOLETE\PROGS\Panel.VCL\Zoom_frm.cpp]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
-FormState=0
-FormOnTop=0
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Zeus_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
 
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Tips_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=6
-CurrentView=5
+ViewCount=15
+CurrentView=8
 View0=0
 View1=1
 View2=2
 View3=3
 View4=4
 View5=5
+View6=6
+View7=7
+View8=8
+View9=9
+View10=10
+View11=11
+View12=12
+View13=13
+View14=14
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -115,16 +160,79 @@ LeftCol=1
 
 [View4]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
-CursorX=1
-CursorY=657
-TopLine=654
-LeftCol=1
+CursorX=31
+CursorY=19
+TopLine=114
+LeftCol=154
 
 [View5]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.h
+CursorX=33
+CursorY=57
+TopLine=51
+LeftCol=1
+
+[View6]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Core.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View7]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.cpp
+CursorX=43
+CursorY=124
+TopLine=1
+LeftCol=1
+
+[View8]
 Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit5.cpp
 CursorX=1
 CursorY=30
 TopLine=29
+LeftCol=1
+
+[View9]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Atab_frm.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View10]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Dni_frm.cpp
+CursorX=77
+CursorY=82
+TopLine=61
+LeftCol=1
+
+[View11]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.cpp
+CursorX=91
+CursorY=221
+TopLine=201
+LeftCol=1
+
+[View12]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
+CursorX=1
+CursorY=23
+TopLine=20
+LeftCol=1
+
+[View13]
+Module=D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+CursorX=1
+CursorY=134
+TopLine=133
+LeftCol=1
+
+[View14]
+Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Desk_frm.h
+CursorX=1
+CursorY=1
+TopLine=101
 LeftCol=1
 
 [Watches]
@@ -144,8 +252,8 @@ Left=42
 Top=15
 Width=1238
 Height=105
-MaxLeft=-4
-MaxTop=-4
+MaxLeft=-1
+MaxTop=-1
 MaxWidth=1288
 MaxHeight=105
 ClientWidth=1280
@@ -214,7 +322,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=72
 ArrangeBy=Name
-SelectedItem=Anchors.akLeft
+SelectedItem=Alignment
 ExpandedItems=Anchors,Constraints
 HiddenCategories=
 ShowStatusBar=1

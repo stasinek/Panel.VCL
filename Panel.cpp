@@ -97,55 +97,61 @@ switch (aCode) {
 case VK_END: // kill application on top
 //------------------------------------
 if (Desktop->Action(KILL_PROCESS,GetForegroundWindow(),0,0))
-	 Tips_form->Execute("Proces: UBI£EM DZIADA!",true,false);
+	 Tips_form->Execute("Process: KILLED!",true,false);
 return true;
 //------------------------------------
 case VK_F5: // idle app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),IDLE_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET NISKI",true,true);
+	 Tips_form->Execute("Process: PRIORITY NISKI",true,true);
 return true;
 //------------------------------------
 case VK_F6: // normal app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),NORMAL_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET NORMALNY",true,true);
+	 Tips_form->Execute("Process: PRIORITY NORMALNY",true,true);
 return true;
 //------------------------------------
 case VK_F7: // high app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),HIGH_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET WYSOKI",true,true);
+	 Tips_form->Execute("Process: PRIORITY WYSOKI",true,true);
 return true;
 //------------------------------------
 case VK_F8: // realtime app
 //------------------------------------
 if (Desktop->Action(SET_PRIORITY,GetForegroundWindow(),REALTIME_PRIORITY_CLASS,0))
-	 Tips_form->Execute("Proces: PRIORYTET - CZAS RZECZYWISTY",true,true);
+	 Tips_form->Execute("Process: PRIORITY - CZAS RZECZYWISTY",true,true);
 return true;
 //------------------------------------
 case '1': // switch to desk 1
 //------------------------------------
 Desk_form->Desktop_Switch(1,true);
-Tips_form->Execute("Biurko: 1",true,false);
+Tips_form->Execute("Desktop: 1",true,false);
 return true;
 //------------------------------------
 case '2': // switch to desk 2
 //------------------------------------
 Desk_form->Desktop_Switch(2,true);
-Tips_form->Execute("Biurko: 2",true,false);
+Tips_form->Execute("Desktop: 2",true,false);
 return true;
 //------------------------------------
 case '3': // switch to desk 3
 //------------------------------------
 Desk_form->Desktop_Switch(3,true);
-Tips_form->Execute("Biurko: 3",true,false);
+Tips_form->Execute("Desktop: 3",true,false);
 return true;
 //------------------------------------
-case '4': // switch to desk share
+case '4': // switch to desk 3
+//------------------------------------
+Desk_form->Desktop_Switch(4,true);
+Tips_form->Execute("Desktop: 4",true,false);
+return true;
+//------------------------------------
+case '5': // switch to desk share
 //------------------------------------
 Desk_form->Desktop_Switch(0,true);
-Tips_form->Execute("Biurko: *",true,false);
+Tips_form->Execute("Desktop: *",true,false);
 return true;
 //------------------------------------
 case VK_ADD: // increse zoom factor

@@ -17,9 +17,11 @@ object Alarm_form: TAlarm_form
     Left = 0
     Top = 0
     Width = 710
-    Height = 408
+    Height = 412
     Align = alClient
     BevelOuter = bvNone
+    Constraints.MinHeight = 408
+    Constraints.MinWidth = 710
     TabOrder = 1
     object Label2: TLabel
       Left = 16
@@ -52,12 +54,14 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 61
       Height = 22
+      AllowAllUp = True
     end
-    object SpeedButton8: TSpeedButton
+    object SpeedButton7: TSpeedButton
       Left = 180
       Top = 104
       Width = 21
       Height = 22
+      AllowAllUp = True
       Caption = 'S'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clRed
@@ -66,11 +70,12 @@ object Alarm_form: TAlarm_form
       Font.Style = []
       ParentFont = False
     end
-    object SpeedButton7: TSpeedButton
+    object SpeedButton6: TSpeedButton
       Left = 156
       Top = 104
       Width = 21
       Height = 22
+      AllowAllUp = True
       Caption = 'S'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clGreen
@@ -84,6 +89,7 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 23
       Height = 22
+      AllowAllUp = True
       Caption = '5'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clNavy
@@ -97,6 +103,7 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 23
       Height = 22
+      AllowAllUp = True
       Caption = '4'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clNavy
@@ -110,6 +117,7 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 23
       Height = 22
+      AllowAllUp = True
       Caption = '3'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clNavy
@@ -123,6 +131,7 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 23
       Height = 22
+      AllowAllUp = True
       Caption = '2'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clNavy
@@ -136,6 +145,7 @@ object Alarm_form: TAlarm_form
       Top = 104
       Width = 23
       Height = 22
+      AllowAllUp = True
       Caption = '1'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clNavy
@@ -145,11 +155,17 @@ object Alarm_form: TAlarm_form
       ParentFont = False
     end
     object CheckBox1: TCheckBox
-      Left = 292
+      Left = 300
       Top = 108
-      Width = 181
+      Width = 157
       Height = 17
       Caption = 'DRZEMKA'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
     end
     object ComboBoxEx1: TComboBox
@@ -187,7 +203,7 @@ object Alarm_form: TAlarm_form
       Left = 484
       Top = 0
       Width = 226
-      Height = 408
+      Height = 412
       Align = alRight
       Anchors = [akLeft, akTop, akRight, akBottom]
       ItemHeight = 13
@@ -196,30 +212,32 @@ object Alarm_form: TAlarm_form
   end
   object Panel1: TPanel
     Left = 0
-    Top = 408
+    Top = 412
     Width = 710
-    Height = 54
+    Height = 50
     Align = alBottom
-    Anchors = [akLeft, akTop, akRight, akBottom]
     BevelOuter = bvLowered
     TabOrder = 0
     object Label1: TLabel
-      Left = 18
-      Top = 6
-      Width = 148
-      Height = 45
-      Alignment = taRightJustify
+      Left = 1
+      Top = 1
+      Width = 164
+      Height = 48
+      Align = alLeft
+      Alignment = taCenter
       Caption = '12:00:01'
+      Color = clInfoBk
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
       Font.Height = -32
       Font.Name = 'Arial Black'
       Font.Style = [fsBold]
+      ParentColor = False
       ParentFont = False
     end
     object Button1: TButton
       Left = 543
-      Top = 16
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]
@@ -228,8 +246,8 @@ object Alarm_form: TAlarm_form
       OnClick = Button1Click
     end
     object Button2: TButton
-      Left = 625
-      Top = 16
+      Left = 621
+      Top = 12
       Width = 75
       Height = 25
       Anchors = [akTop, akRight]

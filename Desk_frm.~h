@@ -47,7 +47,6 @@ __published:	// IDE-managed Components
 		  TMenuItem *MenuItemZbierz;
 		  TMenuItem *MenuItemTop;
 		  TMenuItem *MenuItemZwin;
-		  TMenuItem *N7;
         TMenuItem *N101;
         TMenuItem *N3;
         TMenuItem *MenuItemSize384;

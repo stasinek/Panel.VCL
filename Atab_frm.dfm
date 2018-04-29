@@ -1,6 +1,6 @@
 object Atab_form: TAtab_form
-  Left = 408
-  Top = 187
+  Left = 60
+  Top = 148
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'CTRL+ALT+TAB'
@@ -25,7 +25,7 @@ object Atab_form: TAtab_form
     Left = 0
     Top = 0
     Width = 390
-    Height = 313
+    Height = 317
     Align = alTop
     BevelOuter = bvLowered
     UseDockManager = False

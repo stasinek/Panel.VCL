@@ -27,8 +27,8 @@ __published:	// IDE-managed Components
     TCheckBox *CheckBox1;
     TComboBox *ComboBoxEx1;
     TSpeedButton *SpeedButton9;
-    TSpeedButton *SpeedButton8;
     TSpeedButton *SpeedButton7;
+    TSpeedButton *SpeedButton6;
     TSpeedButton *SpeedButton5;
     TSpeedButton *SpeedButton4;
     TSpeedButton *SpeedButton3;

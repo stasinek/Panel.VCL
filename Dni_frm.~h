@@ -31,6 +31,7 @@ __published:	// IDE-managed Components
     TListBox *ListBox1;
     TTimer *Timer1;
     TAdvancedBar *AdvancedBar1;
+    TButton *Button1;
     void __fastcall Timer1Timer(TObject *Sender);
     void __fastcall MenuItem11Click(TObject *Sender);
     void __fastcall FormCreate(TObject *Sender);
@@ -40,6 +41,7 @@ __published:	// IDE-managed Components
 	void __fastcall MenuItem12Click(TObject *Sender);
         void __fastcall ListBox1MouseUp(TObject *Sender,
           TMouseButton Button, TShiftState Shift, int X, int Y);
+    void __fastcall Button1Click(TObject *Sender);
     
 private:	// User declarations
 //---------------------------------------------------------------------------

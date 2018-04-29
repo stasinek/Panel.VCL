@@ -1237,7 +1237,7 @@ object Main_form: TMain_form
     NumGlyphs = 4
     ParentFont = False
     Spacing = 0
-    OnClick = SpeedButtonDesk3Click
+    OnClick = SpeedButtonDesk4Click
     OnMouseUp = SpeedButton2XMouseUp
   end
   object Bevel4: TBevel
@@ -1251,7 +1251,7 @@ object Main_form: TMain_form
     Left = 12
     Top = 5
     Width = 70
-    Height = 25
+    Height = 24
     BevelOuter = bvNone
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
@@ -1267,7 +1267,7 @@ object Main_form: TMain_form
       Left = 0
       Top = 0
       Width = 70
-      Height = 25
+      Height = 24
       Align = alClient
       Center = True
       Picture.Data = {

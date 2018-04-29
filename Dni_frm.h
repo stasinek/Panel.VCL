@@ -27,11 +27,13 @@ typedef struct __wpis
 class TDni_form : public TForm
 {
 __published:	// IDE-managed Components
+    TTimer *Timer1;
+    TPanel *Panel1;
+    TButton *Button1;
+    TAdvancedBar *AdvancedBar1;
+    TPanel *Panel2;
     TBarGraph *BarGraph1;
     TListBox *ListBox1;
-    TTimer *Timer1;
-    TAdvancedBar *AdvancedBar1;
-    TButton *Button1;
     void __fastcall Timer1Timer(TObject *Sender);
     void __fastcall MenuItem11Click(TObject *Sender);
     void __fastcall FormCreate(TObject *Sender);

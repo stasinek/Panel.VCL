@@ -8,11 +8,11 @@ object Atab_form: TAtab_form
   ClientWidth = 390
   Color = clBtnFace
   DefaultMonitor = dmMainForm
-  Font.Charset = DEFAULT_CHARSET
+  Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
-  Font.Name = 'Default'
-  Font.Style = []
+  Font.Name = 'Tahoma'
+  Font.Style = [fsBold]
   FormStyle = fsStayOnTop
   OldCreateOrder = False
   Position = poScreenCenter

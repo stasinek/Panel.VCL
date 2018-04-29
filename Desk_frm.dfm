@@ -1,11 +1,11 @@
 object Desk_form: TDesk_form
-  Left = 668
+  Left = 635
   Top = 175
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Biurka...'
   ClientHeight = 135
-  ClientWidth = 519
+  ClientWidth = 552
   Color = clBtnFace
   Constraints.MinHeight = 20
   Constraints.MinWidth = 20
@@ -202,6 +202,10 @@ object Desk_form: TDesk_form
         Hint = 'Przenosi okna na...'
         OnClick = MenuItemBiurko1Click
       end
+      object MenuItemBiurko1: TMenuItem
+        Caption = 'Desk 1'
+        Hint = 'Przenosi okna na...'
+      end
       object MenuItemBiurko2: TMenuItem
         Caption = 'Desk 2'
         Hint = 'Przenosi okna na...'
@@ -216,10 +220,6 @@ object Desk_form: TDesk_form
         Caption = 'Desk 4'
         Hint = 'Przenosi okna na...'
         OnClick = MenuItemBiurko4Click
-      end
-      object MenuItemBiurko1: TMenuItem
-        Caption = 'Desk 1'
-        Hint = 'Przenosi okna na...'
       end
       object MenuItemBiurko0: TMenuItem
         Caption = 'Shared desk'

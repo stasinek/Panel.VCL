@@ -4,8 +4,8 @@ object Form1: TForm1
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Zmiana parametrów ekranu.'
-  ClientHeight = 233
-  ClientWidth = 365
+  ClientHeight = 243
+  ClientWidth = 438
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -13,7 +13,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
-  Position = poDefault
+  Position = poScreenCenter
   OnClose = FormClose
   OnPaint = FormPaint
   OnShow = FormShow
@@ -22,20 +22,19 @@ object Form1: TForm1
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 365
-    Height = 33
+    Width = 438
+    Height = 41
     Align = alTop
     BevelOuter = bvNone
     FullRepaint = False
     TabOrder = 0
     object SpeedButton1: TSpeedButton
-      Left = 6
-      Top = 2
+      Left = 358
+      Top = 4
       Width = 29
       Height = 29
       Hint = 'Zwin/rozwin okno.'
       AllowAllUp = True
-      Anchors = [akLeft, akTop, akBottom]
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -88,8 +87,8 @@ object Form1: TForm1
       OnClick = SpeedButton1Click
     end
     object Label2: TLabel
-      Left = 270
-      Top = 10
+      Left = 294
+      Top = 12
       Width = 14
       Height = 13
       Caption = 'Hz'
@@ -101,11 +100,12 @@ object Form1: TForm1
       ParentFont = False
     end
     object SpeedButton2: TSpeedButton
-      Left = 328
-      Top = 2
+      Left = 391
+      Top = 4
       Width = 31
       Height = 29
       Hint = 'USTAW'
+      Anchors = [akTop, akRight]
       Glyph.Data = {
         06020000424D0602000000000000760000002800000028000000140000000100
         0400000000009001000000000000000000001000000000000000000000000000
@@ -128,11 +128,12 @@ object Form1: TForm1
       OnClick = SpeedButton2Click
     end
     object SpeedButton3: TSpeedButton
-      Left = 296
-      Top = 2
+      Left = 325
+      Top = 4
       Width = 29
       Height = 29
       Hint = 'POMOC'
+      Anchors = [akTop, akRight]
       Caption = '?'
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
@@ -143,9 +144,9 @@ object Form1: TForm1
       OnClick = SpeedButton3Click
     end
     object ComboBox4: TComboBox
-      Left = 221
-      Top = 5
-      Width = 44
+      Left = 237
+      Top = 8
+      Width = 52
       Height = 21
       Hint = 'Hz'
       Font.Charset = EASTEUROPE_CHARSET
@@ -168,11 +169,13 @@ object Form1: TForm1
         '90'
         '100'
         '110'
-        '120')
+        '120'
+        '144'
+        '160')
     end
     object ComboBox3: TComboBox
-      Left = 173
-      Top = 5
+      Left = 185
+      Top = 8
       Width = 44
       Height = 21
       Hint = '8,16,24,32 bit'
@@ -192,9 +195,9 @@ object Form1: TForm1
         '32')
     end
     object ComboBox1: TComboBox
-      Left = 88
-      Top = 5
-      Width = 81
+      Left = 76
+      Top = 8
+      Width = 97
       Height = 21
       Hint = 'X*Y pixeli'
       Font.Charset = EASTEUROPE_CHARSET
@@ -251,8 +254,8 @@ object Form1: TForm1
         '4096x3112')
     end
     object ComboBox2: TComboBox
-      Left = 40
-      Top = 5
+      Left = 20
+      Top = 8
       Width = 41
       Height = 21
       Hint = 'Monitor nr.'
@@ -268,10 +271,10 @@ object Form1: TForm1
   end
   object Panel2: TPanel
     Left = 0
-    Top = 33
-    Width = 366
-    Height = 200
-    Anchors = [akLeft, akTop, akRight]
+    Top = 41
+    Width = 438
+    Height = 202
+    Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
     FullRepaint = False
@@ -279,38 +282,50 @@ object Form1: TForm1
     object Image1: TImage
       Left = 16
       Top = 18
-      Width = 334
-      Height = 135
+      Width = 406
+      Height = 137
       Anchors = [akLeft, akTop, akRight, akBottom]
     end
     object SpeedButton4: TSpeedButton
       Left = 16
       Top = 16
-      Width = 57
-      Height = 22
+      Width = 65
+      Height = 29
       Hint = 'Pokaz liste'
       Caption = 'LISTA'
       Enabled = False
     end
     object Button2: TButton
-      Left = 213
-      Top = 164
+      Left = 285
+      Top = 166
       Width = 67
-      Height = 22
+      Height = 27
       Hint = 'NIZSZA'
       Anchors = [akRight, akBottom]
       Caption = '<'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
       OnClick = Button2Click
     end
     object Button3: TButton
-      Left = 285
-      Top = 164
+      Left = 357
+      Top = 166
       Width = 67
-      Height = 22
+      Height = 27
       Hint = 'WYZSZA'
       Anchors = [akRight, akBottom]
       Caption = '>'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 1
       OnClick = Button3Click
     end
