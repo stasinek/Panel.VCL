@@ -566,10 +566,9 @@ SetForegroundWindow(Lupa_form->Handle);
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TMain_form::MenuItemZwinClick(TObject*)
+void __fastcall TMain_form::MenuItemZwinClick(TObject*Sender)
 {
-this->Visible=!this->Visible;
-SetForegroundWindow(Main_form->Handle);
+MenuItemCloseClick(Sender);
 }
 //---------------------------------------------------------------------------
 

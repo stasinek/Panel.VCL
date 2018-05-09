@@ -13,6 +13,7 @@
 #pragma link "exedlg"
 //#pragma link "..\\..\\Classes\\TSoft_DeskSwitcher.obj"
 #pragma package(smart_init)
+#pragma link "FRAMEPAN"
 #pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TLupa_form *Lupa_form;

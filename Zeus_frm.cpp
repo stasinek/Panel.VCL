@@ -67,7 +67,7 @@ if (options.visible) this->Show();
 
 void __fastcall TZeus_form::tform_Load(void)
 {
-KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Expose",true);
+KluczRejestuSystemuWindows->OpenKey("Software\\TSoft\\Panel\\Expose",true);
 
 
 if (KluczRejestuSystemuWindows->ValueExists("rect"))
@@ -79,15 +79,18 @@ else
    }
 if (KluczRejestuSystemuWindows->ValueExists("clientrect"))
    {KluczRejestuSystemuWindows->ReadBinaryData("clientrect",&options.clientrect, sizeof(RECT));
-    if (options.clientrect.right-options.clientrect.left != 385 || options.clientrect.bottom-options.clientrect.top != 30)
-        {options.clientrect.right = 385;
-         options.clientrect.bottom = 30;
+    if (options.clientrect.right-options.clientrect.right < 512 || options.clientrect.bottom-options.clientrect.bottom < 462)
+        {options.clientrect.right = 512;
+         options.clientrect.bottom = 462;
          options.clientrect.left = 0;
-         options.clientrect.top = 0;}
+         options.clientrect.top = 0;
+        }
    }
 else
-   {options.clientrect.right = 385;
-    options.clientrect.bottom = 30;
+   {options.clientrect.right = 512;
+    options.clientrect.bottom = 462;
+    options.clientrect.left = 0;
+    options.clientrect.top = 0;
    }
 if (KluczRejestuSystemuWindows->ValueExists("zoomed"))
    {options.zoomed = KluczRejestuSystemuWindows->ReadBool("zoomed");

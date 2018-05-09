@@ -110,7 +110,7 @@ setmem(&PassedTime,sizeof(SYSTEMTIME),0x00);
 memmove(&LocalTimeDzien,&LocalTime,sizeof(SYSTEMTIME));
 setmem(&PassedTimeDzien,sizeof(SYSTEMTIME),0x00);
 //
-BarGraph1->BarCount = 0;
+//BarGraph1->BarCount = 0;
 Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",true);
 TStringList *DateNames = new TStringList;
 Klucz->GetValueNames(DateNames);
@@ -126,7 +126,7 @@ for (;DateNames->Count > 0;)
  if (DateNames->Count==0)
     {DateNames->Add(LocalTimeToString(LocalTime)+" = __:__");
      ListBox1->Items->Add(DateNames->Strings[0]);
-     BarGraph1->AddBar();
+     //BarGraph1->AddBar();
      PassedTime.wDay = 1;
      return;
     }
@@ -163,8 +163,8 @@ for (timeTmp.wMonth = timeBgn.wMonth; timeTmp.wMonth <= timeEnd.wMonth; timeTmp.
          {
          if (index < DateNames->Count ? LocalTimeToString(timeTmp)==DateNames->Strings[index] : false)
             {minutes = Klucz->ReadInteger(DateNames->Strings[index]);
-             BarGraph1->AddData(clRed,minutes);
-             BarGraph1->AddBar();
+             //BarGraph1->AddData(clRed,minutes);
+             //BarGraph1->AddBar();
              PassedTime.wMinute +=minutes;
              char tempChar[16];
              sprintf(tempChar," = %02d:%02d",minutes/60,minutes%60);
@@ -173,8 +173,8 @@ for (timeTmp.wMonth = timeBgn.wMonth; timeTmp.wMonth <= timeEnd.wMonth; timeTmp.
              index++;
             }
          else
-            {BarGraph1->AddData(clRed,0);
-             BarGraph1->AddBar();
+            {//BarGraph1->AddData(clRed,0);
+             //BarGraph1->AddBar();
              ListBox1->Items->Add(LocalTimeToString(timeTmp)
                                   + " = __:__");
             }
@@ -205,11 +205,11 @@ if (LocalTimeDzien.wDay!=LocalTime.wDay || LocalTimeDzien.wMonth!=LocalTime.wMon
     sprintf(tempChar," = %02d:%02d",PassedTimeDzien.wMinute/60,PassedTimeDzien.wMinute%60);
     ListBox1->Items->Strings[ListBox1->Items->Count-1] = LocalTimeToString(LocalTimeDzien)
                                                          + (String)tempChar;
-    BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
+    //BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
     Post();
     PassedTimeDzien.wMinute = 0;
     LocalTimeDzien = LocalTimeOld = LocalTime;
-    BarGraph1->AddBar();
+    //BarGraph1->AddBar();
     ListBox1->Items->Add(LocalTimeToString(LocalTime)
                          + " = __:__");
    }
@@ -218,14 +218,14 @@ if (LocalTime.wMinute >= LocalTimeOld.wMinute+1 || LocalTime.wHour!=LocalTimeOld
     int diff = (LocalTime.wMinute+60*LocalTime.wHour)-(LocalTimeOld.wMinute+60*LocalTimeOld.wHour);
     PassedTimeDzien.wMinute += diff;
     PassedTime.wMinute += diff;
-    BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
+    //BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
    }
 if (LocalTime.wMinute >= LocalTimeOld.wMinute+5 || LocalTime.wHour!=LocalTimeOld.wHour)
    {
     sprintf(tempChar," = %02d:%02d",PassedTimeDzien.wMinute/60,PassedTimeDzien.wMinute%60);
     ListBox1->Items->Strings[ListBox1->Items->Count-1] = LocalTimeToString(LocalTime)
                                                          + (String)tempChar;
-    BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
+    //BarGraph1->Data[BarGraph1->BarCount-1][clRed] = PassedTimeDzien.wMinute;
     Post();
     LocalTimeOld = LocalTime;
    }
@@ -260,7 +260,7 @@ return time;
 
 void __fastcall TDni_form::MenuItem12Click(TObject *Sender)
 {
-Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",false);
+/*Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",false);
 int margin,i;
 for (margin = true, i = ListBox1->Items->Count-1; i >= 0; i--)
     {if (ListBox1->Selected[i] ? true : (BarGraph1->Data[i][clRed]==0 && margin==true))
@@ -289,6 +289,7 @@ for (margin = true, i = 0; i <= ListBox1->Items->Count-1; i++)
     else margin = false;
    }
 Klucz->CloseKey();
+*/
 }
 //---------------------------------------------------------------------------
 

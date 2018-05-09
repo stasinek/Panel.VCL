@@ -4,8 +4,8 @@ object Lupa_form: TLupa_form
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Magnifier...'
-  ClientHeight = 118
-  ClientWidth = 182
+  ClientHeight = 330
+  ClientWidth = 380
   Color = clBtnFace
   DefaultMonitor = dmMainForm
   Font.Charset = ANSI_CHARSET

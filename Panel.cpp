@@ -34,14 +34,15 @@ USEFORM("Unit4.cpp", Uruchom);
 USEFORM("Unit5.cpp", Alarm_form);
 USEFORM("Idle_frm.cpp", Form6);
 USEFORM("Idlecheck_frm.cpp", Form7);
-USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
+USEUNIT("D:\x86_win32_classes\tsoft_Context.cpp");
+USEUNIT("D:\x86_win32_classes\tsoft_WindowsCollector.cpp");
+USEUNIT("D:\x86_win32_classes\tsoft_WindowsMover.cpp");
+USEUNIT("D:\x86_win32_classes\tsoft_WindowsSnap.cpp");
+USEUNIT("D:\x86_win32_classes\tsoft_WindowsTile.cpp");
 USERES("Panel.res");
 USEUNIT("Core.cpp");
 USEFORM("Unit2.cpp", Form2);
+USEFORM("D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Numpad_frm.cpp", Numpad);
 //---------------------------------------------------------------------------
 #pragma resource "manifest.res"
 //---------------------------------------------------------------------------
@@ -423,6 +424,7 @@ try
          Application->CreateForm(__classid(TForm6), &Form6);
          Application->CreateForm(__classid(TForm7), &Form7);
          Application->CreateForm(__classid(TForm2), &Form2);
+         Application->CreateForm(__classid(TNumpad), &Numpad);
          Application->ShowMainForm = false;
 		Main_form->tform_Initialize();
 		Lupa_form->tform_Initialize();

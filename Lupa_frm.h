@@ -11,6 +11,7 @@
 #include <Controls.hpp>
 #include "exedlg.h"
 #include "Core.h"
+#include "FRAMEPAN.h"
 //---------------------------------------------------------------------------
 class TLupa_form : public TForm
 {

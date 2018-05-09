@@ -27,6 +27,8 @@ object Dni_form: TDni_form
       Top = 13
       Width = 221
       Height = 20
+      TextBackColor = clHighlight
+      TextSuffix = '%'
     end
     object Button1: TButton
       Left = 472
@@ -53,12 +55,11 @@ object Dni_form: TDni_form
       Top = 1
       Width = 366
       Height = 335
+      Align = alClient
       BorderKind = bNone
       BorderSize = bDouble
-      Align = alClient
       Color = clGray
       GridColor = clGreen
-      BarCount = 10
     end
     object ListBox1: TListBox
       Left = 1
