@@ -2,17 +2,17 @@
  <guiObject>
   <name>Clock_form</name>
   <class>TClock_form</class>
-  <Left>556</Left>
-  <Top>256</Top>
-  <BorderStyle>bsToolWindow</BorderStyle>
+  <Left>921</Left>
+  <Top>566</Top>
+  <BorderStyle>bsDialog</BorderStyle>
   <Caption>'Clock'</Caption>
-  <ClientHeight>138</ClientHeight>
+  <ClientHeight>123</ClientHeight>
   <ClientWidth>320</ClientWidth>
   <Color>clBtnFace</Color>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
   <OldCreateOrder>False</OldCreateOrder>
   <PixelsPerInch>96</PixelsPerInch>
@@ -23,8 +23,8 @@
    <Left>0</Left>
    <Top>0</Top>
    <Width>320</Width>
-   <Height>89</Height>
-   <Align>alTop</Align>
+   <Height>85</Height>
+   <Align>alClient</Align>
    <BevelOuter>bvNone</BevelOuter>
    <Caption>'12:10:00'</Caption>
    <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
@@ -39,9 +39,9 @@
    <name>Panel2</name>
    <class>TPanel</class>
    <Left>0</Left>
-   <Top>90</Top>
+   <Top>85</Top>
    <Width>320</Width>
-   <Height>48</Height>
+   <Height>38</Height>
    <Align>alBottom</Align>
    <TabOrder>1</TabOrder>
   </guiObject>

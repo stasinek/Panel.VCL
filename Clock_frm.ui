@@ -4,10 +4,10 @@
  <widget class="QWidget" name="Clock_form">
   <property name="geometry">
    <rect>
-    <x>556</x>
-    <y>256</y>
+    <x>921</x>
+    <y>566</y>
     <width>320</width>
-    <height>138</height>
+    <height>123</height>
    </rect>
   </property>
   <property name="toolTip">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>320</width>
-     <height>89</height>
+     <height>85</height>
     </rect>
    </property>
    <property name="text">
@@ -85,9 +85,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>90</y>
+     <y>85</y>
      <width>320</width>
-     <height>48</height>
+     <height>38</height>
     </rect>
    </property>
    <property name="text">

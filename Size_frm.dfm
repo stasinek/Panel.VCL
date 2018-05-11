@@ -1,6 +1,6 @@
 object Size_form: TSize_form
-  Left = 586
-  Top = 345
+  Left = 674
+  Top = 340
   BorderIcons = [biSystemMenu]
   BorderStyle = bsToolWindow
   Caption = 'Advanced: Size...'
@@ -50,6 +50,7 @@ object Size_form: TSize_form
       Top = 16
       Width = 282
       Height = 32
+      LineSize = 10
       Max = 1024
       Min = 32
       Orientation = trHorizontal
@@ -77,6 +78,7 @@ object Size_form: TSize_form
       Top = 16
       Width = 282
       Height = 32
+      LineSize = 10
       Max = 768
       Min = 24
       Orientation = trHorizontal

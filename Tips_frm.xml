@@ -1,0 +1,47 @@
+<guiRoot>
+ <guiObject>
+  <name>Tips_form</name>
+  <class>TTips_form</class>
+  <Left>179</Left>
+  <Top>131</Top>
+  <BorderIcons>[]</BorderIcons>
+  <BorderStyle>bsNone</BorderStyle>
+  <Caption>'Progress...'</Caption>
+  <ClientHeight>32</ClientHeight>
+  <ClientWidth>254</ClientWidth>
+  <Color>clInfoBk</Color>
+  <DefaultMonitor>dmMainForm</DefaultMonitor>
+  <Enabled>False</Enabled>
+  <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-16</Font.Height>
+  <Font.Name>'Trebuchet MS'</Font.Name>
+  <Font.Style>[fsBold]</Font.Style>
+  <OldCreateOrder>True</OldCreateOrder>
+  <Position>poDefault</Position>
+  <PrintScale>poNone</PrintScale>
+  <Scaled>False</Scaled>
+  <OnActivate>FormActivate</OnActivate>
+  <OnClick>Ramka1Click</OnClick>
+  <OnDblClick>Ramka1Click</OnDblClick>
+  <OnHide>FormHide</OnHide>
+  <OnPaint>FormPaint</OnPaint>
+  <PixelsPerInch>96</PixelsPerInch>
+  <TextHeight>22</TextHeight>
+  <guiObject>
+   <name>Ramka1</name>
+   <class>TRamka</class>
+   <Width>254</Width>
+   <Height>32</Height>
+   <Align>alClient</Align>
+   <BorderKind>bRect</BorderKind>
+   <Color>clNone</Color>
+   <OnMouseDown>Ramka1MouseDown</OnMouseDown>
+   <OnClick>Ramka1Click</OnClick>
+   <OnDblClick>Ramka1Click</OnDblClick>
+   <Caption>'Ramka1'</Caption>
+   <ControlStyle>[csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]</ControlStyle>
+   <Parent>Owner</Parent>
+  </guiObject>
+ </guiObject>
+</guiRoot>

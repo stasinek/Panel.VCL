@@ -2,8 +2,8 @@
  <guiObject>
   <name>Atab_form</name>
   <class>TAtab_form</class>
-  <Left>408</Left>
-  <Top>187</Top>
+  <Left>60</Left>
+  <Top>148</Top>
   <BorderIcons>[]</BorderIcons>
   <BorderStyle>bsSingle</BorderStyle>
   <Caption>'CTRL+ALT+TAB'</Caption>
@@ -11,11 +11,11 @@
   <ClientWidth>390</ClientWidth>
   <Color>clBtnFace</Color>
   <DefaultMonitor>dmMainForm</DefaultMonitor>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'Default'</Font.Name>
-  <Font.Style>[]</Font.Style>
+  <Font.Name>'Tahoma'</Font.Name>
+  <Font.Style>[fsBold]</Font.Style>
   <FormStyle>fsStayOnTop</FormStyle>
   <OldCreateOrder>False</OldCreateOrder>
   <Position>poScreenCenter</Position>
@@ -30,7 +30,7 @@
    <Left>0</Left>
    <Top>0</Top>
    <Width>390</Width>
-   <Height>313</Height>
+   <Height>317</Height>
    <Align>alTop</Align>
    <BevelOuter>bvLowered</BevelOuter>
    <UseDockManager>False</UseDockManager>

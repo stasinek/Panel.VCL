@@ -2,35 +2,19 @@
  <guiObject>
   <name>Form6</name>
   <class>TForm6</class>
-  <Left>57</Left>
-  <Top>366</Top>
+  <Left>684</Left>
+  <Top>162</Top>
   <Width>339</Width>
   <Height>188</Height>
-  <Caption>'Zamknij po bezczynno'#347'ci przez..'</Caption>
   <Color>clBtnFace</Color>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
-  <OldCreateOrder>False</OldCreateOrder>
+  <OldCreateOrder>True</OldCreateOrder>
   <PixelsPerInch>96</PixelsPerInch>
   <TextHeight>13</TextHeight>
-  <guiObject>
-   <name>Label1</name>
-   <class>TLabel</class>
-   <Left>160</Left>
-   <Top>54</Top>
-   <Width>29</Width>
-   <Height>54</Height>
-   <Caption>':'</Caption>
-   <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
-   <Font.Color>clWindowText</Font.Color>
-   <Font.Height>-48</Font.Height>
-   <Font.Name>'Courier New'</Font.Name>
-   <Font.Style>[fsBold]</Font.Style>
-   <ParentFont>False</ParentFont>
-  </guiObject>
   <guiObject>
    <name>Label2</name>
    <class>TLabel</class>

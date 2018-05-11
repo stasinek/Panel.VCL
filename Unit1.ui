@@ -4,25 +4,25 @@
  <widget class="QWidget" name="Form1">
   <property name="geometry">
    <rect>
-    <x>38</x>
+    <x>96</x>
     <y>122</y>
-    <width>365</width>
-    <height>233</height>
+    <width>438</width>
+    <height>243</height>
    </rect>
   </property>
   <property name="toolTip">
    <string></string>
   </property>
   <property name="windowTitle">
-   <string>Zmiana parametrów ekranu.</string>
+   <string>Zmiana parametr�w ekranu.</string>
   </property>
   <widget class="QLabel" name="Panel1">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>365</width>
-     <height>33</height>
+     <width>438</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="text">
@@ -46,8 +46,8 @@
    <widget class="QPushButton" name="SpeedButton1">
     <property name="geometry">
      <rect>
-      <x>6</x>
-      <y>2</y>
+      <x>358</x>
+      <y>4</y>
       <width>29</width>
       <height>29</height>
      </rect>
@@ -105,8 +105,8 @@
    <widget class="QLabel" name="Label2">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>10</y>
+      <x>294</x>
+      <y>12</y>
       <width>14</width>
       <height>13</height>
      </rect>
@@ -161,8 +161,8 @@
    <widget class="QPushButton" name="SpeedButton2">
     <property name="geometry">
      <rect>
-      <x>328</x>
-      <y>2</y>
+      <x>391</x>
+      <y>4</y>
       <width>31</width>
       <height>29</height>
      </rect>
@@ -183,8 +183,8 @@
    <widget class="QPushButton" name="SpeedButton3">
     <property name="geometry">
      <rect>
-      <x>296</x>
-      <y>2</y>
+      <x>325</x>
+      <y>4</y>
       <width>29</width>
       <height>29</height>
      </rect>
@@ -242,9 +242,9 @@
    <widget class="QComboBox" name="ComboBox4">
     <property name="geometry">
      <rect>
-      <x>221</x>
-      <y>5</y>
-      <width>44</width>
+      <x>237</x>
+      <y>8</y>
+      <width>52</width>
       <height>21</height>
      </rect>
     </property>
@@ -309,12 +309,22 @@
       <string>120</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>144</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>160</string>
+     </property>
+    </item>
    </widget>
    <widget class="QComboBox" name="ComboBox3">
     <property name="geometry">
      <rect>
-      <x>173</x>
-      <y>5</y>
+      <x>185</x>
+      <y>8</y>
       <width>44</width>
       <height>21</height>
      </rect>
@@ -349,9 +359,9 @@
    <widget class="QComboBox" name="ComboBox1">
     <property name="geometry">
      <rect>
-      <x>88</x>
-      <y>5</y>
-      <width>81</width>
+      <x>76</x>
+      <y>8</y>
+      <width>97</width>
       <height>21</height>
      </rect>
     </property>
@@ -575,8 +585,8 @@
    <widget class="QComboBox" name="ComboBox2">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>5</y>
+      <x>20</x>
+      <y>8</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -608,9 +618,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>33</y>
-     <width>366</width>
-     <height>200</height>
+     <y>41</y>
+     <width>438</width>
+     <height>202</height>
     </rect>
    </property>
    <property name="text">
@@ -639,8 +649,8 @@
      <rect>
       <x>16</x>
       <y>18</y>
-      <width>334</width>
-      <height>135</height>
+      <width>406</width>
+      <height>137</height>
      </rect>
     </property>
     <property name="enabled">
@@ -655,30 +665,30 @@
      <rect>
       <x>16</x>
       <y>16</y>
-      <width>57</width>
-      <height>22</height>
+      <width>65</width>
+      <height>29</height>
      </rect>
     </property>
     <property name="text">
      <string>LISTA</string>
     </property>
     <property name="enabled">
-     <bool>true</bool>
+     <bool>False</bool>
     </property>
     <property name="flat">
      <bool>false</bool>
     </property>
     <property name="toolTip">
-     <string>Poka| liste</string>
+     <string>Pokaz liste</string>
     </property>
    </widget>
    <widget class="QPushButton" name="Button2">
     <property name="geometry">
      <rect>
-      <x>213</x>
-      <y>164</y>
+      <x>285</x>
+      <y>166</y>
       <width>67</width>
-      <height>22</height>
+      <height>27</height>
      </rect>
     </property>
     <property name="text">
@@ -691,16 +701,53 @@
      <bool>false</bool>
     </property>
     <property name="toolTip">
-     <string>NI{SZA</string>
+     <string>NIZSZA</string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
     </property>
    </widget>
    <widget class="QPushButton" name="Button3">
     <property name="geometry">
      <rect>
-      <x>285</x>
-      <y>164</y>
+      <x>357</x>
+      <y>166</y>
       <width>67</width>
-      <height>22</height>
+      <height>27</height>
      </rect>
     </property>
     <property name="text">
@@ -713,7 +760,44 @@
      <bool>false</bool>
     </property>
     <property name="toolTip">
-     <string>WY{SZA</string>
+     <string>WYZSZA</string>
+    </property>
+    <property name="palette">
+     <palette>
+      <active>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </active>
+      <inactive>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </inactive>
+      <disabled>
+       <colorrole role="WindowText">
+        <brush brushstyle="SolidPattern">
+         <color alpha="255">
+          <red>0</red>
+          <green>0</green>
+          <blue>0</blue>
+         </color>
+        </brush>
+       </colorrole>
+      </disabled>
+     </palette>
     </property>
    </widget>
   </widget>

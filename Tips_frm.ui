@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tips_form</class>
+ <widget class="QWidget" name="Tips_form">
+  <property name="geometry">
+   <rect>
+    <x>179</x>
+    <y>131</y>
+    <width>254</width>
+    <height>32</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Progress...</string>
+  </property>
+  <widget class="QFrame" name="Ramka1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>254</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

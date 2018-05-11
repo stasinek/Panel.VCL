@@ -4,8 +4,8 @@
  <widget class="QWidget" name="Atab_form">
   <property name="geometry">
    <rect>
-    <x>408</x>
-    <y>187</y>
+    <x>60</x>
+    <y>148</y>
     <width>390</width>
     <height>350</height>
    </rect>
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>390</width>
-     <height>313</height>
+     <height>317</height>
     </rect>
    </property>
    <property name="text">

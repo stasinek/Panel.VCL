@@ -4,8 +4,8 @@
  <widget class="QWidget" name="Uruchom">
   <property name="geometry">
    <rect>
-    <x>243</x>
-    <y>380</y>
+    <x>69</x>
+    <y>131</y>
     <width>683</width>
     <height>68</height>
    </rect>
@@ -31,42 +31,42 @@
    <property name="tabPosition">
     <enum>QTabWidget::South</enum>
    </property>
-   <widget class="QWidget" name="tab_PHQGH00000">
+   <widget class="QWidget" name="tab_DVGYL00000">
     <attribute name="title">
      <string>AKCESORIA</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_UMEAY00001">
+   <widget class="QWidget" name="tab_WGBUS00001">
     <attribute name="title">
      <string>2D</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_LNLFD00002">
+   <widget class="QWidget" name="tab_BMBOR00002">
     <attribute name="title">
      <string>3D</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_XFIRC00003">
+   <widget class="QWidget" name="tab_XTLHC00003">
     <attribute name="title">
      <string>BIURO</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_VSCXG00004">
+   <widget class="QWidget" name="tab_SMPXO00004">
     <attribute name="title">
      <string>C++</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_GBWKF00005">
+   <widget class="QWidget" name="tab_HGMGN00005">
     <attribute name="title">
      <string>MULTIMEDIA</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_NQDUX00006">
+   <widget class="QWidget" name="tab_KEUFD00006">
     <attribute name="title">
      <string>INTERNET</string>
     </attribute>
    </widget>
-   <widget class="QWidget" name="tab_WFNFO00007">
+   <widget class="QWidget" name="tab_XOTOG00007">
     <attribute name="title">
      <string>SYSTEMOWE</string>
     </attribute>

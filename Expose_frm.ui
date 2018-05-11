@@ -4,8 +4,8 @@
  <widget class="QWidget" name="Expose_form">
   <property name="geometry">
    <rect>
-    <x>169</x>
-    <y>99</y>
+    <x>540</x>
+    <y>161</y>
     <width>625</width>
     <height>487</height>
    </rect>

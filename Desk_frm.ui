@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Desk_form</class>
+ <widget class="QWidget" name="Desk_form">
+  <property name="geometry">
+   <rect>
+    <x>635</x>
+    <y>175</y>
+    <width>552</width>
+    <height>135</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Biurka...</string>
+  </property>
+  <addaction name="MenuItemZwin"/>
+  <action name="MenuItemZwin">
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <widget class="QMenu" name="SubMenuSize">
+   <property name="title">
+    <string>Window size...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemSizeAdvanced"/>
+   <addaction name="separator"/>
+   <addaction name="MenuItemSize32"/>
+   <addaction name="MenuItemSize48"/>
+   <addaction name="MenuItemSize64"/>
+   <addaction name="MenuItemSize96"/>
+   <addaction name="MenuItemSize144"/>
+   <addaction name="MenuItemSize192"/>
+   <addaction name="MenuItemSize256"/>
+   <addaction name="MenuItemSize384"/>
+  </widget>
+  <addaction name="SubMenuSize"/>
+  <action name="MenuItemSizeAdvanced">
+   <property name="text">
+    <string>Custom</string>
+   </property>
+  </action>
+  <action name="MenuItemSize32">
+   <property name="text">
+    <string>48x16</string>
+   </property>
+  </action>
+  <action name="MenuItemSize48">
+   <property name="text">
+    <string>72x24</string>
+   </property>
+  </action>
+  <action name="MenuItemSize64">
+   <property name="text">
+    <string>96x32</string>
+   </property>
+  </action>
+  <action name="MenuItemSize96">
+   <property name="text">
+    <string>142x48</string>
+   </property>
+  </action>
+  <action name="MenuItemSize144">
+   <property name="text">
+    <string>282x96</string>
+   </property>
+  </action>
+  <action name="MenuItemSize192">
+   <property name="text">
+    <string>420x160</string>
+   </property>
+  </action>
+  <action name="MenuItemSize256">
+   <property name="text">
+    <string>720x240</string>
+   </property>
+  </action>
+  <action name="MenuItemSize384">
+   <property name="text">
+    <string>1002x334</string>
+   </property>
+  </action>
+  <widget class="QMenu" name="SubMenuPrzeswit">
+   <property name="title">
+    <string>Window transparency...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemTrans"/>
+   <addaction name="NOFF"/>
+   <addaction name="separator"/>
+   <addaction name="N101"/>
+   <addaction name="N201"/>
+   <addaction name="N301"/>
+   <addaction name="N401"/>
+   <addaction name="N501"/>
+   <addaction name="N601"/>
+   <addaction name="N701"/>
+   <addaction name="N801"/>
+  </widget>
+  <addaction name="SubMenuPrzeswit"/>
+  <action name="MenuItemTrans">
+   <property name="text">
+    <string>Unclickable</string>
+   </property>
+  </action>
+  <action name="NOFF">
+   <property name="text">
+    <string>OFF</string>
+   </property>
+  </action>
+  <action name="N101">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="N201">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="N301">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="N401">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="N501">
+   <property name="text">
+    <string>50%</string>
+   </property>
+  </action>
+  <action name="N601">
+   <property name="text">
+    <string>60%</string>
+   </property>
+  </action>
+  <action name="N701">
+   <property name="text">
+    <string>70%</string>
+   </property>
+  </action>
+  <action name="N801">
+   <property name="text">
+    <string>80%</string>
+   </property>
+  </action>
+  <addaction name="MenuItemTop"/>
+  <action name="MenuItemTop">
+   <property name="text">
+    <string>Keep window always on top</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <widget class="QMenu" name="SubMenuOkna">
+   <property name="title">
+    <string>Active windows..</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemZbierz"/>
+   <addaction name="MenuItemPrzenies"/>
+   <addaction name="MenuItemBiurko1"/>
+   <addaction name="MenuItemBiurko2"/>
+   <addaction name="MenuItemBiurko3"/>
+   <addaction name="MenuItemBiurko4"/>
+   <addaction name="MenuItemBiurko0"/>
+  </widget>
+  <addaction name="SubMenuOkna"/>
+  <action name="MenuItemZbierz">
+   <property name="text">
+    <string>Move all windows here</string>
+   </property>
+  </action>
+  <action name="MenuItemPrzenies">
+   <property name="text">
+    <string>Move to...</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurko1">
+   <property name="text">
+    <string>Desk 1</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurko2">
+   <property name="text">
+    <string>Desk 2</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurko3">
+   <property name="text">
+    <string>Desk 3</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurko4">
+   <property name="text">
+    <string>Desk 4</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurko0">
+   <property name="text">
+    <string>Shared desk</string>
+   </property>
+  </action>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>248</x>
+     <y>48</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

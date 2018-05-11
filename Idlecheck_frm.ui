@@ -4,8 +4,8 @@
  <widget class="QWidget" name="Form7">
   <property name="geometry">
    <rect>
-    <x>192</x>
-    <y>106</y>
+    <x>732</x>
+    <y>49</y>
     <width>373</width>
     <height>460</height>
    </rect>
@@ -36,19 +36,6 @@
    </property>
    <property name="toolTip">
     <string></string>
-   </property>
-  </widget>
-  <widget class="QFrame" name="ValueListEditor1">
-   <property name="geometry">
-    <rect>
-     <x>14</x>
-     <y>6</y>
-     <width>331</width>
-     <height>371</height>
-    </rect>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
    </property>
   </widget>
  </widget>

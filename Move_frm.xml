@@ -11,10 +11,10 @@
   <ClientWidth>396</ClientWidth>
   <Color>clBtnFace</Color>
   <DefaultMonitor>dmDesktop</DefaultMonitor>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
   <KeyPreview>True</KeyPreview>
   <OldCreateOrder>False</OldCreateOrder>

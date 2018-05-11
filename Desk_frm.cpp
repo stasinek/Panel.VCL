@@ -84,7 +84,7 @@ Desktop->Screen->Context->Resize(options.clientrect.right,options.clientrect.bot
 ::FillRect(Desktop->Screen->Context->Hdc,&options.clientrect,btnbrush);
 SetStretchBltMode(Desktop->Screen->Context->Hdc,HALFTONE);
 
-for (int i = 1, x; i < 5; i++)
+for (int i = 1, x; i <= 4; i++)
     {
     if (Desktop->Virtual[i]->Printed==true) x = i;
 	else x = 0;

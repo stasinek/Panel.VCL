@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main_form</class>
+ <widget class="QWidget" name="Main_form">
+  <property name="geometry">
+   <rect>
+    <x>236</x>
+    <y>438</y>
+    <width>466</width>
+    <height>130</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Panel...</string>
+  </property>
+  <widget class="QFrame" name="MainFormFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>466</width>
+     <height>130</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDesk5">
+   <property name="geometry">
+    <rect>
+     <x>224</x>
+     <y>4</y>
+     <width>141</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDeskGrid">
+   <property name="geometry">
+    <rect>
+     <x>364</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton3">
+   <property name="geometry">
+    <rect>
+     <x>136</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel2">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>217</x>
+     <y>7</y>
+     <width>3</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButton5">
+   <property name="geometry">
+    <rect>
+     <x>432</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>X</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel3">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>7</y>
+     <width>3</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDesk1">
+   <property name="geometry">
+    <rect>
+     <x>252</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDesk2">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDesk3">
+   <property name="geometry">
+    <rect>
+     <x>308</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonLupa">
+   <property name="geometry">
+    <rect>
+     <x>164</x>
+     <y>4</y>
+     <width>49</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ZOOM</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string>Lupa</string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonMenu">
+   <property name="geometry">
+    <rect>
+     <x>96</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonMinimalize">
+   <property name="geometry">
+    <rect>
+     <x>404</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel5">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>129</x>
+     <y>7</y>
+     <width>3</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel1">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>397</x>
+     <y>7</y>
+     <width>3</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SpeedButtonDesk4">
+   <property name="geometry">
+    <rect>
+     <x>336</x>
+     <y>4</y>
+     <width>28</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Bevel4">
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>88</x>
+     <y>7</y>
+     <width>3</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Panel1">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>5</y>
+     <width>70</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string></string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <enum>Qt::AlignCenter</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <widget class="QGraphicsView" name="Image1">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>70</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="MainSysTray">
+   <property name="geometry">
+    <rect>
+     <x>204</x>
+     <y>76</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QMenu" name="SubMenuTools">
+   <property name="title">
+    <string>Show other tools</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="separator"/>
+   <addaction name="ShowtheClock1"/>
+   <addaction name="Alarm1"/>
+   <addaction name="Pozycjakursora1"/>
+   <addaction name="ShowZeus1"/>
+   <addaction name="MenuItemBiurka"/>
+   <addaction name="MenuItemLupa"/>
+   <addaction name="ShowResolution1"/>
+   <addaction name="separator"/>
+   <addaction name="MenuItemInfo"/>
+   <addaction name="EXPERIMENTALExpose1"/>
+  </widget>
+  <addaction name="SubMenuTools"/>
+  <action name="ShowtheClock1">
+   <property name="text">
+    <string>Show the Clock</string>
+   </property>
+  </action>
+  <action name="Alarm1">
+   <property name="text">
+    <string>Set Alarm</string>
+   </property>
+  </action>
+  <action name="Pozycjakursora1">
+   <property name="text">
+    <string>Show the Cursor positioner</string>
+   </property>
+  </action>
+  <action name="ShowZeus1">
+   <property name="text">
+    <string>Zeus</string>
+   </property>
+  </action>
+  <action name="MenuItemBiurka">
+   <property name="text">
+    <string>Show the Desk manager</string>
+   </property>
+  </action>
+  <action name="MenuItemLupa">
+   <property name="text">
+    <string>Show the Magnifier</string>
+   </property>
+  </action>
+  <action name="ShowResolution1">
+   <property name="text">
+    <string>Change Screen Resolution</string>
+   </property>
+  </action>
+  <action name="MenuItemInfo">
+   <property name="text">
+    <string>About this app</string>
+   </property>
+  </action>
+  <action name="EXPERIMENTALExpose1">
+   <property name="text">
+    <string>EXPERIMENTAL Expose</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <widget class="QMenu" name="SubMenuPrzeswit">
+   <property name="title">
+    <string>Set transparency</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemTrans"/>
+   <addaction name="NOFF"/>
+   <addaction name="separator"/>
+   <addaction name="N101"/>
+   <addaction name="N201"/>
+   <addaction name="N301"/>
+   <addaction name="N401"/>
+   <addaction name="N501"/>
+   <addaction name="N601"/>
+   <addaction name="N701"/>
+   <addaction name="N801"/>
+  </widget>
+  <addaction name="SubMenuPrzeswit"/>
+  <action name="MenuItemTrans">
+   <property name="text">
+    <string>Unclickable</string>
+   </property>
+  </action>
+  <action name="NOFF">
+   <property name="text">
+    <string>OFF</string>
+   </property>
+  </action>
+  <action name="N101">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="N201">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="N301">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="N401">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="N501">
+   <property name="text">
+    <string>50%</string>
+   </property>
+  </action>
+  <action name="N601">
+   <property name="text">
+    <string>60%</string>
+   </property>
+  </action>
+  <action name="N701">
+   <property name="text">
+    <string>70%</string>
+   </property>
+  </action>
+  <action name="N801">
+   <property name="text">
+    <string>80%</string>
+   </property>
+  </action>
+  <addaction name="MenuItemZwin"/>
+  <action name="MenuItemZwin">
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <addaction name="MenuItemClose"/>
+  <action name="MenuItemClose">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <widget class="QFrame" name="MainTimer">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>76</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>76</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="ServerSocket1">
+   <property name="geometry">
+    <rect>
+     <x>304</x>
+     <y>68</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="ClientSocket1">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>72</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

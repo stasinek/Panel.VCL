@@ -4,8 +4,8 @@
  <widget class="QWidget" name="Form3">
   <property name="geometry">
    <rect>
-    <x>192</x>
-    <y>103</y>
+    <x>368</x>
+    <y>224</y>
     <width>660</width>
     <height>459</height>
    </rect>
@@ -68,13 +68,13 @@
    <property name="geometry">
     <rect>
      <x>28</x>
-     <y>396</y>
-     <width>31</width>
+     <y>400</y>
+     <width>111</width>
      <height>13</height>
     </rect>
    </property>
    <property name="text">
-    <string>Label1</string>
+    <string>Cursor without borders</string>
    </property>
    <property name="enabled">
     <bool>true</bool>
@@ -448,14 +448,14 @@
   <widget class="QLineEdit" name="MaskEdit1">
    <property name="geometry">
     <rect>
-     <x>24</x>
+     <x>160</x>
      <y>338</y>
-     <width>249</width>
+     <width>257</width>
      <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>Mmaso*Q@*@34w342345@#@</string>
+    <string>*****</string>
    </property>
    <property name="enabled">
     <bool>true</bool>
@@ -468,13 +468,13 @@
    <property name="geometry">
     <rect>
      <x>24</x>
-     <y>314</y>
+     <y>342</y>
      <width>129</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Chronione hasBem</string>
+    <string>Chronione haslem</string>
    </property>
    <property name="checked">
     <bool>false</bool>
@@ -505,7 +505,7 @@
     <number>3</number>
    </property>
    <property name="value">
-    <number>1</number>
+    <number>2</number>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>

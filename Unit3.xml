@@ -2,8 +2,8 @@
  <guiObject>
   <name>Form3</name>
   <class>TForm3</class>
-  <Left>192</Left>
-  <Top>103</Top>
+  <Left>368</Left>
+  <Top>224</Top>
   <Width>660</Width>
   <Height>459</Height>
   <Caption>'Kursor bez granic'</Caption>
@@ -11,7 +11,7 @@
   <Font.Charset>DEFAULT_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
   <OldCreateOrder>False</OldCreateOrder>
   <PixelsPerInch>96</PixelsPerInch>
@@ -53,10 +53,10 @@
    <name>Label1</name>
    <class>TLabel</class>
    <Left>28</Left>
-   <Top>396</Top>
-   <Width>31</Width>
+   <Top>400</Top>
+   <Width>111</Width>
    <Height>13</Height>
-   <Caption>'Label1'</Caption>
+   <Caption>'Cursor without borders'</Caption>
   </guiObject>
   <guiObject>
    <name>SpeedButton1</name>
@@ -75,6 +75,7 @@
    <Width>23</Width>
    <Height>22</Height>
    <Caption>'-'</Caption>
+   <OnClick>SpeedButton2Click</OnClick>
   </guiObject>
   <guiObject>
    <name>SpeedButton3</name>
@@ -93,6 +94,7 @@
    <Width>23</Width>
    <Height>22</Height>
    <Caption>'-'</Caption>
+   <OnClick>SpeedButton4Click</OnClick>
   </guiObject>
   <guiObject>
    <name>SpeedButton5</name>
@@ -111,6 +113,7 @@
    <Width>23</Width>
    <Height>22</Height>
    <Caption>'-'</Caption>
+   <OnClick>SpeedButton6Click</OnClick>
   </guiObject>
   <guiObject>
    <name>SpeedButton7</name>
@@ -230,21 +233,22 @@
   <guiObject>
    <name>MaskEdit1</name>
    <class>TMaskEdit</class>
-   <Left>24</Left>
+   <Left>160</Left>
    <Top>338</Top>
-   <Width>249</Width>
+   <Width>257</Width>
    <Height>21</Height>
+   <PasswordChar>'*'</PasswordChar>
    <TabOrder>8</TabOrder>
-   <Text>'Mmaso*Q@*@34w342345@#@'</Text>
+   <Text>'*****'</Text>
   </guiObject>
   <guiObject>
    <name>CheckBox4</name>
    <class>TCheckBox</class>
    <Left>24</Left>
-   <Top>314</Top>
+   <Top>342</Top>
    <Width>129</Width>
    <Height>17</Height>
-   <Caption>'Chronione has'#322'em'</Caption>
+   <Caption>'Chronione haslem'</Caption>
    <TabOrder>9</TabOrder>
   </guiObject>
   <guiObject>
@@ -260,13 +264,12 @@
    <Orientation>trHorizontal</Orientation>
    <PageSize>3</PageSize>
    <Frequency>1</Frequency>
-   <Position>1</Position>
+   <Position>2</Position>
    <SelEnd>3</SelEnd>
    <SelStart>1</SelStart>
    <TabOrder>10</TabOrder>
-   <ThumbLength>15</ThumbLength>
    <TickMarks>tmBottomRight</TickMarks>
-   <TickStyle>tsAuto</TickStyle>
+   <TickStyle>tsNone</TickStyle>
   </guiObject>
  </guiObject>
 </guiRoot>

@@ -2,18 +2,18 @@
  <guiObject>
   <name>Uruchom</name>
   <class>TUruchom</class>
-  <Left>243</Left>
-  <Top>380</Top>
+  <Left>69</Left>
+  <Top>131</Top>
   <BorderStyle>bsToolWindow</BorderStyle>
   <Caption>'Uruchom'</Caption>
   <ClientHeight>68</ClientHeight>
   <ClientWidth>683</ClientWidth>
   <Color>clBtnFace</Color>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
-  <Font.Style>[]</Font.Style>
+  <Font.Name>'Tahoma'</Font.Name>
+  <Font.Style>[fsBold]</Font.Style>
   <OldCreateOrder>False</OldCreateOrder>
   <PixelsPerInch>96</PixelsPerInch>
   <TextHeight>13</TextHeight>

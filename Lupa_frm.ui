@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Lupa_form</class>
+ <widget class="QWidget" name="Lupa_form">
+  <property name="geometry">
+   <rect>
+    <x>643</x>
+    <y>231</y>
+    <width>380</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>Magnifier...</string>
+  </property>
+  <addaction name="MenuItemZwin"/>
+  <action name="MenuItemZwin">
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <widget class="QMenu" name="SubMenuPrzeswit">
+   <property name="title">
+    <string>Window transparency...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemTrans"/>
+   <addaction name="NOFF"/>
+   <addaction name="separator"/>
+   <addaction name="N101"/>
+   <addaction name="N201"/>
+   <addaction name="N301"/>
+   <addaction name="N401"/>
+   <addaction name="N501"/>
+   <addaction name="N601"/>
+   <addaction name="N701"/>
+   <addaction name="N801"/>
+  </widget>
+  <addaction name="SubMenuPrzeswit"/>
+  <action name="MenuItemTrans">
+   <property name="text">
+    <string>Unclicable</string>
+   </property>
+  </action>
+  <action name="NOFF">
+   <property name="text">
+    <string>OFF</string>
+   </property>
+  </action>
+  <action name="N101">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="N201">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="N301">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="N401">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="N501">
+   <property name="text">
+    <string>50%</string>
+   </property>
+  </action>
+  <action name="N601">
+   <property name="text">
+    <string>60%</string>
+   </property>
+  </action>
+  <action name="N701">
+   <property name="text">
+    <string>70%</string>
+   </property>
+  </action>
+  <action name="N801">
+   <property name="text">
+    <string>80%</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <widget class="QMenu" name="SubMenuSize">
+   <property name="title">
+    <string>Window size...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemSizeAdvanced"/>
+   <addaction name="separator"/>
+   <addaction name="MenuItemSize180120"/>
+   <addaction name="MenuItemSize240180"/>
+   <addaction name="MenuItemSize320240"/>
+   <addaction name="MenuItemSize384288"/>
+   <addaction name="MenuItemSize512384"/>
+  </widget>
+  <addaction name="SubMenuSize"/>
+  <action name="MenuItemSizeAdvanced">
+   <property name="text">
+    <string>Custom</string>
+   </property>
+  </action>
+  <action name="MenuItemSize180120">
+   <property name="text">
+    <string>180x120</string>
+   </property>
+  </action>
+  <action name="MenuItemSize240180">
+   <property name="text">
+    <string>240x180</string>
+   </property>
+  </action>
+  <action name="MenuItemSize320240">
+   <property name="text">
+    <string>320x240</string>
+   </property>
+  </action>
+  <action name="MenuItemSize384288">
+   <property name="text">
+    <string>384x288</string>
+   </property>
+  </action>
+  <action name="MenuItemSize512384">
+   <property name="text">
+    <string>512x384</string>
+   </property>
+  </action>
+  <widget class="QMenu" name="SubMenuZoom">
+   <property name="title">
+    <string>Zoom...</string>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <addaction name="MenuItemZoomAdvanced"/>
+   <addaction name="separator"/>
+   <addaction name="MenuItemZoom02"/>
+   <addaction name="MenuItemZoom03"/>
+   <addaction name="MenuItemZoom04"/>
+   <addaction name="MenuItemZoom06"/>
+   <addaction name="MenuItemZoom08"/>
+  </widget>
+  <addaction name="SubMenuZoom"/>
+  <action name="MenuItemZoomAdvanced">
+   <property name="text">
+    <string>Custom</string>
+   </property>
+  </action>
+  <action name="MenuItemZoom02">
+   <property name="text">
+    <string>x2</string>
+   </property>
+  </action>
+  <action name="MenuItemZoom03">
+   <property name="text">
+    <string>x3</string>
+   </property>
+  </action>
+  <action name="MenuItemZoom04">
+   <property name="text">
+    <string>x4</string>
+   </property>
+  </action>
+  <action name="MenuItemZoom06">
+   <property name="text">
+    <string>x6</string>
+   </property>
+  </action>
+  <action name="MenuItemZoom08">
+   <property name="text">
+    <string>x8</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <addaction name="MenuItemCelownik"/>
+  <action name="MenuItemCelownik">
+   <property name="text">
+    <string>Show cross at cursor point</string>
+   </property>
+  </action>
+  <addaction name="Na1"/>
+  <action name="Na1">
+   <property name="text">
+    <string>Move window to center of the screen</string>
+   </property>
+  </action>
+  <addaction name="Natopie1"/>
+  <action name="Natopie1">
+   <property name="text">
+    <string>Always keep on top</string>
+   </property>
+  </action>
+  <widget class="QFrame" name="Timer1">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>61</y>
+     <width>15</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+  </widget>
+ </widget>
+</ui>

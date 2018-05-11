@@ -2,24 +2,24 @@
  <guiObject>
   <name>Form1</name>
   <class>TForm1</class>
-  <Left>38</Left>
+  <Left>96</Left>
   <Top>122</Top>
   <BorderIcons>[biSystemMenu, biMinimize]</BorderIcons>
   <BorderStyle>bsDialog</BorderStyle>
-  <Caption>'Zmiana parametr'#243'w ekranu.'</Caption>
-  <ClientHeight>233</ClientHeight>
-  <ClientWidth>365</ClientWidth>
+  <Caption>'Zmiana parametr�w ekranu.'</Caption>
+  <ClientHeight>243</ClientHeight>
+  <ClientWidth>438</ClientWidth>
   <Color>clBtnFace</Color>
-  <ParentFont>True</ParentFont>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
+  <Font.Color>clWindowText</Font.Color>
+  <Font.Height>-11</Font.Height>
+  <Font.Name>'Tahoma'</Font.Name>
+  <Font.Style>[]</Font.Style>
   <OldCreateOrder>False</OldCreateOrder>
-  <Position>poDefault</Position>
+  <Position>poScreenCenter</Position>
   <OnClose>FormClose</OnClose>
   <OnPaint>FormPaint</OnPaint>
   <OnShow>FormShow</OnShow>
-  <DesignSize>
-   <item>365</item>
-   <item>233</item>
-  </DesignSize>
   <PixelsPerInch>96</PixelsPerInch>
   <TextHeight>13</TextHeight>
   <guiObject>
@@ -27,26 +27,21 @@
    <class>TPanel</class>
    <Left>0</Left>
    <Top>0</Top>
-   <Width>365</Width>
-   <Height>33</Height>
+   <Width>438</Width>
+   <Height>41</Height>
    <Align>alTop</Align>
    <BevelOuter>bvNone</BevelOuter>
    <FullRepaint>False</FullRepaint>
    <TabOrder>0</TabOrder>
-   <DesignSize>
-    <item>365</item>
-    <item>33</item>
-   </DesignSize>
    <guiObject>
     <name>SpeedButton1</name>
     <class>TSpeedButton</class>
-    <Left>6</Left>
-    <Top>2</Top>
+    <Left>358</Left>
+    <Top>4</Top>
     <Width>29</Width>
     <Height>29</Height>
     <Hint>'Zwin/rozwin okno.'</Hint>
     <AllowAllUp>True</AllowAllUp>
-    <Anchors>[akLeft, akTop, akBottom]</Anchors>
     <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
     <Font.Color>clWindowText</Font.Color>
     <Font.Height>-11</Font.Height>
@@ -60,8 +55,8 @@
    <guiObject>
     <name>Label2</name>
     <class>TLabel</class>
-    <Left>270</Left>
-    <Top>10</Top>
+    <Left>294</Left>
+    <Top>12</Top>
     <Width>14</Width>
     <Height>13</Height>
     <Caption>'Hz'</Caption>
@@ -75,11 +70,12 @@
    <guiObject>
     <name>SpeedButton2</name>
     <class>TSpeedButton</class>
-    <Left>328</Left>
-    <Top>2</Top>
+    <Left>391</Left>
+    <Top>4</Top>
     <Width>31</Width>
     <Height>29</Height>
     <Hint>'USTAW'</Hint>
+    <Anchors>[akTop, akRight]</Anchors>
     <Glyph.Data>06020000424D060200000000000076000000280000002800000014000000010004000000000090010000000000000000000010000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFFFFFFFFFFFFFFF444FFFFFFFFFFFFFFFF777FFFFFFFFFFFFFFFF4F4444FFFFFFFFFFFFF7F7777FFFFFFFFFFFFFFF4F44444FFFFFFFFFFFF7F77777FFFFFFFFFFFF4F4F444444FFFFFFFFF7F7F777777FFFFFFF4F4F4F4F4444444FFFF7F7F7F7F7777777FFFFFF4F4F4F4F44444444FFF7F7F7F7F77777777FFFFF4F4F4F4F444444444FF7F7F7F7F777777777FFFF4F4F4F4F444444444FF7F7F7F7F777777777FFFF4F4F4F4F44444444FFF7F7F7F7F77777777FFFFFFFFF4F4F4444444FFFFFFFF7F7F7777777FFFFFFFFFFFF4F444444FFFFFFFFFFF7F777777FFFFFFFFFFFFF4F44444FFFFFFFFFFFF7F77777FFFFFFFFFFFFFFFF4444FFFFFFFFFFFFFFF7777FFFFFFFFFFFFFFFFF444FFFFFFFFFFFFFFFF777FFFFFFFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFFFFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</Glyph.Data>
     <NumGlyphs>2</NumGlyphs>
     <OnClick>SpeedButton2Click</OnClick>
@@ -87,11 +83,12 @@
    <guiObject>
     <name>SpeedButton3</name>
     <class>TSpeedButton</class>
-    <Left>296</Left>
-    <Top>2</Top>
+    <Left>325</Left>
+    <Top>4</Top>
     <Width>29</Width>
     <Height>29</Height>
     <Hint>'POMOC'</Hint>
+    <Anchors>[akTop, akRight]</Anchors>
     <Caption>'?'</Caption>
     <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
     <Font.Color>clWindowText</Font.Color>
@@ -104,9 +101,9 @@
    <guiObject>
     <name>ComboBox4</name>
     <class>TComboBox</class>
-    <Left>221</Left>
-    <Top>5</Top>
-    <Width>44</Width>
+    <Left>237</Left>
+    <Top>8</Top>
+    <Width>52</Width>
     <Height>21</Height>
     <Hint>'Hz'</Hint>
     <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
@@ -130,13 +127,15 @@
      <item>100</item>
      <item>110</item>
      <item>120</item>
+     <item>144</item>
+     <item>160</item>
     </Items.Strings>
    </guiObject>
    <guiObject>
     <name>ComboBox3</name>
     <class>TComboBox</class>
-    <Left>173</Left>
-    <Top>5</Top>
+    <Left>185</Left>
+    <Top>8</Top>
     <Width>44</Width>
     <Height>21</Height>
     <Hint>'8,16,24,32 bit'</Hint>
@@ -159,12 +158,11 @@
    <guiObject>
     <name>ComboBox1</name>
     <class>TComboBox</class>
-    <Left>88</Left>
-    <Top>5</Top>
-    <Width>81</Width>
+    <Left>76</Left>
+    <Top>8</Top>
+    <Width>97</Width>
     <Height>21</Height>
     <Hint>'X*Y pixeli'</Hint>
-    <AutoComplete>False</AutoComplete>
     <Font.Charset>EASTEUROPE_CHARSET</Font.Charset>
     <Font.Color>clWindowText</Font.Color>
     <Font.Height>-11</Font.Height>
@@ -222,8 +220,8 @@
    <guiObject>
     <name>ComboBox2</name>
     <class>TComboBox</class>
-    <Left>40</Left>
-    <Top>5</Top>
+    <Left>20</Left>
+    <Top>8</Top>
     <Width>41</Width>
     <Height>21</Height>
     <Hint>'Monitor nr.'</Hint>
@@ -242,25 +240,21 @@
    <name>Panel2</name>
    <class>TPanel</class>
    <Left>0</Left>
-   <Top>33</Top>
-   <Width>366</Width>
-   <Height>200</Height>
-   <Anchors>[akLeft, akTop, akRight]</Anchors>
+   <Top>41</Top>
+   <Width>438</Width>
+   <Height>202</Height>
+   <Align>alClient</Align>
    <BevelInner>bvRaised</BevelInner>
    <BevelOuter>bvLowered</BevelOuter>
    <FullRepaint>False</FullRepaint>
    <TabOrder>1</TabOrder>
-   <DesignSize>
-    <item>366</item>
-    <item>200</item>
-   </DesignSize>
    <guiObject>
     <name>Image1</name>
     <class>TImage</class>
     <Left>16</Left>
     <Top>18</Top>
-    <Width>334</Width>
-    <Height>135</Height>
+    <Width>406</Width>
+    <Height>137</Height>
     <Anchors>[akLeft, akTop, akRight, akBottom]</Anchors>
    </guiObject>
    <guiObject>
@@ -268,34 +262,47 @@
     <class>TSpeedButton</class>
     <Left>16</Left>
     <Top>16</Top>
-    <Width>57</Width>
-    <Height>22</Height>
-    <Hint>'Poka'#380' liste'</Hint>
+    <Width>65</Width>
+    <Height>29</Height>
+    <Hint>'Pokaz liste'</Hint>
     <Caption>'LISTA'</Caption>
+    <Enabled>False</Enabled>
    </guiObject>
    <guiObject>
     <name>Button2</name>
     <class>TButton</class>
-    <Left>213</Left>
-    <Top>164</Top>
+    <Left>285</Left>
+    <Top>166</Top>
     <Width>67</Width>
-    <Height>22</Height>
-    <Hint>'NI'#379'SZA'</Hint>
+    <Height>27</Height>
+    <Hint>'NIZSZA'</Hint>
     <Anchors>[akRight, akBottom]</Anchors>
     <Caption>'&lt;'</Caption>
+    <Font.Charset>ANSI_CHARSET</Font.Charset>
+    <Font.Color>clWindowText</Font.Color>
+    <Font.Height>-11</Font.Height>
+    <Font.Name>'Tahoma'</Font.Name>
+    <Font.Style>[fsBold]</Font.Style>
+    <ParentFont>False</ParentFont>
     <TabOrder>0</TabOrder>
     <OnClick>Button2Click</OnClick>
    </guiObject>
    <guiObject>
     <name>Button3</name>
     <class>TButton</class>
-    <Left>285</Left>
-    <Top>164</Top>
+    <Left>357</Left>
+    <Top>166</Top>
     <Width>67</Width>
-    <Height>22</Height>
-    <Hint>'WY'#379'SZA'</Hint>
+    <Height>27</Height>
+    <Hint>'WYZSZA'</Hint>
     <Anchors>[akRight, akBottom]</Anchors>
     <Caption>'>'</Caption>
+    <Font.Charset>ANSI_CHARSET</Font.Charset>
+    <Font.Color>clWindowText</Font.Color>
+    <Font.Height>-11</Font.Height>
+    <Font.Name>'Tahoma'</Font.Name>
+    <Font.Style>[fsBold]</Font.Style>
+    <ParentFont>False</ParentFont>
     <TabOrder>1</TabOrder>
     <OnClick>Button3Click</OnClick>
    </guiObject>

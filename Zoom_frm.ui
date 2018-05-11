@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Size_form</class>
- <widget class="QWidget" name="Size_form">
+ <class>Zoom_form</class>
+ <widget class="QWidget" name="Zoom_form">
   <property name="geometry">
    <rect>
-    <x>674</x>
-    <y>340</y>
+    <x>623</x>
+    <y>355</y>
     <width>306</width>
-    <height>162</height>
+    <height>106</height>
    </rect>
   </property>
   <property name="toolTip">
    <string></string>
   </property>
   <property name="windowTitle">
-   <string>Advanced: Size...</string>
+   <string>Advanced: Zoom...</string>
   </property>
   <widget class="QPushButton" name="OKBtn">
    <property name="geometry">
     <rect>
      <x>147</x>
-     <y>132</y>
+     <y>76</y>
      <width>75</width>
      <height>25</height>
     </rect>
@@ -42,7 +42,7 @@
    <property name="geometry">
     <rect>
      <x>227</x>
-     <y>132</y>
+     <y>76</y>
      <width>75</width>
      <height>25</height>
     </rect>
@@ -70,7 +70,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>1024 pixels</string>
+    <string>2 : 1</string>
    </property>
    <property name="toolTip">
     <string></string>
@@ -91,13 +91,13 @@
      <string></string>
     </property>
     <property name="minimum">
-     <number>32</number>
+     <number>1</number>
     </property>
     <property name="maximum">
-     <number>1024</number>
+     <number>8</number>
     </property>
     <property name="value">
-     <number>32</number>
+     <number>1</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
@@ -106,72 +106,6 @@
      <enum>QSlider::TicksBothSides</enum>
     </property>
    </widget>
-  </widget>
-  <widget class="QGroupBox" name="GroupBox2">
-   <property name="geometry">
-    <rect>
-     <x>8</x>
-     <y>68</y>
-     <width>294</width>
-     <height>58</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>1024 pixels</string>
-   </property>
-   <property name="toolTip">
-    <string></string>
-   </property>
-   <widget class="QSlider" name="TrackBar2">
-    <property name="geometry">
-     <rect>
-      <x>6</x>
-      <y>16</y>
-      <width>282</width>
-      <height>32</height>
-     </rect>
-    </property>
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="toolTip">
-     <string></string>
-    </property>
-    <property name="minimum">
-     <number>24</number>
-    </property>
-    <property name="maximum">
-     <number>768</number>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickPosition">
-     <enum>QSlider::TicksBothSides</enum>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QCheckBox" name="CheckBox1">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>136</y>
-     <width>97</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>4:3 proportions</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="toolTip">
-    <string></string>
-   </property>
   </widget>
  </widget>
 </ui>

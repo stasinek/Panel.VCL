@@ -2,18 +2,18 @@
  <guiObject>
   <name>Size_form</name>
   <class>TSize_form</class>
-  <Left>304</Left>
-  <Top>345</Top>
+  <Left>674</Left>
+  <Top>340</Top>
   <BorderIcons>[biSystemMenu]</BorderIcons>
   <BorderStyle>bsToolWindow</BorderStyle>
   <Caption>'Advanced: Size...'</Caption>
   <ClientHeight>162</ClientHeight>
   <ClientWidth>306</ClientWidth>
   <Color>clBtnFace</Color>
-  <Font.Charset>DEFAULT_CHARSET</Font.Charset>
+  <Font.Charset>ANSI_CHARSET</Font.Charset>
   <Font.Color>clWindowText</Font.Color>
   <Font.Height>-11</Font.Height>
-  <Font.Name>'MS Sans Serif'</Font.Name>
+  <Font.Name>'Tahoma'</Font.Name>
   <Font.Style>[]</Font.Style>
   <OldCreateOrder>True</OldCreateOrder>
   <Position>poDefault</Position>
@@ -61,6 +61,7 @@
     <Top>16</Top>
     <Width>282</Width>
     <Height>32</Height>
+    <LineSize>10</LineSize>
     <Max>1024</Max>
     <Min>32</Min>
     <Orientation>trHorizontal</Orientation>
@@ -92,6 +93,7 @@
     <Top>16</Top>
     <Width>282</Width>
     <Height>32</Height>
+    <LineSize>10</LineSize>
     <Max>768</Max>
     <Min>24</Min>
     <Orientation>trHorizontal</Orientation>
