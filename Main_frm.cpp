@@ -661,7 +661,7 @@ SetForegroundWindow(Clock_form->Handle);
 
 void __fastcall TMain_form::SpeedButton3Click(TObject *Sender)
 {
-Form1->Visible = SpeedButton3->Down;
+ResizerForm->Visible = SpeedButton3->Down;
 }
 //---------------------------------------------------------------------------
 
@@ -686,7 +686,7 @@ void __fastcall TMain_form::SpeedButton1Click(TObject *Sender)
 
 void __fastcall TMain_form::ShowResolution1Click(TObject *Sender)
 {
-Form1->Visible = true;	
+ResizerForm->Visible = true;	
 }
 //---------------------------------------------------------------------------
 

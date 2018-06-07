@@ -1,10 +1,10 @@
 object Uruchom: TUruchom
   Left = 69
   Top = 131
-  BorderStyle = bsToolWindow
+  BorderStyle = bsNone
   Caption = 'Uruchom'
-  ClientHeight = 68
-  ClientWidth = 683
+  ClientHeight = 70
+  ClientWidth = 754
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -12,13 +12,14 @@ object Uruchom: TUruchom
   Font.Name = 'Tahoma'
   Font.Style = [fsBold]
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object TabControl1: TTabControl
     Left = 0
     Top = 0
-    Width = 683
-    Height = 68
+    Width = 754
+    Height = 70
     Align = alClient
     MultiLine = True
     RaggedRight = True
@@ -27,13 +28,14 @@ object Uruchom: TUruchom
     TabPosition = tpBottom
     Tabs.Strings = (
       'AKCESORIA'
+      'AUDIO'
+      'VIDEO'
+      'OFFICE'
+      'INTERNET'
       '2D'
       '3D'
-      'BIURO'
-      'C++'
-      'MULTIMEDIA'
-      'INTERNET'
-      'SYSTEMOWE')
+      'SYSTEM'
+      'DEV')
     TabIndex = 0
     TabWidth = 80
   end

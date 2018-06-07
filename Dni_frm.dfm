@@ -1,6 +1,6 @@
 object Dni_form: TDni_form
-  Left = 157
-  Top = 146
+  Left = 551
+  Top = 183
   BorderStyle = bsDialog
   ClientHeight = 388
   ClientWidth = 560
@@ -23,10 +23,10 @@ object Dni_form: TDni_form
     BevelOuter = bvLowered
     TabOrder = 0
     object AdvancedBar1: TAdvancedBar
-      Left = 16
+      Left = 200
       Top = 13
-      Width = 221
-      Height = 20
+      Width = 253
+      Height = 24
       TextBackColor = clHighlight
       TextSuffix = '%'
     end

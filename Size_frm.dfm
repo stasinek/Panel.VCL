@@ -51,11 +51,11 @@ object Size_form: TSize_form
       Width = 282
       Height = 32
       LineSize = 10
-      Max = 1024
+      Max = 1280
       Min = 32
       Orientation = trHorizontal
       PageSize = 1
-      Frequency = 8
+      Frequency = 32
       Position = 32
       SelEnd = 0
       SelStart = 0
@@ -79,11 +79,11 @@ object Size_form: TSize_form
       Width = 282
       Height = 32
       LineSize = 10
-      Max = 768
+      Max = 800
       Min = 24
       Orientation = trHorizontal
       PageSize = 1
-      Frequency = 6
+      Frequency = 32
       Position = 24
       SelEnd = 0
       SelStart = 0

@@ -1,6 +1,6 @@
 object Move_form: TMove_form
-  Left = 107
-  Top = 170
+  Left = 750
+  Top = 285
   BorderIcons = [biSystemMenu]
   BorderStyle = bsToolWindow
   Caption = 'Move window to desk..'

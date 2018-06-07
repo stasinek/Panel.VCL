@@ -1,6 +1,6 @@
 object Atab_form: TAtab_form
-  Left = 60
-  Top = 148
+  Left = 396
+  Top = 272
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'CTRL+ALT+TAB'

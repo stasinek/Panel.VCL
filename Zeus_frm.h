@@ -22,7 +22,6 @@ class TZeus_form : public TForm
 {
 __published:	// IDE-managed Components
         TTimer *Timer1;
-        TBitBtn *BitBtn1;
         TMainMenu *MainMenu1;
         TMenuItem *Window1;
         TMenuItem *Hide1;
@@ -37,7 +36,6 @@ __published:	// IDE-managed Components
         TSpeedButton *SpeedButton1;
         TStatusBar *StatusBar1;
         TCheckListBox *CheckListBox1;
-        THeaderControl *HeaderControl1;
         void __fastcall BitBtn1Click(TObject *Sender);
         void __fastcall Tile1Click(TObject *Sender);
         void __fastcall Cascade1Click(TObject *Sender);

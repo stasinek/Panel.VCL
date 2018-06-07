@@ -14,10 +14,11 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object MaskEdit1: TMaskEdit
-    Left = 20
+    Left = 8
     Top = 16
-    Width = 121
+    Width = 257
     Height = 21
+    Anchors = [akLeft, akTop, akRight]
     TabOrder = 0
   end
   object Button1: TButton
@@ -25,6 +26,7 @@ object Form2: TForm2
     Top = 60
     Width = 75
     Height = 25
+    Anchors = [akRight, akBottom]
     Caption = 'OK'
     ModalResult = 1
     TabOrder = 1
@@ -34,6 +36,7 @@ object Form2: TForm2
     Top = 60
     Width = 75
     Height = 25
+    Anchors = [akRight, akBottom]
     Caption = 'Cancel'
     ModalResult = 2
     TabOrder = 2

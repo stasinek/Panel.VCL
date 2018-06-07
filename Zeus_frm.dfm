@@ -1,6 +1,6 @@
 object Zeus_form: TZeus_form
-  Left = 229
-  Top = 135
+  Left = 660
+  Top = 143
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'ZEUS'
@@ -33,11 +33,11 @@ object Zeus_form: TZeus_form
     OnMouseMove = Image2MouseMove
   end
   object SpeedButton1: TSpeedButton
-    Left = 376
+    Left = 400
     Top = 356
     Width = 89
     Height = 25
-    Caption = 'UBIJ!'
+    Caption = 'KILL'
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -45,21 +45,6 @@ object Zeus_form: TZeus_form
     Font.Style = [fsBold]
     ParentFont = False
     OnClick = SpeedButton1Click
-  end
-  object BitBtn1: TBitBtn
-    Left = 472
-    Top = 356
-    Width = 25
-    Height = 25
-    Caption = 'X'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 0
-    OnClick = BitBtn1Click
   end
   object StatusBar1: TStatusBar
     Left = 0
@@ -71,9 +56,9 @@ object Zeus_form: TZeus_form
   end
   object CheckListBox1: TCheckListBox
     Left = 0
-    Top = 24
+    Top = 8
     Width = 505
-    Height = 129
+    Height = 153
     ItemHeight = 13
     Items.Strings = (
       '1'
@@ -85,31 +70,7 @@ object Zeus_form: TZeus_form
       '7'
       '8'
       '9')
-    TabOrder = 2
-  end
-  object HeaderControl1: THeaderControl
-    Left = 0
-    Top = 0
-    Width = 504
-    Height = 17
-    DragReorder = False
-    Sections = <
-      item
-        AutoSize = True
-        ImageIndex = -1
-        Text = 'Proces'
-        Width = 354
-      end
-      item
-        ImageIndex = -1
-        Text = 'Okno'
-        Width = 100
-      end
-      item
-        ImageIndex = -1
-        Text = 'Biurko'
-        Width = 50
-      end>
+    TabOrder = 1
   end
   object Timer1: TTimer
     Enabled = False

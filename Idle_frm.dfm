@@ -49,7 +49,7 @@ object Form6: TForm6
     Left = 34
     Top = 52
     Width = 67
-    Height = 62
+    Height = 57
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -48
@@ -63,7 +63,7 @@ object Form6: TForm6
     Left = 198
     Top = 52
     Width = 69
-    Height = 62
+    Height = 57
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText
     Font.Height = -48

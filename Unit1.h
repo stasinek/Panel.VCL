@@ -11,7 +11,7 @@
 #include <Buttons.hpp>
 #include <Graphics.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TResizerForm : public TForm
 {
 __published:	// IDE-managed Components
         TComboBox *ComboBox1;
@@ -39,9 +39,9 @@ __published:	// IDE-managed Components
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
-        __fastcall TForm1(TComponent* Owner);
+        __fastcall TResizerForm(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TResizerForm *ResizerForm;
 //---------------------------------------------------------------------------
 #endif

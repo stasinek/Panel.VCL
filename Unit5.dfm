@@ -1,6 +1,6 @@
 object Alarm_form: TAlarm_form
-  Left = 157
-  Top = 112
+  Left = 690
+  Top = 145
   Width = 718
   Height = 489
   Caption = 'Alarm'
@@ -221,7 +221,7 @@ object Alarm_form: TAlarm_form
     object Label1: TLabel
       Left = 1
       Top = 1
-      Width = 164
+      Width = 148
       Height = 48
       Align = alLeft
       Alignment = taCenter

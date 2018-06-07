@@ -1,6 +1,6 @@
-object Form1: TForm1
-  Left = 96
-  Top = 122
+object ResizerForm: TResizerForm
+  Left = 664
+  Top = 230
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Zmiana parametrów ekranu.'

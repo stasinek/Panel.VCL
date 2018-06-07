@@ -4,8 +4,8 @@ object Tips_form: TTips_form
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Progress...'
-  ClientHeight = 32
-  ClientWidth = 254
+  ClientHeight = 47
+  ClientWidth = 287
   Color = clInfoBk
   DefaultMonitor = dmMainForm
   Enabled = False
@@ -26,8 +26,8 @@ object Tips_form: TTips_form
   PixelsPerInch = 96
   TextHeight = 22
   object Ramka1: TRamka
-    Width = 254
-    Height = 32
+    Width = 287
+    Height = 47
     Align = alClient
     BorderKind = bRect
     Color = clNone

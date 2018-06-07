@@ -28,7 +28,7 @@ USEFORM("Expose_frm.cpp", Expose_form);
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
-USEFORM("Unit1.cpp", Form1);
+USEFORM("Unit1.cpp", ResizerForm);
 USEFORM("Unit3.cpp", Form3);
 USEFORM("Unit4.cpp", Uruchom);
 USEFORM("Unit5.cpp", Alarm_form);
@@ -417,7 +417,7 @@ try
          Application->CreateForm(__classid(TExpose_form), &Expose_form);
          Application->CreateForm(__classid(TZeus_form), &Zeus_form);
          Application->CreateForm(__classid(TClock_form), &Clock_form);
-         Application->CreateForm(__classid(TForm1), &Form1);
+         Application->CreateForm(__classid(TResizerForm), &ResizerForm);
          Application->CreateForm(__classid(TForm3), &Form3);
          Application->CreateForm(__classid(TUruchom), &Uruchom);
          Application->CreateForm(__classid(TAlarm_form), &Alarm_form);

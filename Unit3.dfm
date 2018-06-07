@@ -4754,8 +4754,8 @@ object Form3: TForm3
       F100}
   end
   object Label1: TLabel
-    Left = 28
-    Top = 400
+    Left = 24
+    Top = 396
     Width = 111
     Height = 13
     Caption = 'Cursor without borders'
