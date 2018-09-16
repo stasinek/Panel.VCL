@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 735
-  Top = 103
+  Left = 50
+  Top = 168
   Width = 373
   Height = 460
   Caption = 'Lista auto ubijania po czasie..'

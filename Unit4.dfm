@@ -3,7 +3,7 @@ object Uruchom: TUruchom
   Top = 131
   BorderStyle = bsNone
   Caption = 'Uruchom'
-  ClientHeight = 70
+  ClientHeight = 90
   ClientWidth = 754
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
@@ -19,7 +19,7 @@ object Uruchom: TUruchom
     Left = 0
     Top = 0
     Width = 754
-    Height = 70
+    Height = 90
     Align = alClient
     MultiLine = True
     RaggedRight = True

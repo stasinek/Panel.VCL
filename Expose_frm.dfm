@@ -1,6 +1,6 @@
 object Expose_form: TExpose_form
-  Left = 540
-  Top = 161
+  Left = 119
+  Top = 139
   Width = 625
   Height = 487
   Caption = 'Expose...'

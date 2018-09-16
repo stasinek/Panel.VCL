@@ -1,10 +1,10 @@
 object Desk_form: TDesk_form
-  Left = 635
-  Top = 175
+  Left = 163
+  Top = 36
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'Biurka...'
-  ClientHeight = 135
+  ClientHeight = 422
   ClientWidth = 552
   Color = clBtnFace
   Constraints.MinHeight = 20

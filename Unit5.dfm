@@ -1,6 +1,6 @@
 object Alarm_form: TAlarm_form
-  Left = 690
-  Top = 145
+  Left = 261
+  Top = 151
   Width = 718
   Height = 489
   Caption = 'Alarm'

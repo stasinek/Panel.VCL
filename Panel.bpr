@@ -26,8 +26,7 @@
     <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="qrpt.bpi teeui.bpi teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi"/>
-    <PATHCPP value=".;..\..\FORM_TEMPLATES;D:\x86_win32_classes\;D:\stasiek\My 
-      Projects\OBSOLETE\PROGS\Panel.VCL\"/>
+    <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>

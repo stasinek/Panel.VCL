@@ -1,6 +1,6 @@
 object Lupa_form: TLupa_form
-  Left = 643
-  Top = 231
+  Left = 353
+  Top = 334
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'Magnifier...'
