@@ -11,16 +11,16 @@ File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Dni_
 File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,3,4,0,0
 
 [Modules]
-Module0=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
+Module0=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
 Count=1
 EditWindowCount=1
 
-[D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr]
+[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -37,11 +37,11 @@ Top=229
 Width=1081
 Height=482
 MaxLeft=-4
-MaxTop=100
+MaxTop=97
 MaxWidth=1288
-MaxHeight=676
+MaxHeight=679
 ClientWidth=1280
-ClientHeight=649
+ClientHeight=652
 LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=85
@@ -49,7 +49,7 @@ BottomPanelClients=MessageView@EditWindow0
 BottomPanelData=000004000000000055000000000000000000050000000000000100000000550000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Resizer.cpp
+Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.cpp
 CursorX=1
 CursorY=1
 TopLine=1

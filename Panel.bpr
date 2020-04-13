@@ -8,11 +8,12 @@
       Zoom_frm.obj Atab_frm.obj Move_frm.obj Size_frm.obj Expose_frm.obj 
       ..\..\FORM_TEMPLATES\About_frm.obj Zeus_frm.obj Clock_frm.obj Unit1.obj 
       Unit3.obj Unit4.obj Unit5.obj Idle_frm.obj Idlecheck_frm.obj 
-      D:\x86_win32_classes\tsoft_Context.obj 
-      D:\x86_win32_classes\tsoft_WindowsCollector.obj 
-      D:\x86_win32_classes\tsoft_WindowsMover.obj 
-      D:\x86_win32_classes\tsoft_WindowsSnap.obj 
-      D:\x86_win32_classes\tsoft_WindowsTile.obj Core.obj Unit2.obj &quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Numpad_frm.obj&quot;"/>
+      ..\..\..\x86_win32_classes\tsoft_Context.obj 
+      ..\..\..\x86_win32_classes\tsoft_WindowsCollector.obj 
+      ..\..\..\x86_win32_classes\tsoft_WindowsMover.obj 
+      ..\..\..\x86_win32_classes\tsoft_WindowsSnap.obj 
+      ..\..\..\x86_win32_classes\tsoft_WindowsTile.obj Core.obj Unit2.obj 
+      Numpad_frm.obj"/>
     <RESFILES value="Panel.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -21,12 +22,12 @@
       Tips_frm.dfm Zoom_frm.dfm Atab_frm.dfm Move_frm.dfm Size_frm.dfm 
       Expose_frm.dfm ..\..\FORM_TEMPLATES\About_frm.dfm Zeus_frm.dfm 
       Clock_frm.dfm Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm Idle_frm.dfm 
-      Idlecheck_frm.dfm Unit2.dfm &quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Numpad_frm.dfm&quot;"/>
+      Idlecheck_frm.dfm Unit2.dfm Numpad_frm.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="qrpt.bpi teeui.bpi teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi"/>
-    <PATHCPP value=".;..\..\FORM_TEMPLATES"/>
+    <PATHCPP value=".;..\..\FORM_TEMPLATES;..\..\..\x86_win32_classes"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -36,8 +37,8 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Panel.cpp"/>
-    <INCLUDEPATH value="&quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL&quot;;D:\x86_win32_classes;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES"/>
-    <LIBPATH value="&quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL&quot;;D:\x86_win32_classes;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms"/>
+    <INCLUDEPATH value="FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;&quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL&quot;;D:\x86_win32_classes;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES"/>
+    <LIBPATH value="FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;&quot;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL&quot;;D:\x86_win32_classes;&quot;C:\Program Files\Borland\CBuilder5\Projects&quot;;..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
