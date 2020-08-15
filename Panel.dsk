@@ -4,23 +4,37 @@ File_1=SourceModule,'D:\stasiek\My Projects\OBSOLETE\FORM_TEMPLATES\About_frm.cp
 File_2=SourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp',0,1,50,1,23,1,0
 
 [Modules]
-Module0=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr
-Count=1
+Module0=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
+Module1=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp
+Module2=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr
+Count=3
 EditWindowCount=1
+
+[H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
 
 [H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[H:\Drive\My Projects\OBSOLETE\PROGS\AMR.VCL\ProjectGroup1.bpg]
+[H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=1
-CurrentView=0
+ViewCount=3
+CurrentView=2
 View0=0
+View1=1
+View2=2
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -48,6 +62,20 @@ CursorY=28
 TopLine=1
 LeftCol=1
 
+[View1]
+Module=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Move_frm.cpp
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=H:\Drive\My Projects\OBSOLETE\PROGS\Panel.VCL\Main_frm.cpp
+CursorX=7
+CursorY=571
+TopLine=381
+LeftCol=1
+
 [Watches]
 Count=0
 
@@ -65,8 +93,8 @@ Left=42
 Top=15
 Width=1238
 Height=105
-MaxLeft=-1
-MaxTop=-1
+MaxLeft=-4
+MaxTop=-4
 MaxWidth=1288
 MaxHeight=105
 ClientWidth=1280
@@ -135,7 +163,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=72
 ArrangeBy=Name
-SelectedItem=
+SelectedItem=Caption
 ExpandedItems=Anchors,Constraints,MenuAnimation
 HiddenCategories=
 ShowStatusBar=1

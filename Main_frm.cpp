@@ -568,7 +568,7 @@ SetForegroundWindow(Lupa_form->Handle);
 
 void __fastcall TMain_form::MenuItemZwinClick(TObject*Sender)
 {
-MenuItemCloseClick(Sender);
+FormHide(Sender);
 }
 //---------------------------------------------------------------------------
 
@@ -712,4 +712,5 @@ void __fastcall TMain_form::Alarm1Click(TObject *Sender)
 Alarm_form->Show();
 }
 //---------------------------------------------------------------------------
+
 
