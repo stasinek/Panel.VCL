@@ -24,8 +24,8 @@
       Clock_frm.dfm Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm Idle_frm.dfm 
       Idlecheck_frm.dfm Unit2.dfm Numpad_frm.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib vclx.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib vclx.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
     <PACKAGES value="qrpt.bpi teeui.bpi teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES;..\..\..\x86_win32_classes"/>
     <PATHPAS value=".;"/>
@@ -47,7 +47,7 @@
     <PFLAGS value="-$YD -$W -$U -$R -$Q -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
     <AFLAGS value="/mu /w0 /zi"/>
-    <LFLAGS value="-D&quot;&quot; -V5.1 -Rr -Gz -aa -Tpe -GD -s -M -v"/>
+    <LFLAGS value="-D&quot;&quot; -V5.1 -Rr -Gz -aa -Tpe -GD -s -M"/>
   </OPTIONS>
   <LINKER>
     <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>

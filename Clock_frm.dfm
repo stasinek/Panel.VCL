@@ -1,6 +1,6 @@
 object Clock_form: TClock_form
-  Left = 921
-  Top = 566
+  Left = 430
+  Top = 356
   BorderStyle = bsDialog
   Caption = 'Clock'
   ClientHeight = 123
