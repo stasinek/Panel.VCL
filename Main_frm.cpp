@@ -33,6 +33,8 @@
 __fastcall TMain_form::TMain_form(TComponent* Owner)
 	: TForm(Owner)
 {
+Helper = new TForm_Helper();
+Helper->Default.clientrect.right = 487; Helper->Default.clientrect.bottom = 36;
 }
 //---------------------------------------------------------------------------
 
@@ -47,13 +49,13 @@ this->FormMouseMove(this,shiftState,0,0);
 
 void __fastcall TMain_form::tform_Resize()
 {
-options.rect.right  = options.rect.left + options.clientrect.right;
-options.rect.bottom = options.rect.top  + options.clientrect.bottom;
-AdjustWindowRectEx(&options.rect,
+Helper->Options.rect.right  = Helper->Options.rect.left + Helper->Options.clientrect.right;
+Helper->Options.rect.bottom = Helper->Options.rect.top  + Helper->Options.clientrect.bottom;
+AdjustWindowRectEx(&Helper->Options.rect,
 		GetWindowLong(this->Handle,GWL_STYLE),false,
 		GetWindowLong(this->Handle,GWL_EXSTYLE));
 SetWindowPos(this->Handle,NULL,
-		0,0,(options.rect.right-options.rect.left),(options.rect.bottom-options.rect.top),
+		0,0,(Helper->Options.rect.right-Helper->Options.rect.left),(Helper->Options.rect.bottom-Helper->Options.rect.top),
 		SWP_NOCOPYBITS|SWP_NOMOVE|SWP_NOACTIVATE|SWP_NOZORDER);
 tform_Align();
 }
@@ -63,7 +65,7 @@ void __fastcall TMain_form::tform_Move()
 {
 SetWindowPos(this->Handle,
 		0,
-		options.rect.left,options.rect.top,0,0,
+		Helper->Options.rect.left,Helper->Options.rect.top,0,0,
 		SWP_NOCOPYBITS|SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER);
 tform_Align();
 }
@@ -71,88 +73,15 @@ tform_Align();
 
 void __fastcall TMain_form::tform_Initialize(void)
 {
-tform_Load();
+Helper->Load("Desk");
 Desk_form->Desktop_Switch(1,true);
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 tform_Move(); tform_Resize();
 SetClassLong(this->Handle,GCL_STYLE,GetClassLong(this->Handle,GCL_STYLE) | CS_SAVEBITS);
-if (options.zoomed)
+if (Helper->Options.zoomed)
     SetWindowLong(this->Handle,GWL_STYLE,GetWindowLong(this->Handle,GWL_STYLE) | WS_MAXIMIZE);
-if (options.visible)
+if (Helper->Options.visible)
     this->Show();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TMain_form::tform_Load(void)
-{
-KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Main",true);
-
-#define des_height 36
-#define des_width 466
-
-if (KluczRejestuSystemuWindows->ValueExists("clientrect"))
-   {KluczRejestuSystemuWindows->ReadBinaryData("clientrect",&options.clientrect, sizeof(RECT));
-    if (options.clientrect.right-options.clientrect.left != des_width || options.clientrect.bottom-options.clientrect.top != des_height)
-        {options.clientrect.right = des_width;
-         options.clientrect.bottom = des_height;
-         options.clientrect.left = 0;
-         options.clientrect.top = 0;}
-   }
-else
-   {options.clientrect.right = des_width;
-    options.clientrect.bottom = des_height;
-   }
-if (KluczRejestuSystemuWindows->ValueExists("rect"))
-   {KluczRejestuSystemuWindows->ReadBinaryData("rect",&options.rect, sizeof(RECT));
-   }
-else
-   {options.rect.left = 0;
-    options.rect.top = 0;
-   }
-if (KluczRejestuSystemuWindows->ValueExists("zoomed"))
-   {options.zoomed = KluczRejestuSystemuWindows->ReadBool("zoomed");
-   }
-else
-   {options.zoomed = false;
-   }
-if (KluczRejestuSystemuWindows->ValueExists("alpha"))
-   {options.alpha = KluczRejestuSystemuWindows->ReadInteger("alpha");
-   }
-else
-   {options.alpha = -1;
-   }
-if (KluczRejestuSystemuWindows->ValueExists("clickthrough"))
-   {options.clickthrough  = KluczRejestuSystemuWindows->ReadInteger("clickthrough");
-   }
-else
-   {options.clickthrough  = 0;
-   }
-if (KluczRejestuSystemuWindows->ValueExists("visible"))
-   {options.visible = KluczRejestuSystemuWindows->ReadBool("visible");
-   }
-else
-   {options.visible = false;
-   }
-KluczRejestuSystemuWindows->CloseKey();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TMain_form::tform_Save(void)
-{
-if (!options.zoomed)
-   {::GetClientRect(this->Handle,&options.clientrect);
-    ::GetWindowRect(this->Handle,&options.rect);
-   }
-KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Main",true);
-
-KluczRejestuSystemuWindows->WriteBinaryData("rect",&options.rect,sizeof(RECT));
-KluczRejestuSystemuWindows->WriteBinaryData("clientrect",&options.clientrect,sizeof(RECT));
-KluczRejestuSystemuWindows->WriteBool("zoomed",options.zoomed);
-KluczRejestuSystemuWindows->WriteInteger("alpha",options.alpha);
-KluczRejestuSystemuWindows->WriteInteger("clickthrough",options.clickthrough);
-KluczRejestuSystemuWindows->WriteBool("visible",options.visible);
-
-KluczRejestuSystemuWindows->CloseKey();
 }
 //---------------------------------------------------------------------------
 
@@ -162,7 +91,6 @@ updateing = 0;
 hInst = (HINSTANCE)HInstance;
 ::SetStretchBltMode(this->Canvas->Handle, STRETCH_DELETESCANS);
 Ruszacz = new ts::WindowsMover();
-KluczRejestuSystemuWindows = new TRegistry;
 MainSysTray->Icon->Handle = LoadIcon(hInst,"MAINICON1");
 MainSysTray->AddIcon();
 MainTimer->Enabled = true;
@@ -172,7 +100,7 @@ MainTimer->Enabled = true;
 void __fastcall TMain_form::FormShow(TObject*)
 {
 MenuItemZwin->Caption = "&Hide";
-options.visible = true;
+Helper->Options.visible = true;
 tform_Align();
 }
 //---------------------------------------------------------------------------
@@ -182,21 +110,20 @@ void __fastcall TMain_form::FormHide(TObject*)
 ShowWindow(Application->Handle,SW_SHOWNA);
 ShowWindow(Application->Handle,SW_HIDE);
 MenuItemZwin->Caption = "&Show";
-options.visible = false;
+Helper->Options.visible = false;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::FormDestroy(TObject*)
 {
 delete Ruszacz;
-delete KluczRejestuSystemuWindows;
 MainSysTray->RemoveIcon();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::FormResize(TObject*)
 {
-options.zoomed = IsZoomed(Handle);
+Helper->Options.zoomed = IsZoomed(Handle);
 }
 //---------------------------------------------------------------------------
 
@@ -445,109 +372,109 @@ Lupa_form->Visible = SpeedButtonLupa->Down;
 
 void __fastcall TMain_form::SubMenuPrzeswitClick(TObject*)
 {
-if (options.clickthrough==true)
+if (Helper->Options.clickthrough==true)
     MenuItemTrans->Checked = true;
 
-if (options.alpha==-1)
+if (Helper->Options.alpha==-1)
     NOFF->Checked = true;
 else
-if (options.alpha==20)
+if (Helper->Options.alpha==20)
     N201->Checked = true;
 else
-if (options.alpha==30)
+if (Helper->Options.alpha==30)
     N301->Checked = true;
 else
-if (options.alpha==40)
+if (Helper->Options.alpha==40)
     N401->Checked = true;
 else
-if (options.alpha==50)
+if (Helper->Options.alpha==50)
     N501->Checked = true;
 else
-if (options.alpha==60)
+if (Helper->Options.alpha==60)
     N601->Checked = true;
 else
-if (options.alpha==70)
+if (Helper->Options.alpha==70)
     N701->Checked = true;
 else
-if (options.alpha==80)
+if (Helper->Options.alpha==80)
     N801->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::MenuItemTransClick(TObject*)
 {
-MenuItemTrans->Checked = options.clickthrough = !MenuItemTrans->Checked;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+MenuItemTrans->Checked = Helper->Options.clickthrough = !MenuItemTrans->Checked;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::NOFFClick(TObject*)
 {
-options.alpha = -1;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = -1;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 NOFF->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N101Click(TObject *Sender)
 {
-options.alpha = 10;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 10;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N201->Checked = true;
 }
 //---------------------------------------------------------------------------
 void __fastcall TMain_form::N201Click(TObject*)
 {
-options.alpha = 20;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 20;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N201->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N301Click(TObject*)
 {
-options.alpha = 30;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 30;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N301->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N401Click(TObject*)
 {
-options.alpha = 40;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 40;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N401->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N501Click(TObject*)
 {
-options.alpha = 50;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 50;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N501->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N601Click(TObject*)
 {
-options.alpha = 60;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 60;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N601->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N701Click(TObject*)
 {
-options.alpha = 70;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 70;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N701->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::N801Click(TObject*)
 {
-options.alpha = 80;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 80;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N801->Checked = true;
 }
 //---------------------------------------------------------------------------
@@ -568,7 +495,7 @@ SetForegroundWindow(Lupa_form->Handle);
 
 void __fastcall TMain_form::MenuItemZwinClick(TObject*Sender)
 {
-FormHide(Sender);
+this->FormHide(Sender);
 }
 //---------------------------------------------------------------------------
 
@@ -580,9 +507,9 @@ AboutForm->ShowModal();
 
 void __fastcall TMain_form::MenuItemCloseClick(TObject*)
 {
-Main_form->tform_Save();
-Desk_form->tform_Save();
-Lupa_form->tform_Save();
+Main_form->Helper->Save("Main");
+Desk_form->Helper->Save("Desk");
+Lupa_form->Helper->Save("Lupa");
 
 //Desktop->Action(SET_TRANSPARENCY,FindWindow("Shell_TrayWnd",NULL),-1,false);
 //Desktop->Action(SET_TRANSPARENCY,FindWindow("BaseBar",NULL),-1,false);

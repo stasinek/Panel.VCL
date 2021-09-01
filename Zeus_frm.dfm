@@ -1,6 +1,6 @@
 object Zeus_form: TZeus_form
-  Left = 249
-  Top = 215
+  Left = 512
+  Top = 106
   BorderIcons = []
   BorderStyle = bsSingle
   Caption = 'ZEUS'

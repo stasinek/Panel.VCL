@@ -1,11 +1,11 @@
 object ResizerForm: TResizerForm
-  Left = 377
-  Top = 314
+  Left = 250
+  Top = 254
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsDialog
   Caption = 'Zmiana parametrów ekranu.'
-  ClientHeight = 243
-  ClientWidth = 438
+  ClientHeight = 183
+  ClientWidth = 312
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -22,19 +22,20 @@ object ResizerForm: TResizerForm
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 438
+    Width = 312
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     FullRepaint = False
     TabOrder = 0
     object SpeedButton1: TSpeedButton
-      Left = 358
+      Left = 272
       Top = 4
-      Width = 29
+      Width = 36
       Height = 29
       Hint = 'Zwin/rozwin okno.'
       AllowAllUp = True
+      Anchors = [akTop, akRight]
       Font.Charset = EASTEUROPE_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
@@ -87,7 +88,7 @@ object ResizerForm: TResizerForm
       OnClick = SpeedButton1Click
     end
     object Label2: TLabel
-      Left = 294
+      Left = 252
       Top = 12
       Width = 14
       Height = 13
@@ -99,54 +100,10 @@ object ResizerForm: TResizerForm
       Font.Style = [fsBold]
       ParentFont = False
     end
-    object SpeedButton2: TSpeedButton
-      Left = 391
-      Top = 4
-      Width = 31
-      Height = 29
-      Hint = 'USTAW'
-      Anchors = [akTop, akRight]
-      Glyph.Data = {
-        06020000424D0602000000000000760000002800000028000000140000000100
-        0400000000009001000000000000000000001000000000000000000000000000
-        8000008000000080800080000000800080008080000080808000C0C0C0000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFF
-        FFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFFFFFFFFFFFFFFF444FFFFFFFF
-        FFFFFFFF777FFFFFFFFFFFFFFFF4F4444FFFFFFFFFFFFF7F7777FFFFFFFFFFFF
-        FFF4F44444FFFFFFFFFFFF7F77777FFFFFFFFFFFF4F4F444444FFFFFFFFF7F7F
-        777777FFFFFFF4F4F4F4F4444444FFFF7F7F7F7F7777777FFFFFF4F4F4F4F444
-        44444FFF7F7F7F7F77777777FFFFF4F4F4F4F444444444FF7F7F7F7F77777777
-        7FFFF4F4F4F4F444444444FF7F7F7F7F777777777FFFF4F4F4F4F44444444FFF
-        7F7F7F7F77777777FFFFFFFFF4F4F4444444FFFFFFFF7F7F7777777FFFFFFFFF
-        FFF4F444444FFFFFFFFFFF7F777777FFFFFFFFFFFFF4F44444FFFFFFFFFFFF7F
-        77777FFFFFFFFFFFFFFFF4444FFFFFFFFFFFFFFF7777FFFFFFFFFFFFFFFFF444
-        FFFFFFFFFFFFFFFF777FFFFFFFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFF
-        FFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFF}
-      NumGlyphs = 2
-      OnClick = SpeedButton2Click
-    end
-    object SpeedButton3: TSpeedButton
-      Left = 325
-      Top = 4
-      Width = 29
-      Height = 29
-      Hint = 'POMOC'
-      Anchors = [akTop, akRight]
-      Caption = '?'
-      Font.Charset = EASTEUROPE_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -11
-      Font.Name = 'Tahoma'
-      Font.Style = [fsBold]
-      ParentFont = False
-      OnClick = SpeedButton3Click
-    end
     object ComboBox4: TComboBox
-      Left = 237
+      Left = 196
       Top = 8
-      Width = 52
+      Width = 50
       Height = 21
       Hint = 'Hz'
       Font.Charset = EASTEUROPE_CHARSET
@@ -174,7 +131,7 @@ object ResizerForm: TResizerForm
         '160')
     end
     object ComboBox3: TComboBox
-      Left = 185
+      Left = 148
       Top = 8
       Width = 44
       Height = 21
@@ -195,9 +152,9 @@ object ResizerForm: TResizerForm
         '32')
     end
     object ComboBox1: TComboBox
-      Left = 76
+      Left = 46
       Top = 8
-      Width = 97
+      Width = 96
       Height = 21
       Hint = 'X*Y pixeli'
       Font.Charset = EASTEUROPE_CHARSET
@@ -254,9 +211,9 @@ object ResizerForm: TResizerForm
         '4096x3112')
     end
     object ComboBox2: TComboBox
-      Left = 20
+      Left = 4
       Top = 8
-      Width = 41
+      Width = 37
       Height = 21
       Hint = 'Monitor nr.'
       ItemHeight = 13
@@ -272,33 +229,78 @@ object ResizerForm: TResizerForm
   object Panel2: TPanel
     Left = 0
     Top = 41
-    Width = 438
-    Height = 202
+    Width = 312
+    Height = 142
     Align = alClient
     BevelInner = bvRaised
     BevelOuter = bvLowered
     FullRepaint = False
     TabOrder = 1
     object Image1: TImage
-      Left = 16
-      Top = 18
-      Width = 406
-      Height = 137
+      Left = 8
+      Top = 8
+      Width = 297
+      Height = 87
       Anchors = [akLeft, akTop, akRight, akBottom]
     end
     object SpeedButton4: TSpeedButton
-      Left = 16
-      Top = 16
+      Left = 8
+      Top = 8
       Width = 65
       Height = 29
       Hint = 'Pokaz liste'
       Caption = 'LISTA'
       Enabled = False
     end
+    object SpeedButton2: TSpeedButton
+      Left = 240
+      Top = 102
+      Width = 66
+      Height = 27
+      Hint = 'SET'
+      Anchors = [akRight, akBottom]
+      Caption = 'SET'
+      Glyph.Data = {
+        06020000424D0602000000000000760000002800000028000000140000000100
+        0400000000009001000000000000000000001000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFF
+        FFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFFFFFFFFFFFFFFF444FFFFFFFF
+        FFFFFFFF777FFFFFFFFFFFFFFFF4F4444FFFFFFFFFFFFF7F7777FFFFFFFFFFFF
+        FFF4F44444FFFFFFFFFFFF7F77777FFFFFFFFFFFF4F4F444444FFFFFFFFF7F7F
+        777777FFFFFFF4F4F4F4F4444444FFFF7F7F7F7F7777777FFFFFF4F4F4F4F444
+        44444FFF7F7F7F7F77777777FFFFF4F4F4F4F444444444FF7F7F7F7F77777777
+        7FFFF4F4F4F4F444444444FF7F7F7F7F777777777FFFF4F4F4F4F44444444FFF
+        7F7F7F7F77777777FFFFFFFFF4F4F4444444FFFFFFFF7F7F7777777FFFFFFFFF
+        FFF4F444444FFFFFFFFFFF7F777777FFFFFFFFFFFFF4F44444FFFFFFFFFFFF7F
+        77777FFFFFFFFFFFFFFFF4444FFFFFFFFFFFFFFF7777FFFFFFFFFFFFFFFFF444
+        FFFFFFFFFFFFFFFF777FFFFFFFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFF
+        FFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFF}
+      NumGlyphs = 2
+      OnClick = SpeedButton2Click
+    end
+    object SpeedButton3: TSpeedButton
+      Left = 7
+      Top = 102
+      Width = 27
+      Height = 27
+      Hint = 'POMOC'
+      Anchors = [akBottom]
+      Caption = '?'
+      Font.Charset = EASTEUROPE_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      OnClick = SpeedButton3Click
+    end
     object Button2: TButton
-      Left = 285
-      Top = 166
-      Width = 67
+      Left = 130
+      Top = 102
+      Width = 49
       Height = 27
       Hint = 'NIZSZA'
       Anchors = [akRight, akBottom]
@@ -313,9 +315,9 @@ object ResizerForm: TResizerForm
       OnClick = Button2Click
     end
     object Button3: TButton
-      Left = 357
-      Top = 166
-      Width = 67
+      Left = 186
+      Top = 102
+      Width = 49
       Height = 27
       Hint = 'WYZSZA'
       Anchors = [akRight, akBottom]

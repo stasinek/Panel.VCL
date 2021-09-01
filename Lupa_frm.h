@@ -105,16 +105,10 @@ HINSTANCE hInst;
 bool PopupMenuVisible;
 //---------------------------------------------------------------------------
 ts::WindowsMover *Ruszacz;
-TRegistry *KluczRejestuSystemuWindows;
 //---------------------------------------------------------------------------
 public:		// User declarations
 //---------------------------------------------------------------------------
-struct {
-LONG sizeof_options;
-RECT rect;
-LONG alpha,clickthrough,zoomed,visible,zorder,interval,sight,zoom,central;
-RECT clientrect;
-} options;
+struct TForm_Helper *Helper;
 //---------------------------------------------------------------------------
       __fastcall TLupa_form(TComponent* Owner);
 //---------------------------------------------------------------------------
@@ -123,9 +117,6 @@ void  __fastcall tform_Align           (void);
 void  __fastcall tform_Move            (void);
 //---------------------------------------------------------------------------
 void  __fastcall tform_Initialize      (void);
-//---------------------------------------------------------------------------
-void  __fastcall tform_Save            (void);
-void  __fastcall tform_Load            (void);
 //---------------------------------------------------------------------------
 void  __fastcall tform_Redraw          (void);
 };

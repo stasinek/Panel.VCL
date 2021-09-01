@@ -12,7 +12,8 @@ File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core
 
 [Modules]
 Module0=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
-Count=1
+Module1=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
+Count=2
 EditWindowCount=1
 
 [C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr]
@@ -20,14 +21,20 @@ ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\SRC\OBSOLETE\PROGS\Koperek.VCL\ProjectGroup1.bpg]
+[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=1
+ViewCount=2
 CurrentView=0
 View0=0
+View1=1
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -37,11 +44,11 @@ Top=229
 Width=1081
 Height=482
 MaxLeft=-4
-MaxTop=97
+MaxTop=100
 MaxWidth=1288
-MaxHeight=679
+MaxHeight=676
 ClientWidth=1280
-ClientHeight=652
+ClientHeight=649
 LeftPanelSize=0
 RightPanelSize=0
 BottomPanelSize=85
@@ -51,7 +58,14 @@ BottomPanelData=0000040000000000550000000000000000000500000000000001000000005500
 [View0]
 Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.cpp
 CursorX=1
-CursorY=1
+CursorY=6
+TopLine=1
+LeftCol=1
+
+[View1]
+Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
+CursorX=29
+CursorY=6
 TopLine=1
 LeftCol=1
 
@@ -84,7 +98,7 @@ ClientHeight=78
 Create=1
 Visible=0
 State=0
-Left=369
+Left=374
 Top=372
 Width=438
 Height=303
@@ -143,7 +157,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=
+SelectedItem=Caption
 ExpandedItems=
 HiddenCategories=
 ShowStatusBar=1

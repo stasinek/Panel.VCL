@@ -15,6 +15,13 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
+USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
+USEUNIT("Core.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
+USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
 USEFORM("Dni_frm.cpp", Dni_form);
 USEFORM("Desk_frm.cpp", Desk_form);
 USEFORM("Lupa_frm.cpp", Lupa_form);
@@ -25,7 +32,6 @@ USEFORM("Atab_frm.cpp", Atab_form);
 USEFORM("Move_frm.cpp", Move_form);
 USEFORM("Size_frm.cpp", Size_form);
 USEFORM("Expose_frm.cpp", Expose_form);
-USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
 USEFORM("Unit1.cpp", ResizerForm);
@@ -34,15 +40,10 @@ USEFORM("Unit4.cpp", Uruchom);
 USEFORM("Unit5.cpp", Alarm_form);
 USEFORM("Idle_frm.cpp", Form6);
 USEFORM("Idlecheck_frm.cpp", Form7);
-USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
-USERES("Panel.res");
-USEUNIT("Core.cpp");
 USEFORM("Unit2.cpp", Form2);
 USEFORM("Numpad_frm.cpp", Numpad);
+USERES("Panel.res");
+USERC("Panel.manifest.rc");
 //---------------------------------------------------------------------------
 #pragma resource "manifest.res"
 //---------------------------------------------------------------------------
@@ -273,9 +274,9 @@ case VK_LWIN: // ctose this app
 //------------------------------------
 //
 Tips_form->Execute("Panel: Appliacation is being closed. Hope to see You later! ",true,true);
-Main_form->tform_Save();
-Desk_form->tform_Save();
-Lupa_form->tform_Save();
+Main_form->Helper->Save("Main");
+Desk_form->Helper->Save("Desk");
+Lupa_form->Helper->Save("Lupa");
 Sleep(600);
 Application->Terminate();
 return true;

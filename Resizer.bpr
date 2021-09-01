@@ -4,12 +4,12 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="Resizer.exe"/>
-    <OBJFILES value="Resizer.obj Unit1.obj ..\..\FORM_TEMPLATES\About_frm.obj"/>
+    <OBJFILES value="Resizer.obj ..\..\FORM_TEMPLATES\About_frm.obj Unit1.obj"/>
     <RESFILES value=""/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) Unit1.dfm ..\..\FORM_TEMPLATES\About_frm.dfm"/>
+    <RESDEPEN value="$(RESFILES) ..\..\FORM_TEMPLATES\About_frm.dfm Unit1.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value="dclusr50.lib Vcl50.lib vcl.lib"/>
     <SPARELIBS value="vcl.lib Vcl50.lib dclusr50.lib"/>
@@ -31,12 +31,12 @@
   </MACROS>
   <OPTIONS>
     <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -D_DEBUG -boa"/>
-    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl50.csm -Hc -Q -Vx -Ve -xf -xp -Vmp -VF -C -ff -X- -ps 
-      -a8 -6 -b -d -k -y -v -vi- -c -tW -tWM"/>
-    <PFLAGS value="-$YD -$W -$R -$Q -$A8 -v -JPHNE -M"/>
+    <CFLAG1 value="-O2 -Q -Vx -Ve -xf -xp -Vmp -VF -C -ff -X- -ps -a8 -6 -b -d -k -y -v -vi- 
+      -c -tW -tWM"/>
+    <PFLAGS value="-$Y+ -$W -$R -$Q -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mx /w2 /zi"/>
-    <LFLAGS value="-D&quot;&quot; -aa -Tpe -GD -s -M -v"/>
+    <AFLAGS value="/ml /w2 /zi"/>
+    <LFLAGS value="-D&quot;&quot; -Rr -Gz -c- -aa -Tpe -GD -s -M -v"/>
   </OPTIONS>
   <LINKER>
     <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
@@ -45,7 +45,7 @@
   </LINKER>
   <IDEOPTIONS>
 [Version Info]
-IncludeVerInfo=1
+IncludeVerInfo=0
 AutoIncBuild=0
 MajorVer=2
 MinorVer=0
@@ -72,16 +72,18 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=3
-Item0=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
-Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
-Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Count=4
+Item0=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES
+Item1=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=3
-Item0=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
-Item1=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
-Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Count=4
+Item0=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\..\PACKAGES
+Item1=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1
@@ -103,6 +105,6 @@ RemoteDebug=0
 
 [Compiler]
 ShowInfoMsgs=1
-LinkDebugVcl=0
+LinkDebugVcl=1
   </IDEOPTIONS>
 </PROJECT>

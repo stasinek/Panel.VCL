@@ -5,7 +5,6 @@
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
-#include <Registry.hpp>
 #include <dos.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,8 +71,9 @@ __published:	// IDE-managed Components
     TSpeedButton *SpeedButtonDesk4;
     TBevel *Bevel2;
     TPanel *Panel1;
-    TImage *Image1;
     TPanel *Panel3;
+    TRamka *Ramka1;
+    TRamka *Ramka2;
 		  void __fastcall MenuItemZwinClick(TObject *Sender);
 		  void __fastcall SubMenuPrzeswitClick(TObject *Sender);
 		  void __fastcall MenuItemTransClick(TObject *Sender);
@@ -134,26 +134,17 @@ private:	// User declarations
 HINSTANCE hInst; LONG updateing;
 //---------------------------------------------------------------------------
 ts::WindowsMover *Ruszacz;
-TRegistry *KluczRejestuSystemuWindows;
 //---------------------------------------------------------------------------
 public:		// User declarations
 //---------------------------------------------------------------------------
-struct {
-RECT rect;
-LONG alpha,clickthrough,zoomed,visible,zorder;
-RECT clientrect;
-} options;
-//---------------------------------------------------------------------------
 __fastcall TMain_form(TComponent* Owner);
+struct TForm_Helper *Helper;
 //---------------------------------------------------------------------------
 void  __fastcall tform_Resize          (void);
 void  __fastcall tform_Align           (void);
 void  __fastcall tform_Move            (void);
 //---------------------------------------------------------------------------
 void  __fastcall tform_Initialize      (void);
-//---------------------------------------------------------------------------
-void  __fastcall tform_Save            (void);
-void  __fastcall tform_Load            (void);
 //---------------------------------------------------------------------------
 };
 //---------------------------------------------------------------------------

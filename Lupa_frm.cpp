@@ -21,6 +21,8 @@ TLupa_form *Lupa_form;
 __fastcall TLupa_form::TLupa_form(TComponent* Owner)
 		  : TForm(Owner) , PopupMenuVisible(false)
 {
+Helper = new TForm_Helper(this);
+Helper->Default.clientrect.right = 320; Helper->Default.clientrect.bottom = 240;
 }
 //---------------------------------------------------------------------------
 
@@ -32,11 +34,11 @@ if (lock==1)
         }
 lock = 1;
 
-::GetClientRect(this->Handle,&options.clientrect);
+::GetClientRect(this->Handle,&Helper->Options.clientrect);
 POINT halfsize, fullsize;
-fullsize.x = (options.clientrect.right-4)/options.zoom; fullsize.y = (options.clientrect.bottom-4)/options.zoom;
+fullsize.x = (Helper->Options.clientrect.right-4)/Helper->Options.zoom; fullsize.y = (Helper->Options.clientrect.bottom-4)/Helper->Options.zoom;
 halfsize.x =  fullsize.x/2; halfsize.y = fullsize.y/2;
-options.central = options.clickthrough >0;
+Helper->Options.central = Helper->Options.clickthrough >0;
 
 static CURSORINFO oldcursorinfo, curcursorinfo;
 curcursorinfo.cbSize = sizeof(CURSORINFO);
@@ -45,7 +47,7 @@ static POINT newformpoint;
 
 static HBRUSH backgroundbrush = GetSysColorBrush(COLOR_BACKGROUND);
 static HBRUSH crossbrush = GetSysColorBrush(COLOR_BTNFACE);
-Desktop->Screen->Context->Resize(options.clientrect.right,options.clientrect.bottom);
+Desktop->Screen->Context->Resize(Helper->Options.clientrect.right,Helper->Options.clientrect.bottom);
 // zamalowanie poza ekranem X
 //
 RECT grabrect, destrect, fillrect;
@@ -94,9 +96,9 @@ RECT grabrect, destrect, fillrect;
 		Desktop->Screen->Hdc,
 		grabrect.left,grabrect.top,
 		SRCCOPY);
-//options.sight
+//Helper->Options.sight
 //
-if (options.sight==true && curcursorinfo.flags!=0)
+if (Helper->Options.sight==true && curcursorinfo.flags!=0)
    {
     ::MoveToEx(Desktop->Screen->Context->Hdc,halfsize.x - 4,halfsize.y,NULL);
       ::LineTo(Desktop->Screen->Context->Hdc,halfsize.x + 5,halfsize.y);
@@ -105,42 +107,42 @@ if (options.sight==true && curcursorinfo.flags!=0)
    }
 // ustawienie pozycji okna i/lub umieszczenie TOPMOST
 //
-/* if (options.follow==true && options.zoomed==false)
+/* if (Helper->Options.follow==true && Helper->Options.zoomed==false)
 if (oldcursorinfo.ptScreenPos.x!=curcursorinfo.ptScreenPos.x || oldcursorinfo.ptScreenPos.y!=curcursorinfo.ptScreenPos.y)
    {
-	if (options.central==true) {
-        newformpoint.x = curcursorinfo.ptScreenPos.x - options.clientrect.right/2;
-	if (newformpoint.x > Desktop->Screen->Rect.right - options.clientrect.right)
-	   {newformpoint.x = Desktop->Screen->Rect.right - options.clientrect.right;
+	if (Helper->Options.central==true) {
+        newformpoint.x = curcursorinfo.ptScreenPos.x - Helper->Options.clientrect.right/2;
+	if (newformpoint.x > Desktop->Screen->Rect.right - Helper->Options.clientrect.right)
+	   {newformpoint.x = Desktop->Screen->Rect.right - Helper->Options.clientrect.right;
 		goto NEXT;
 	   }
-	    newformpoint.y = curcursorinfo.ptScreenPos.y - options.clientrect.bottom/2;
-	if (newformpoint.y > Desktop->Screen->Rect.bottom - options.clientrect.bottom)
-	   {newformpoint.y = Desktop->Screen->Rect.bottom - options.clientrect.bottom;
+	    newformpoint.y = curcursorinfo.ptScreenPos.y - Helper->Options.clientrect.bottom/2;
+	if (newformpoint.y > Desktop->Screen->Rect.bottom - Helper->Options.clientrect.bottom)
+	   {newformpoint.y = Desktop->Screen->Rect.bottom - Helper->Options.clientrect.bottom;
 	    goto NEXT;
 	   }
     }
 	else {
-		newformpoint.x = curcursorinfo.ptScreenPos.x + (options.clientrect.right)/2;
-	if (newformpoint.x > Desktop->Screen->Rect.right - options.clientrect.right)
-	   {newformpoint.x = Desktop->Screen->Rect.right - options.clientrect.right;
+		newformpoint.x = curcursorinfo.ptScreenPos.x + (Helper->Options.clientrect.right)/2;
+	if (newformpoint.x > Desktop->Screen->Rect.right - Helper->Options.clientrect.right)
+	   {newformpoint.x = Desktop->Screen->Rect.right - Helper->Options.clientrect.right;
 		if (Desktop->Screen->Rect.right - curcursorinfo.ptScreenPos.x >= Desktop->Screen->Rect.bottom - curcursorinfo.ptScreenPos.y)
-		   {newformpoint.y = curcursorinfo.ptScreenPos.y - (options.clientrect.bottom)/2 - options.clientrect.bottom;
+		   {newformpoint.y = curcursorinfo.ptScreenPos.y - (Helper->Options.clientrect.bottom)/2 - Helper->Options.clientrect.bottom;
 			goto NEXT;
 		   }
 	   }
-		newformpoint.y = curcursorinfo.ptScreenPos.y + (options.clientrect.bottom-options.clientrect.top)/2;
-	if (newformpoint.y > Desktop->Screen->Rect.bottom - options.clientrect.bottom)
-	   {newformpoint.y = Desktop->Screen->Rect.bottom - options.clientrect.bottom;
+		newformpoint.y = curcursorinfo.ptScreenPos.y + (Helper->Options.clientrect.bottom-Helper->Options.clientrect.top)/2;
+	if (newformpoint.y > Desktop->Screen->Rect.bottom - Helper->Options.clientrect.bottom)
+	   {newformpoint.y = Desktop->Screen->Rect.bottom - Helper->Options.clientrect.bottom;
 		if (Desktop->Screen->Rect.right - curcursorinfo.ptScreenPos.x <= Desktop->Screen->Rect.bottom - curcursorinfo.ptScreenPos.y)
-		   {newformpoint.x = curcursorinfo.ptScreenPos.x - (options.clientrect.right)/2 - options.clientrect.right;
+		   {newformpoint.x = curcursorinfo.ptScreenPos.x - (Helper->Options.clientrect.right)/2 - Helper->Options.clientrect.right;
 			goto NEXT;
 		   }
 	   }
     }
 	 NEXT:
 	 SetWindowPos(Handle,
-			 (void*)options.zorder,
+			 (void*)Helper->Options.zorder,
 			 newformpoint.x,newformpoint.y,
 			 0,0,
 			 SWP_NOCOPYBITS|SWP_NOACTIVATE|SWP_NOSIZE);
@@ -150,12 +152,12 @@ if (oldcursorinfo.ptScreenPos.x!=curcursorinfo.ptScreenPos.x || oldcursorinfo.pt
 */
     if(!Zeus_form->Visible && !Zoom_form->Visible && !Size_form->Visible && !Atab_form->Visible && !Tips_form->Visible && !PopupMenuVisible)
         {SetWindowPos(Handle,
-			 (void*)options.zorder,
+			 (void*)Helper->Options.zorder,
 			 0,0,
 			 0,0,
         SWP_NOREDRAW|SWP_NOACTIVATE|SWP_NOSIZE|SWP_NOMOVE);
         }
-RECT framerect = options.clientrect;
+RECT framerect = Helper->Options.clientrect;
 ::FrameRect(this->Canvas->Handle,&framerect,crossbrush);
 	 framerect.left++;
 	 framerect.top++;
@@ -164,7 +166,7 @@ RECT framerect = options.clientrect;
 ::FrameRect(this->Canvas->Handle,&framerect,crossbrush);
 
 StretchBlt(this->Canvas->Handle,
-	  2,2,options.clientrect.right-4,options.clientrect.bottom-4,
+	  2,2,Helper->Options.clientrect.right-4,Helper->Options.clientrect.bottom-4,
 	  Desktop->Screen->Context->Hdc,
 	  0,0,fullsize.x,fullsize.y,
 	  SRCCOPY);
@@ -176,23 +178,23 @@ lock = 0;
 void __fastcall TLupa_form::tform_Align(void)
 {
 ::GetWindowRect(Desktop->Screen->Hwnd,&Desktop->Screen->Rect);
-::GetWindowRect(Handle,&options.rect);
+::GetWindowRect(Handle,&Helper->Options.rect);
 
-if (options.rect.left	 < Desktop->Screen->Rect.left)
-   {options.rect.left    = Desktop->Screen->Rect.left;
+if (Helper->Options.rect.left	 < Desktop->Screen->Rect.left)
+   {Helper->Options.rect.left    = Desktop->Screen->Rect.left;
    }
-if (options.rect.right  >= Desktop->Screen->Rect.right)
-   {options.rect.left    = Desktop->Screen->Rect.right  - (options.rect.right-options.rect.left);
+if (Helper->Options.rect.right  >= Desktop->Screen->Rect.right)
+   {Helper->Options.rect.left    = Desktop->Screen->Rect.right  - (Helper->Options.rect.right-Helper->Options.rect.left);
    }
-if (options.rect.top	 < Desktop->Screen->Rect.top)
-   {options.rect.top     = Desktop->Screen->Rect.top;
+if (Helper->Options.rect.top	 < Desktop->Screen->Rect.top)
+   {Helper->Options.rect.top     = Desktop->Screen->Rect.top;
    }
-if (options.rect.bottom >= Desktop->Screen->Rect.bottom)
-   {options.rect.top     = Desktop->Screen->Rect.bottom - (options.rect.bottom-options.rect.top);
+if (Helper->Options.rect.bottom >= Desktop->Screen->Rect.bottom)
+   {Helper->Options.rect.top     = Desktop->Screen->Rect.bottom - (Helper->Options.rect.bottom-Helper->Options.rect.top);
    }
 
 SetWindowPos(this->Handle,NULL,
-		options.rect.left,options.rect.top,0,0,
+		Helper->Options.rect.left,Helper->Options.rect.top,0,0,
 		SWP_NOCOPYBITS|SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER);
 }
 //---------------------------------------------------------------------------
@@ -200,7 +202,7 @@ SetWindowPos(this->Handle,NULL,
 void __fastcall TLupa_form::tform_Move()
 {
 SetWindowPos(this->Handle,NULL,
-		options.rect.left,options.rect.top,0,0,
+		Helper->Options.rect.left,Helper->Options.rect.top,0,0,
 		SWP_NOCOPYBITS|SWP_NOSIZE|SWP_NOACTIVATE|SWP_NOZORDER);
 tform_Align();
 }
@@ -208,14 +210,14 @@ tform_Align();
 
 void __fastcall TLupa_form::tform_Resize(void)
 {
-options.rect.right  = options.rect.left + options.clientrect.right;
-options.rect.bottom = options.rect.top  + options.clientrect.bottom;
+Helper->Options.rect.right  = Helper->Options.rect.left + Helper->Options.clientrect.right;
+Helper->Options.rect.bottom = Helper->Options.rect.top  + Helper->Options.clientrect.bottom;
 
-AdjustWindowRectEx(&options.rect,
+AdjustWindowRectEx(&Helper->Options.rect,
 		GetWindowLong(this->Handle,GWL_STYLE),false,
 		GetWindowLong(this->Handle,GWL_EXSTYLE));
 SetWindowPos(this->Handle,NULL,
-		0,0,(options.rect.right-options.rect.left),(options.rect.bottom-options.rect.top),
+		0,0,(Helper->Options.rect.right-Helper->Options.rect.left),(Helper->Options.rect.bottom-Helper->Options.rect.top),
 		SWP_NOCOPYBITS|SWP_NOMOVE|SWP_NOACTIVATE|SWP_NOZORDER);
 tform_Align();
 }
@@ -223,119 +225,19 @@ tform_Align();
 
 void __fastcall TLupa_form::tform_Initialize(void)
 {
-tform_Load();
-Timer1->Interval = options.interval;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Load("Lupa");
+Timer1->Interval = Helper->Options.interval;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 tform_Move(); tform_Resize();
-if (options.zoomed)
+if (Helper->Options.zoomed)
 	 SetWindowLong(this->Handle,GWL_STYLE,GetWindowLong(this->Handle,GWL_STYLE) | WS_MAXIMIZE);
-if (options.visible)
+if (Helper->Options.visible)
 	 this->Show();
 SetClassLong(this->Handle,GCL_STYLE,GetClassLong(this->Handle,GCL_STYLE) | CS_SAVEBITS);
-MenuItemCelownik->Checked = options.sight;
+MenuItemCelownik->Checked = Helper->Options.sight;
 SubMenuZoomClick(this);
 SubMenuPrzeswitClick(this);
 SubMenuSizeClick(this);
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TLupa_form::tform_Load(void)
-{
-KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Lupa",true);
-
-if (KluczRejestuSystemuWindows->ValueExists("clientrect"))
-	{KluczRejestuSystemuWindows->ReadBinaryData("clientrect",&options.clientrect, sizeof(RECT));
-	}
-else
-	{options.clientrect.right = 320;
-	 options.clientrect.bottom = 240;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("rect"))
-	{KluczRejestuSystemuWindows->ReadBinaryData("rect",&options.rect, sizeof(RECT));
-	}
-else
-	{options.rect.left = 0; 
-	 options.rect.top = 0;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("zoomed"))
-	{options.zoomed = KluczRejestuSystemuWindows->ReadBool("zoomed");
-	}
-else
-	{options.zoomed = false;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("alpha"))
-	{options.alpha = KluczRejestuSystemuWindows->ReadInteger("alpha");
-	}
-else
-	{options.alpha = -1;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("clickthrough"))
-	{options.clickthrough  = KluczRejestuSystemuWindows->ReadInteger("clickthrough");
-	}
-else
-	{options.clickthrough  = 0;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("visible"))
-	{options.visible = KluczRejestuSystemuWindows->ReadBool("visible");
-	}
-else
-	{options.visible = false;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("interval"))
-	{options.interval = KluczRejestuSystemuWindows->ReadInteger("interval");
-	}
-else
-	{options.interval = 44;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("zorder"))
-	{options.zorder = KluczRejestuSystemuWindows->ReadInteger("zorder");
-	}
-else
-	{options.zorder = (long)HWND_TOPMOST;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("sight"))
-	{options.sight = KluczRejestuSystemuWindows->ReadBool("sight");
-	}
-else
-	{options.sight = false;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("zoom"))
-	{options.zoom = KluczRejestuSystemuWindows->ReadInteger("zoom");
-	}
-else
-	{options.zoom = 3;
-	}
-if (KluczRejestuSystemuWindows->ValueExists("central"))
-	{options.central = KluczRejestuSystemuWindows->ReadBool("central");
-	}
-else
-	{options.central = false;
-	}
-KluczRejestuSystemuWindows->CloseKey();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TLupa_form::tform_Save(void)
-{
-if (!options.zoomed)
-	{::GetClientRect(this->Handle,&options.clientrect);
-	 ::GetWindowRect(this->Handle,&options.rect);
-	}
-KluczRejestuSystemuWindows->OpenKey("Software\\TSoft_\\Panel\\Lupa",true);
-
-KluczRejestuSystemuWindows->WriteBinaryData("rect",&options.rect,sizeof(RECT));
-KluczRejestuSystemuWindows->WriteBinaryData("clientrect",&options.clientrect,sizeof(RECT));
-KluczRejestuSystemuWindows->WriteBool("zoomed",options.zoomed);
-KluczRejestuSystemuWindows->WriteInteger("alpha",options.alpha);
-KluczRejestuSystemuWindows->WriteInteger("clickthrough",options.clickthrough);
-KluczRejestuSystemuWindows->WriteBool("visible",options.visible);
-KluczRejestuSystemuWindows->WriteInteger("interval", options.interval);
-KluczRejestuSystemuWindows->WriteInteger("zorder",options.zorder);
-KluczRejestuSystemuWindows->WriteBool("sight",options.sight);
-KluczRejestuSystemuWindows->WriteInteger("zoom",options.zoom);
-KluczRejestuSystemuWindows->WriteBool("central",options.central);
-
-KluczRejestuSystemuWindows->CloseKey();
 }
 //---------------------------------------------------------------------------
 
@@ -344,7 +246,6 @@ void __fastcall TLupa_form::FormCreate(TObject *Sender)
 hInst = (HINSTANCE)HInstance;
 ::SetStretchBltMode(this->Canvas->Handle,STRETCH_DELETESCANS);
 Ruszacz = new ts::WindowsMover();
-KluczRejestuSystemuWindows = new TRegistry;
 }
 //---------------------------------------------------------------------------
 
@@ -354,7 +255,7 @@ Timer1->Enabled = true;
 if (Main_form!=NULL ? Main_form->SpeedButtonLupa!=NULL : false)
 	 Main_form->SpeedButtonLupa->Down = true;
 MenuItemZwin->Caption = "&Hide";
-options.visible = true;
+Helper->Options.visible = true;
 tform_Align();
 }
 //---------------------------------------------------------------------------
@@ -367,35 +268,34 @@ if (Main_form!=NULL ? Main_form->SpeedButtonLupa!=NULL : false)
 ShowWindow(Application->Handle,SW_SHOWNA);
 ShowWindow(Application->Handle,SW_HIDE);
 MenuItemZwin->Caption = "&Show";
-options.visible = false;
+Helper->Options.visible = false;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::FormDestroy(TObject *Sender)
 {
 delete Ruszacz;
-delete KluczRejestuSystemuWindows;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::FormResize(TObject *Sender)
 {
-::GetClientRect(this->Handle,&options.clientrect);
-::GetWindowRect(this->Handle,&options.rect);
-options.zoomed = IsZoomed(Handle);
+::GetClientRect(this->Handle,&Helper->Options.clientrect);
+::GetWindowRect(this->Handle,&Helper->Options.rect);
+Helper->Options.zoomed = IsZoomed(Handle);
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::FormPaint(TObject *Sender)
 {
 /*SetWindowPos(Handle,
-	     (void*)options.zorder,
+	     (void*)Helper->Options.zorder,
 	     0,0,0,0,
 	     SWP_NOCOPYBITS|SWP_NOSIZE|SWP_NOMOVE|SWP_NOACTIVATE|SWP_NOSENDCHANGING);
 RECT temprect;
  ::GetClipBox(this->Canvas->Handle,&temprect);
 POINT halfsize, fullsize;
-fullsize.x = (temprect.right-4)/options.zoom; fullsize.y = (temprect.bottom-4)/options.zoom;
+fullsize.x = (temprect.right-4)/Helper->Options.zoom; fullsize.y = (temprect.bottom-4)/Helper->Options.zoom;
 
 if (temprect.right!=Desktop->Screen->Context->Bitmap.Info.bmiHeader.biWidth || temprect.bottom!=Desktop->Screen->Context->Bitmap.Info.bmiHeader.biHeight)
 {tform_Redraw();
@@ -404,7 +304,7 @@ else
 {
 ::GetClipBox(this->Canvas->Handle,&temprect);
 StretchBlt(this->Canvas->Handle,
-	  2,2,options.clientrect.right-4,options.clientrect.bottom-4,
+	  2,2,Helper->Options.clientrect.right-4,Helper->Options.clientrect.bottom-4,
 	  Desktop->Screen->Context->Hdc,
 	  0,0,fullsize.x,fullsize.y,
 	  SRCCOPY);
@@ -458,134 +358,134 @@ tform_Redraw();
 
 void __fastcall TLupa_form::SubMenuPrzeswitClick(TObject *Sender)
 {
-if (options.clickthrough==true)
+if (Helper->Options.clickthrough==true)
 	 MenuItemTrans->Checked = true;
 
-if (options.alpha==-1)
+if (Helper->Options.alpha==-1)
 	 NOFF->Checked = true;
 else
-if (options.alpha==20)
+if (Helper->Options.alpha==20)
 	 N201->Checked = true;
 else
-if (options.alpha==30)
+if (Helper->Options.alpha==30)
 	 N301->Checked = true;
 else
-if (options.alpha==40)
+if (Helper->Options.alpha==40)
 	 N401->Checked = true;
 else
-if (options.alpha==50)
+if (Helper->Options.alpha==50)
 	 N501->Checked = true;
 else
-if (options.alpha==60)
+if (Helper->Options.alpha==60)
 	 N601->Checked = true;
 else
-if (options.alpha==70)
+if (Helper->Options.alpha==70)
 	 N701->Checked = true;
 else
-if (options.alpha==80)
+if (Helper->Options.alpha==80)
 	 N801->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemTransClick(TObject *Sender)
 {
-options.clickthrough = !options.clickthrough;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
-MenuItemTrans->Checked = options.clickthrough;
+Helper->Options.clickthrough = !Helper->Options.clickthrough;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
+MenuItemTrans->Checked = Helper->Options.clickthrough;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::NOFFClick(TObject *Sender)
 {
-options.alpha = -1;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = -1;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 NOFF->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N101Click(TObject *Sender)
 {
-options.alpha = 10;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 10;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N201->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N201Click(TObject *Sender)
 {
-options.alpha = 20;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 20;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N201->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N301Click(TObject *Sender)
 {
-options.alpha = 30;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 30;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N301->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N401Click(TObject *Sender)
 {
-options.alpha = 40;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 40;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N401->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N501Click(TObject *Sender)
 {
-options.alpha = 50;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 50;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N501->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N601Click(TObject *Sender)
 {
-options.alpha = 60;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 60;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N601->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N701Click(TObject *Sender)
 {
-options.alpha = 70;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 70;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N701->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::N801Click(TObject *Sender)
 {
-options.alpha = 80;
-Desktop->Action(SET_TRANSPARENCY,this->Handle,options.alpha,options.clickthrough);
+Helper->Options.alpha = 80;
+Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 N801->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::SubMenuSizeClick(TObject *Sender)
 {
-if ((options.clientrect.right-options.clientrect.left)-4==512)
+if ((Helper->Options.clientrect.right-Helper->Options.clientrect.left)-4==512)
 	{MenuItemSize512384->Checked = true;
 	}
 else
-if ((options.clientrect.right-options.clientrect.left)-4==384)
+if ((Helper->Options.clientrect.right-Helper->Options.clientrect.left)-4==384)
 	{MenuItemSize384288->Checked = true;
 	}
 else
-if ((options.clientrect.right-options.clientrect.left)-4==320)
+if ((Helper->Options.clientrect.right-Helper->Options.clientrect.left)-4==320)
 	{MenuItemSize320240->Checked = true;
 	}
 else
-if ((options.clientrect.right-options.clientrect.left)-4==240)
+if ((Helper->Options.clientrect.right-Helper->Options.clientrect.left)-4==240)
 	{MenuItemSize240180->Checked = true;
 	}
 else
-if ((options.clientrect.right-options.clientrect.left)-4==180)
+if ((Helper->Options.clientrect.right-Helper->Options.clientrect.left)-4==180)
 	{MenuItemSize180120->Checked = true;
 	}
 else
@@ -595,73 +495,73 @@ MenuItemSizeAdvanced->Checked   = true;
 
 void __fastcall TLupa_form::MenuItemSizeAdvancedClick(TObject *Sender)
 {
-Size_form->CheckBox1->Checked  = options.clientrect.bottom*4==options.clientrect.right*3;
-Size_form->TrackBar1->Position = options.clientrect.right;
-Size_form->TrackBar2->Position = options.clientrect.bottom;
-long  acc = options.zorder;
-	    options.zorder = (long)HWND_BOTTOM;
+Size_form->CheckBox1->Checked  = Helper->Options.clientrect.bottom*4==Helper->Options.clientrect.right*3;
+Size_form->TrackBar1->Position = Helper->Options.clientrect.right;
+Size_form->TrackBar2->Position = Helper->Options.clientrect.bottom;
+long  acc = Helper->Options.zorder;
+	    Helper->Options.zorder = (long)HWND_BOTTOM;
 if (Size_form->Execute(this)==mrOk)
-	{options.clientrect.right = Size_form->TrackBar1->Position; options.rect.bottom = Size_form->TrackBar2->Position;
+	{Helper->Options.clientrect.right = Size_form->TrackBar1->Position; Helper->Options.rect.bottom = Size_form->TrackBar2->Position;
 	 tform_Resize();
 	}
-options.zorder = acc;
+Helper->Options.zorder = acc;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemSize512384Click(TObject *Sender)
 {
-options.clientrect.right = 512+4; options.clientrect.bottom = 384+4;
+Helper->Options.clientrect.right = 512+4; Helper->Options.clientrect.bottom = 384+4;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemSize384288Click(TObject *Sender)
 {
-options.clientrect.right = 384+4; options.clientrect.bottom = 288+4;
+Helper->Options.clientrect.right = 384+4; Helper->Options.clientrect.bottom = 288+4;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemSize320240Click(TObject *Sender)
 {
-options.clientrect.right = 320+4; options.clientrect.bottom = 240+4;
+Helper->Options.clientrect.right = 320+4; Helper->Options.clientrect.bottom = 240+4;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemSize240180Click(TObject *Sender)
 {
-options.clientrect.right = 240+4; options.clientrect.bottom = 180+4;
+Helper->Options.clientrect.right = 240+4; Helper->Options.clientrect.bottom = 180+4;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemSize180120Click(TObject *Sender)
 {
-options.clientrect.right = 180+4; options.clientrect.bottom = 120+4;
+Helper->Options.clientrect.right = 180+4; Helper->Options.clientrect.bottom = 120+4;
 tform_Resize();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::SubMenuZoomClick(TObject *Sender)
 {
-if (options.zoom==8)
+if (Helper->Options.zoom==8)
 	{MenuItemZoom08->Checked   = true;
 	}
 else
-if (options.zoom==6)
+if (Helper->Options.zoom==6)
 	{MenuItemZoom06->Checked   = true;
 	}
 else
-if (options.zoom==4)
+if (Helper->Options.zoom==4)
 	{MenuItemZoom04->Checked   = true;
 	}
 else
-if (options.zoom==3)
+if (Helper->Options.zoom==3)
 	{MenuItemZoom03->Checked   = true;
 	}
 else
-if (options.zoom==2)
+if (Helper->Options.zoom==2)
 	{MenuItemZoom02->Checked   = true;
 	}
 else
@@ -671,48 +571,48 @@ MenuItemZoomAdvanced->Checked = true;
 
 void __fastcall TLupa_form::MenuItemZoomAdvancedClick(TObject *Sender)
 {
-long acc = options.zorder;
-	   options.zorder = (long)HWND_BOTTOM;
-Zoom_form->TrackBar1->Position = options.zoom;
+long acc = Helper->Options.zorder;
+	   Helper->Options.zorder = (long)HWND_BOTTOM;
+Zoom_form->TrackBar1->Position = Helper->Options.zoom;
 if (Zoom_form->Execute(this)==mrOk)
-	 options.zoom = Zoom_form->TrackBar1->Position;
-options.zorder = acc;
+	 Helper->Options.zoom = Zoom_form->TrackBar1->Position;
+Helper->Options.zorder = acc;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemZoom02Click(TObject *Sender)
 {
-options.zoom = 2;
+Helper->Options.zoom = 2;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemZoom03Click(TObject *Sender)
 {
-options.zoom = 3;
+Helper->Options.zoom = 3;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemZoom04Click(TObject *Sender)
 {
-options.zoom = 4;
+Helper->Options.zoom = 4;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemZoom06Click(TObject *Sender)
 {
-options.zoom = 6;
+Helper->Options.zoom = 6;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::MenuItemZoom08Click(TObject *Sender)
 {
-options.zoom = 8;
+Helper->Options.zoom = 8;
 }
 //---------------------------------------------------------------------------
 void __fastcall TLupa_form::MenuItemCelownikClick(TObject *Sender)
 {
-options.sight = !options.sight;
-MenuItemCelownik->Checked = options.sight;
+Helper->Options.sight = !Helper->Options.sight;
+MenuItemCelownik->Checked = Helper->Options.sight;
 tform_Align();
 }
 
@@ -728,7 +628,7 @@ SetForegroundWindow(Lupa_form->Handle);
 void __fastcall TLupa_form::Na1Click(TObject *Sender)
 {
 SetWindowPos(Handle,
-    	 (void*)options.zorder,
+    	 (void*)Helper->Options.zorder,
     	 (Desktop->Screen->Rect.right-Desktop->Screen->Rect.left)/2 - this->Width/2,(Desktop->Screen->Rect.bottom-Desktop->Screen->Rect.top)/2 - this->Height/2,
     	 0,0,
     	 SWP_NOCOPYBITS|SWP_NOACTIVATE|SWP_NOSIZE);
@@ -738,111 +638,111 @@ SetWindowPos(Handle,
 void __fastcall TLupa_form::Natopie1Click(TObject *Sender)
 {
 Natopie1->Checked = !Natopie1->Checked;
-if (Natopie1->Checked) options.zorder = (long)HWND_TOPMOST;
-else options.zorder = NULL;
+if (Natopie1->Checked) Helper->Options.zorder = (long)HWND_TOPMOST;
+else Helper->Options.zorder = NULL;
 }
 //---------------------------------------------------------------------------
 
 /*
 void __fastcall TLupa_form::SubMenuTimerClick(TObject *Sender)
 {
-if (options.interval==20)
+if (Helper->Options.interval==20)
 	U020->Checked = true;
 else
-if (options.interval==25)
+if (Helper->Options.interval==25)
 	U025->Checked = true;
 else
-if (options.interval==30)
+if (Helper->Options.interval==30)
 	U030->Checked = true;
 else
-if (options.interval==40)
+if (Helper->Options.interval==40)
 	U040->Checked = true;
 else
-if (options.interval==50)
+if (Helper->Options.interval==50)
 	U050->Checked = true;
 else
-if (options.interval==100)
+if (Helper->Options.interval==100)
 	U100->Checked = true;
 else
-if (options.interval==200)
+if (Helper->Options.interval==200)
 	U200->Checked = true;
 else
-if (options.interval==250)
+if (Helper->Options.interval==250)
 	U250->Checked = true;
 else
-if (options.interval==500)
+if (Helper->Options.interval==500)
 	U500->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U020Click(TObject *Sender)
 {
-options.interval = 20;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 20;
+Timer1->Interval = Helper->Options.interval;
 U020->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U025Click(TObject *Sender)
 {
-options.interval = 25;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 25;
+Timer1->Interval = Helper->Options.interval;
 U025->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U030Click(TObject *Sender)
 {
-options.interval = 30;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 30;
+Timer1->Interval = Helper->Options.interval;
 U030->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U040Click(TObject *Sender)
 {
-options.interval = 40;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 40;
+Timer1->Interval = Helper->Options.interval;
 U040->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U050Click(TObject *Sender)
 {
-options.interval = 50;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 50;
+Timer1->Interval = Helper->Options.interval;
 U050->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U100Click(TObject *Sender)
 {
-options.interval = 100;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 100;
+Timer1->Interval = Helper->Options.interval;
 U100->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U200Click(TObject *Sender)
 {
-options.interval = 200;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 200;
+Timer1->Interval = Helper->Options.interval;
 U200->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U250Click(TObject *Sender)
 {
-options.interval = 250;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 250;
+Timer1->Interval = Helper->Options.interval;
 U250->Checked = true;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TLupa_form::U500Click(TObject *Sender)
 {
-options.interval = 500;
-Timer1->Interval = options.interval;
+Helper->Options.interval = 500;
+Timer1->Interval = Helper->Options.interval;
 U500->Checked = true;
 }
 //---------------------------------------------------------------------------

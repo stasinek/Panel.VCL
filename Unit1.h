@@ -1,5 +1,4 @@
 //---------------------------------------------------------------------------
-
 #ifndef Unit1H
 #define Unit1H
 //---------------------------------------------------------------------------
@@ -24,10 +23,10 @@ __published:	// IDE-managed Components
         TSpeedButton *SpeedButton1;
         TImage *Image1;
         TLabel *Label2;
-        TSpeedButton *SpeedButton2;
-        TSpeedButton *SpeedButton3;
         TComboBox *ComboBox2;
         TSpeedButton *SpeedButton4;
+        TSpeedButton *SpeedButton2;
+        TSpeedButton *SpeedButton3;
         void __fastcall SpeedButton1Click(TObject *Sender);
         void __fastcall Button2Click(TObject *Sender);
         void __fastcall Button3Click(TObject *Sender);

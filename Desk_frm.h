@@ -6,7 +6,6 @@
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
-#include <Registry.hpp>
 #include <ExtCtrls.hpp>
 #include <Graphics.hpp>
 #include <Menus.hpp>
@@ -106,17 +105,11 @@ private:	// User declarations
 HINSTANCE hInst; LONG updateing;
 //---------------------------------------------------------------------------
 ts::WindowsMover *Ruszacz;
-TRegistry *KluczRejestuSystemuWindows;
 //---------------------------------------------------------------------------
 public:		// User declarations
 //---------------------------------------------------------------------------
-struct {
-RECT rect;
-LONG alpha,clickthrough,zoomed,visible,zorder,interval;
-RECT clientrect, deskrect[5], deskhdcc;
-} options;
-//---------------------------------------------------------------------------
         __fastcall TDesk_form(TComponent* Owner);
+struct TForm_Helper *Helper;
 //---------------------------------------------------------------------------
 int   __fastcall Desktop_Switch        (int newDesk, bool redraw);
 //---------------------------------------------------------------------------
@@ -125,9 +118,6 @@ void  __fastcall tform_Align           (void);
 void  __fastcall tform_Move            (void);
 //---------------------------------------------------------------------------
 void  __fastcall tform_Initialize      (void);
-//---------------------------------------------------------------------------
-void  __fastcall tform_Save            (void);
-void  __fastcall tform_Load            (void);
 //---------------------------------------------------------------------------
 void  __fastcall tform_Calculate_Rect  (void);
 void  __fastcall tform_Redraw          (void);

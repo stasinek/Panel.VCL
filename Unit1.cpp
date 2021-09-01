@@ -1,8 +1,6 @@
 //---------------------------------------------------------------------------
-
 #include <vcl.h>
 #pragma hdrstop
-
 //#include "Main_frm.h"
 #include "Unit1.h"
 #include "./../../FORM_TEMPLATES/About_frm.h"
@@ -54,7 +52,7 @@ this->FormPaint(Sender);
 void __fastcall TResizerForm::FormPaint(TObject *Sender)
 {
 static __int32 w = 1, h = 1;
-__int32 l, p;
+__int32 l, p, s;
 l = ComboBox1->Text.Length();
 if (l >=7) {
 p = ComboBox1->Text.Pos("x");
@@ -62,12 +60,11 @@ if (p >=4) {
  w = ComboBox1->Text.SubString(1,p - 1).ToInt();
  h = ComboBox1->Text.SubString(p + 1,l).ToInt();
 }}
-__int32 s = 1000;
 
-if (w*Image1->Height>=h*Image1->Width) { s = (1000 * (Image1->Width - 70))  / w;
+if (w*Image1->Height>=h*Image1->Width) { s = (1000 * (Image1->Width - 50))  / w;
 }
 else {
-s = (1000 * (Image1->Height - 50)) / h;
+s = (1000 * (Image1->Height - 30)) / h;
 }
 w = (w * s) / 1000;
 h = (h * s) / 1000;

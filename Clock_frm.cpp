@@ -23,8 +23,8 @@ int hour = tm_struct->tm_hour;
 int minute = tm_struct->tm_min;
 int sec = tm_struct->tm_sec;
 
-Clock_form->Panel1->Caption = (AnsiString)hour + ":" + (AnsiString)minute + ":" + (AnsiString)sec;
-Alarm_form->Label1->Caption = (AnsiString)hour + ":" + (AnsiString)minute + ":" + (AnsiString)sec;
+Clock_form->Panel1->Caption = AnsiString::FormatFloat("0#",hour) + ":" + AnsiString::FormatFloat("0#",minute) + ":" + AnsiString::FormatFloat("0#",sec);
+Alarm_form->Label1->Caption = AnsiString::FormatFloat("0#",hour) + ":" + AnsiString::FormatFloat("0#",minute) + ":" + AnsiString::FormatFloat("0#",sec);
 }
 //---------------------------------------------------------------------------
 

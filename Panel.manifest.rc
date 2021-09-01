@@ -1,0 +1,9 @@
+#define APP_MANIFEST 1
+#define RT_MANIFEST 24
+
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+APP_MANIFEST RT_MANIFEST "Panel.manifest"
