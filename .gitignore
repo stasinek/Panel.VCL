@@ -40,3 +40,6 @@ _ReSharper*/
 *.ild
 journal*.*
 *.map
+*.csm
+*.#??
+/Win32/*

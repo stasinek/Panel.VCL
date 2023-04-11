@@ -25,8 +25,8 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT"/>
     <MAINSOURCE value="Resizer.cpp"/>
-    <INCLUDEPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES"/>
-    <LIBPATH value="..\..\FORM_TEMPLATES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\lib\obj;$(BCB)\lib;..\..\PACKAGES"/>
+    <INCLUDEPATH value="..\..\FORM_TEMPLATES;..\..\PACKAGES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\..\FORM_TEMPLATES;..\..\PACKAGES;..\..;..;&quot;C:\Program Files\Borland\CBuilder6\Projects\&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
@@ -72,18 +72,20 @@ ProductVersion=1.0.0.0
 Comments=
 
 [HistoryLists\hlIncludePath]
-Count=4
-Item0=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES
-Item1=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
-Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
-Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
+Count=5
+Item0=..\..\FORM_TEMPLATES;..\..\PACKAGES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl
+Item1=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES
+Item2=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\\..\\..\\PACKAGES
+Item4=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=4
-Item0=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\..\PACKAGES
-Item1=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
-Item2=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
-Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
+Count=5
+Item0=..\..\FORM_TEMPLATES;..\..\PACKAGES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\..\FORM_TEMPLATES;..\..;..;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\lib\obj;$(BCB)\lib;..\..\PACKAGES
+Item2=..\..\FORM_TEMPLATES;..\..;..\;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item3=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib;.\\..\\..\\PACKAGES
+Item4=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

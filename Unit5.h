@@ -13,6 +13,7 @@
 #include <Grids.hpp>
 #include <Buttons.hpp>
 #include <ExtCtrls.hpp>
+#include "CCALENDR.h"
 //---------------------------------------------------------------------------
 class TAlarm_form : public TForm
 {
@@ -43,6 +44,9 @@ __published:	// IDE-managed Components
 private:	// User declarations
 public:		// User declarations
 	__fastcall TAlarm_form(TComponent* Owner);
+        struct __alarms {
+          long time;
+          bool active; } daily_alarms[24], weekly_alarms[7], monhtly_alarms[31], active_alarms[24*7];
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TAlarm_form *Alarm_form;

@@ -111,7 +111,7 @@ memmove(&LocalTimeDzien,&LocalTime,sizeof(SYSTEMTIME));
 setmem(&PassedTimeDzien,sizeof(SYSTEMTIME),0x00);
 //
 //BarGraph1->BarCount = 0;
-Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",true);
+Klucz->OpenKey("Software\\TSoft\\Licznik\\Dni",true);
 TStringList *DateNames = new TStringList;
 Klucz->GetValueNames(DateNames);
 DateNames->Sorted = true;
@@ -188,7 +188,7 @@ Klucz->CloseKey();
 
 void __fastcall TDni_form::Post(void)
 {
-Klucz->OpenKey("Software\\TSoft_\\Licznik\\Dni",true);
+Klucz->OpenKey("Software\\TSoft\\Licznik\\Dni",true);
 Klucz->WriteInteger(LocalTimeToString(LocalTimeDzien).c_str(),PassedTimeDzien.wMinute);
 Klucz->CloseKey();
 }

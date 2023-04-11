@@ -33,8 +33,8 @@
 __fastcall TMain_form::TMain_form(TComponent* Owner)
 	: TForm(Owner)
 {
-Helper = new TForm_Helper();
-Helper->Default.clientrect.right = 487; Helper->Default.clientrect.bottom = 36;
+Helper = new TForm_Helper(this);
+Helper->Default.clientrect.right = 650; Helper->Default.clientrect.bottom = 36;
 }
 //---------------------------------------------------------------------------
 
@@ -73,13 +73,11 @@ tform_Align();
 
 void __fastcall TMain_form::tform_Initialize(void)
 {
-Helper->Load("Desk");
+Helper->Load("Main");
 Desk_form->Desktop_Switch(1,true);
 Desktop->Action(SET_TRANSPARENCY,this->Handle,Helper->Options.alpha,Helper->Options.clickthrough);
 tform_Move(); tform_Resize();
-SetClassLong(this->Handle,GCL_STYLE,GetClassLong(this->Handle,GCL_STYLE) | CS_SAVEBITS);
-if (Helper->Options.zoomed)
-    SetWindowLong(this->Handle,GWL_STYLE,GetWindowLong(this->Handle,GWL_STYLE) | WS_MAXIMIZE);
+SetClassLong(this->Handle,GCL_STYLE,GetClassLong(this->Handle,GCL_STYLE)| CS_SAVEBITS);
 if (Helper->Options.visible)
     this->Show();
 }
@@ -91,33 +89,25 @@ updateing = 0;
 hInst = (HINSTANCE)HInstance;
 ::SetStretchBltMode(this->Canvas->Handle, STRETCH_DELETESCANS);
 Ruszacz = new ts::WindowsMover();
-MainSysTray->Icon->Handle = LoadIcon(hInst,"MAINICON1");
-MainSysTray->AddIcon();
+SysTray1->Icon->Handle = LoadIconA(hInst,IDI_APPLICATION);
+SysTray1->AddIcon();
 MainTimer->Enabled = true;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TMain_form::FormShow(TObject*)
-{
-MenuItemZwin->Caption = "&Hide";
-Helper->Options.visible = true;
-tform_Align();
-}
-//---------------------------------------------------------------------------
-
-void __fastcall TMain_form::FormHide(TObject*)
+void __fastcall TMain_form::FormHide(TObject *Sender)
 {
 ShowWindow(Application->Handle,SW_SHOWNA);
 ShowWindow(Application->Handle,SW_HIDE);
 MenuItemZwin->Caption = "&Show";
-Helper->Options.visible = false;
+this->Helper->Options.visible = false;
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::FormDestroy(TObject*)
 {
 delete Ruszacz;
-MainSysTray->RemoveIcon();
+SysTray1->RemoveIcon();
 }
 //---------------------------------------------------------------------------
 
@@ -495,13 +485,14 @@ SetForegroundWindow(Lupa_form->Handle);
 
 void __fastcall TMain_form::MenuItemZwinClick(TObject*Sender)
 {
-this->FormHide(Sender);
+if (this->Helper->Options.visible==false) this->Show();
+else this->Hide();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TMain_form::MenuItemInfoClick(TObject*)
 {
-AboutForm->ShowModal();
+About_form->ShowModal();
 }
 //---------------------------------------------------------------------------
 
@@ -510,7 +501,6 @@ void __fastcall TMain_form::MenuItemCloseClick(TObject*)
 Main_form->Helper->Save("Main");
 Desk_form->Helper->Save("Desk");
 Lupa_form->Helper->Save("Lupa");
-
 //Desktop->Action(SET_TRANSPARENCY,FindWindow("Shell_TrayWnd",NULL),-1,false);
 //Desktop->Action(SET_TRANSPARENCY,FindWindow("BaseBar",NULL),-1,false);
 Application->Terminate();
@@ -588,7 +578,7 @@ SetForegroundWindow(Clock_form->Handle);
 
 void __fastcall TMain_form::SpeedButton3Click(TObject *Sender)
 {
-ResizerForm->Visible = SpeedButton3->Down;
+Resizer_form->Visible = SpeedButton3->Down;
 }
 //---------------------------------------------------------------------------
 
@@ -613,7 +603,7 @@ void __fastcall TMain_form::SpeedButton1Click(TObject *Sender)
 
 void __fastcall TMain_form::ShowResolution1Click(TObject *Sender)
 {
-ResizerForm->Visible = true;	
+Resizer_form->Visible = true;	
 }
 //---------------------------------------------------------------------------
 
@@ -637,6 +627,24 @@ SetForegroundWindow(Zeus_form->Handle);
 void __fastcall TMain_form::Alarm1Click(TObject *Sender)
 {
 Alarm_form->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TMain_form::FormShow(TObject *Sender)
+{
+MenuItemZwin->Caption = "&Hide";
+this->Helper->Options.visible = true;
+ShowWindow(Application->Handle,SW_SHOWNA);
+this->tform_Align();    
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TMain_form::Panel1DblClick(TObject *Sender)
+{
+if (this->Helper->Options.visible==false) this->Show();
+else this->Hide();
+    
 }
 //---------------------------------------------------------------------------
 

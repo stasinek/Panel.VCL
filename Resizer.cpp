@@ -4,8 +4,8 @@
 #include "./../../FORM_TEMPLATES/About_frm.h"
 #pragma hdrstop
 //---------------------------------------------------------------------------
-USEFORM("./../../FORM_TEMPLATES/About_frm.cpp", AboutForm);
-USEFORM("Unit1.cpp", ResizerForm);
+USEFORM("./../../FORM_TEMPLATES/About_frm.cpp", About_form);
+USEFORM("Unit1.cpp", Resizer_form);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -13,8 +13,8 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
         {
                  Application->Initialize();
                  Application->Title = "Resizer.VCL";
-                 Application->CreateForm(__classid(TResizerForm), &ResizerForm);
-                 Application->CreateForm(__classid(TAboutForm), &AboutForm);
+                 Application->CreateForm(__classid(TResizer_form), &Resizer_form);
+                 Application->CreateForm(__classid(TAbout_form), &About_form);
                  Application->Run();
         }
         catch (Exception &exception)

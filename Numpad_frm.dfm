@@ -1,6 +1,6 @@
 object Numpad: TNumpad
-  Left = 539
-  Top = 118
+  Left = 72
+  Top = 213
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsDialog
   Caption = 'ADCKeyboard Calc'

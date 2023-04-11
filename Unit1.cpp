@@ -7,16 +7,16 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TResizerForm *ResizerForm;
+TResizer_form *Resizer_form;
 //---------------------------------------------------------------------------
-__fastcall TResizerForm::TResizerForm(TComponent* Owner)
+__fastcall TResizer_form::TResizer_form(TComponent* Owner)
         : TForm(Owner)
 {
-Application->Title = ResizerForm->Caption;
+Application->Title = Resizer_form->Caption;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::SpeedButton1Click(TObject *Sender)
+void __fastcall TResizer_form::SpeedButton1Click(TObject *Sender)
 {
 static bool down = false;
 
@@ -32,7 +32,7 @@ down = !down;
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::Button2Click(TObject *Sender)
+void __fastcall TResizer_form::Button2Click(TObject *Sender)
 {
 if (ComboBox1->ItemIndex > 0)
 ComboBox1->ItemIndex = ComboBox1->ItemIndex-1;
@@ -40,7 +40,7 @@ this->FormPaint(Sender);
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::Button3Click(TObject *Sender)
+void __fastcall TResizer_form::Button3Click(TObject *Sender)
 {
 if (ComboBox1->ItemIndex < ComboBox1->Items->Count-1)
 ComboBox1->ItemIndex = ComboBox1->ItemIndex+1;
@@ -49,7 +49,7 @@ this->FormPaint(Sender);
 //---------------------------------------------------------------------------
 
 
-void __fastcall TResizerForm::FormPaint(TObject *Sender)
+void __fastcall TResizer_form::FormPaint(TObject *Sender)
 {
 static __int32 w = 1, h = 1;
 __int32 l, p, s;
@@ -90,7 +90,7 @@ Image1->Canvas->TextOutA((Image1->Width - ts.cx)/2, (Image1->Height - ts.cy)/2, 
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::SpeedButton2Click(TObject *Sender)
+void __fastcall TResizer_form::SpeedButton2Click(TObject *Sender)
 {
 DEVMODE DevMode; // >>
 DevMode.dmSize = sizeof (DEVMODE);
@@ -114,14 +114,14 @@ if (ChangeDisplaySettingsEx(dev,&DevMode,NULL,CDS_TEST,NULL)==DISP_CHANGE_SUCCES
 
 
 
-void __fastcall TResizerForm::SpeedButton3Click(TObject *Sender)
+void __fastcall TResizer_form::SpeedButton3Click(TObject *Sender)
 {
-AboutForm->ShowModal();
+About_form->ShowModal();
 }
 //---------------------------------------------------------------------------
 
 
-void __fastcall TResizerForm::ComboBox2Change(TObject *Sender)
+void __fastcall TResizer_form::ComboBox2Change(TObject *Sender)
 {
 DEVMODE DevMode; // >>
 DevMode.dmSize = sizeof (DEVMODE);
@@ -149,13 +149,13 @@ for (int i = 0; i < ComboBox1->Items->Count;i++) {
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::FormShow(TObject *Sender)
+void __fastcall TResizer_form::FormShow(TObject *Sender)
 {
 ComboBox2Change(Sender);
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TResizerForm::FormClose(TObject *Sender, TCloseAction &Action)
+void __fastcall TResizer_form::FormClose(TObject *Sender, TCloseAction &Action)
 {
 this->SpeedButton3->Down = false;
 }

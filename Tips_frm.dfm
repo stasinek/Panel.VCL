@@ -25,17 +25,4 @@ object Tips_form: TTips_form
   OnPaint = FormPaint
   PixelsPerInch = 96
   TextHeight = 22
-  object Ramka1: TRamka
-    Width = 287
-    Height = 47
-    Align = alClient
-    BorderKind = bRect
-    Color = clNone
-    OnMouseDown = Ramka1MouseDown
-    OnClick = Ramka1Click
-    OnDblClick = Ramka1Click
-    Caption = 'Ramka1'
-    ControlStyle = [csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]
-    Parent = Owner
-  end
 end

@@ -13,7 +13,6 @@
 class TTips_form : public TForm
 {
 __published:	// IDE-managed Components
-        	TRamka *Ramka1;
 			void __fastcall FormPaint(TObject *Sender);
 			void __fastcall FormHide(TObject *Sender);
         void __fastcall Ramka1Click(TObject *Sender);

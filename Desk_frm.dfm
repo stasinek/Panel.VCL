@@ -34,8 +34,8 @@ object Desk_form: TDesk_form
   PixelsPerInch = 96
   TextHeight = 13
   object DeskPopupMenu: TPopupMenu
-    Left = 28
-    Top = 64
+    Left = 180
+    Top = 48
     object MenuItemZwin: TMenuItem
       Caption = 'Show'
       Default = True

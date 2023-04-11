@@ -171,7 +171,7 @@ ArrangeIconicWindows(GetDesktopWindow());
 void __fastcall TZeus_form::N2Click(TObject *Sender)
 {
 Timer1->Enabled=false;
-AboutForm->ShowModal();
+About_form->ShowModal();
 Timer1->Enabled=true;
 }
 //---------------------------------------------------------------------------

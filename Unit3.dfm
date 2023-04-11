@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 119
-  Top = 224
+  Left = 199
+  Top = 159
   Width = 660
   Height = 459
   Caption = 'Kursor bez granic'

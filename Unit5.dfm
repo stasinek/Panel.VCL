@@ -1,5 +1,5 @@
 object Alarm_form: TAlarm_form
-  Left = 261
+  Left = 227
   Top = 151
   Width = 718
   Height = 489
@@ -181,12 +181,11 @@ object Alarm_form: TAlarm_form
       Left = 16
       Top = 140
       Width = 451
-      Height = 205
+      Height = 165
       BorderStyle = bsNone
       Color = clBtnFace
       ColCount = 8
       DefaultColWidth = 55
-      RowCount = 8
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goThumbTracking]
       ScrollBars = ssNone
       TabOrder = 2

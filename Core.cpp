@@ -90,15 +90,14 @@ KluczRejestuSystemuWindows->CloseKey();
 
 void __fastcall TForm_Helper::Save(String aform_Name)
 {
-if (!Options.zoomed)
-   {::GetClientRect(Owner->Handle,&Options.clientrect);
-    ::GetWindowRect(Owner->Handle,&Options.rect);
-   }
 if (!KluczRejestuSystemuWindows->OpenKey("Software\\TSoft\\Panel\\" + aform_Name,true))
     return;
-
-KluczRejestuSystemuWindows->WriteBinaryData("rect",&Options.rect,sizeof(RECT));
-KluczRejestuSystemuWindows->WriteBinaryData("clientrect",&Options.clientrect,sizeof(RECT));
+if (Owner!=NULL && !Options.zoomed)
+   {::GetClientRect(Owner->Handle,&Options.clientrect);
+    ::GetWindowRect(Owner->Handle,&Options.rect);
+    KluczRejestuSystemuWindows->WriteBinaryData("rect",&Options.rect,sizeof(RECT));
+    KluczRejestuSystemuWindows->WriteBinaryData("clientrect",&Options.clientrect,sizeof(RECT));
+   }
 KluczRejestuSystemuWindows->WriteBool("zoomed",Options.zoomed);
 KluczRejestuSystemuWindows->WriteInteger("alpha",Options.alpha);
 KluczRejestuSystemuWindows->WriteInteger("clickthrough",Options.clickthrough);

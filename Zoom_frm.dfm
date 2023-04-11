@@ -1,5 +1,5 @@
 object Zoom_form: TZoom_form
-  Left = 623
+  Left = 393
   Top = 355
   BorderStyle = bsDialog
   Caption = 'Advanced: Zoom...'

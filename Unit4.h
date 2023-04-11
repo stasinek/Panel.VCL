@@ -8,11 +8,13 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
+#include "FRAMEPAN.h"
 //---------------------------------------------------------------------------
 class TUruchom : public TForm
 {
 __published:	// IDE-managed Components
-	TTabControl *TabControl1;
+    TRamka *Ramka1;
+    TTabControl *TabControl1;
 private:	// User declarations
 public:		// User declarations
 	__fastcall TUruchom(TComponent* Owner);

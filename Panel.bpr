@@ -13,7 +13,7 @@
       Lupa_frm.obj Main_frm.obj Tips_frm.obj Zoom_frm.obj Atab_frm.obj 
       Move_frm.obj Size_frm.obj Expose_frm.obj Zeus_frm.obj Clock_frm.obj 
       Unit1.obj Unit3.obj Unit4.obj Unit5.obj Idle_frm.obj Idlecheck_frm.obj 
-      Unit2.obj Numpad_frm.obj"/>
+      Unit2.obj"/>
     <RESFILES value="Panel.res Panel.manifest.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -22,10 +22,10 @@
       Lupa_frm.dfm Main_frm.dfm Tips_frm.dfm Zoom_frm.dfm Atab_frm.dfm 
       Move_frm.dfm Size_frm.dfm Expose_frm.dfm Zeus_frm.dfm Clock_frm.dfm 
       Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm Idle_frm.dfm Idlecheck_frm.dfm 
-      Unit2.dfm Numpad_frm.dfm"/>
+      Unit2.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib"/>
+    <LIBRARIES value="bcbsmp50.lib dclusr50.lib Vclx50.lib Vcl50.lib dclusr50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib dclusr50.lib Vcl50.lib Vclx50.lib dclusr50.lib bcbsmp50.lib"/>
     <PACKAGES value="qrpt.bpi teeui.bpi teedb.bpi tee.bpi teeqr.bpi ibxpress.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES;..\..\..\x86_win32_classes"/>
     <PATHPAS value=".;"/>
@@ -42,11 +42,11 @@
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
-    <CFLAG1 value="-O2 -H=.\vcl50.csm -Hc -Q -Jgx -Vx -Ve -xf -xp -Vmp -VF -C -ff -X- -ps -a8 
-      -6 -b -d -k -y -v -vi- -P -c -tW -tWM"/>
+    <CFLAG1 value="-O2 -Q -Jgx -Vx -Ve -xf -xp -Vmp -VF -C -ff -X- -ps -a8 -6 -b -d -k -y -v 
+      -vi- -P -c -tW -tWM"/>
     <PFLAGS value="-$YD -$W -$U -$R -$Q -$A8 -v -JPHNE -M"/>
     <RFLAGS value=""/>
-    <AFLAGS value="/mu /w0 /zi"/>
+    <AFLAGS value="/mu /w2 /zi"/>
     <LFLAGS value="-D&quot;&quot; -V5.1 -Rr -Gz -aa -Tpe -GD -s -M -v"/>
   </OPTIONS>
   <LINKER>
@@ -61,7 +61,7 @@ AutoIncBuild=1
 MajorVer=4
 MinorVer=3
 Release=1
-Build=51
+Build=53
 Debug=0
 PreRelease=1
 Special=0
@@ -73,7 +73,7 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=SSTSOFT
 FileDescription=
-FileVersion=4.3.1.51
+FileVersion=4.3.1.53
 InternalName=Panel
 LegalCopyright=Stanislaw Stasiak 2000-2018
 LegalTrademarks=

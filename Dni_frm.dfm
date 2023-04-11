@@ -1,6 +1,6 @@
 object Dni_form: TDni_form
-  Left = 551
-  Top = 183
+  Left = 324
+  Top = 198
   BorderStyle = bsDialog
   ClientHeight = 388
   ClientWidth = 560

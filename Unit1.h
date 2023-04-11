@@ -10,7 +10,7 @@
 #include <Buttons.hpp>
 #include <Graphics.hpp>
 //---------------------------------------------------------------------------
-class TResizerForm : public TForm
+class TResizer_form : public TForm
 {
 __published:	// IDE-managed Components
         TComboBox *ComboBox1;
@@ -38,9 +38,9 @@ __published:	// IDE-managed Components
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 private:	// User declarations
 public:		// User declarations
-        __fastcall TResizerForm(TComponent* Owner);
+        __fastcall TResizer_form(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TResizerForm *ResizerForm;
+extern PACKAGE TResizer_form *Resizer_form;
 //---------------------------------------------------------------------------
 #endif

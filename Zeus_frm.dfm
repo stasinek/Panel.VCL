@@ -1,9 +1,9 @@
 object Zeus_form: TZeus_form
-  Left = 512
-  Top = 106
+  Left = 298
+  Top = 171
   BorderIcons = []
   BorderStyle = bsSingle
-  Caption = 'ZEUS'
+  Caption = 'Panel Task Manager'
   ClientHeight = 416
   ClientWidth = 504
   Color = clBtnFace
@@ -85,7 +85,7 @@ object Zeus_form: TZeus_form
       Caption = '&Okna'
       OnClick = Window1Click
       object Kill1: TMenuItem
-        Caption = 'Jestem bogiem!'
+        Caption = 'Zamknij proces'
         ShortCut = 49242
         OnClick = Kill1Click
       end
@@ -93,15 +93,15 @@ object Zeus_form: TZeus_form
         Caption = '-'
       end
       object Cascade1: TMenuItem
-        Caption = 'Cascade all Windows'
+        Caption = 'Kaskada'
         OnClick = Cascade1Click
       end
       object Tile2: TMenuItem
-        Caption = 'Tile all Windows Horizontally'
+        Caption = 'Wszystkie obok siebie'
         OnClick = Tile2Click
       end
       object Tile1: TMenuItem
-        Caption = 'Tile all Windows Vertically'
+        Caption = 'Wszystkie w tabeli (automatyczne dopasowanie)'
         OnClick = Tile1Click
       end
       object N1: TMenuItem

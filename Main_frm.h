@@ -25,7 +25,6 @@ class TMain_form : public TForm
 __published:	// IDE-managed Components
         TPopupMenu *MainPopupMenu;
         TTimer *MainTimer;
-        TSysTray *MainSysTray;
         TMenuItem *Pozycjakursora1;
         TMenuItem *MenuItemZwin;
         TMenuItem *SubMenuPrzeswit;
@@ -59,7 +58,6 @@ __published:	// IDE-managed Components
     TSpeedButton *SpeedButtonDesk5;
     TSpeedButton *SpeedButtonDeskGrid;
     TSpeedButton *SpeedButton3;
-    TSpeedButton *SpeedButton5;
     TBevel *Bevel3;
     TSpeedButton *SpeedButtonDesk1;
     TSpeedButton *SpeedButtonDesk2;
@@ -72,8 +70,9 @@ __published:	// IDE-managed Components
     TBevel *Bevel2;
     TPanel *Panel1;
     TPanel *Panel3;
+        TSpeedButton *SpeedButton1;
+    TSysTray *SysTray1;
     TRamka *Ramka1;
-    TRamka *Ramka2;
 		  void __fastcall MenuItemZwinClick(TObject *Sender);
 		  void __fastcall SubMenuPrzeswitClick(TObject *Sender);
 		  void __fastcall MenuItemTransClick(TObject *Sender);
@@ -109,7 +108,6 @@ __published:	// IDE-managed Components
           TShiftState Shift, int X, int Y);
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall FormDestroy(TObject *Sender);
-        void __fastcall FormShow(TObject *Sender);
         void __fastcall FormHide(TObject *Sender);
         void __fastcall FormResize(TObject *Sender);
         void __fastcall MainTimerTimer(TObject *Sender);
@@ -129,6 +127,8 @@ __published:	// IDE-managed Components
     void __fastcall SpeedButton7Click(TObject *Sender);
     void __fastcall SpeedButtonMinimalizeClick(TObject *Sender);
     void __fastcall Alarm1Click(TObject *Sender);
+    void __fastcall FormShow(TObject *Sender);
+    void __fastcall Panel1DblClick(TObject *Sender);
 private:	// User declarations
 //---------------------------------------------------------------------------
 HINSTANCE hInst; LONG updateing;

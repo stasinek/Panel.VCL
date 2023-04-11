@@ -6,6 +6,7 @@
 #include "Unit4.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+#pragma link "FRAMEPAN"
 #pragma resource "*.dfm"
 TUruchom *Uruchom;
 //---------------------------------------------------------------------------

@@ -15,7 +15,7 @@
 //---------------------------------------------------------------------------
 #pragma hdrstop
 //---------------------------------------------------------------------------
-USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", AboutForm);
+USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", About_form);
 USEUNIT("Core.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
@@ -34,18 +34,15 @@ USEFORM("Size_frm.cpp", Size_form);
 USEFORM("Expose_frm.cpp", Expose_form);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
-USEFORM("Unit1.cpp", ResizerForm);
+USEFORM("Unit1.cpp", Resizer_form);
 USEFORM("Unit3.cpp", Form3);
 USEFORM("Unit4.cpp", Uruchom);
 USEFORM("Unit5.cpp", Alarm_form);
 USEFORM("Idle_frm.cpp", Form6);
 USEFORM("Idlecheck_frm.cpp", Form7);
 USEFORM("Unit2.cpp", Form2);
-USEFORM("Numpad_frm.cpp", Numpad);
 USERES("Panel.res");
 USERC("Panel.manifest.rc");
-//---------------------------------------------------------------------------
-#pragma resource "manifest.res"
 //---------------------------------------------------------------------------
 LRESULT WindowSwitcherProc(INT aCode, INT aEdge) {
 //------------------------------------
@@ -273,7 +270,7 @@ return true;
 case VK_LWIN: // ctose this app
 //------------------------------------
 //
-Tips_form->Execute("Panel: Appliacation is being closed. Hope to see You later! ",true,true);
+Tips_form->Execute("Panel.VCL - Appliacation is being closed. Hope to see You later! ",true,true);
 Main_form->Helper->Save("Main");
 Desk_form->Helper->Save("Desk");
 Lupa_form->Helper->Save("Lupa");
@@ -413,19 +410,18 @@ try
          Application->CreateForm(__classid(TAtab_form), &Atab_form);
          Application->CreateForm(__classid(TMove_form), &Move_form);
          Application->CreateForm(__classid(TSize_form), &Size_form);
-         Application->CreateForm(__classid(TAboutForm), &AboutForm);
+         Application->CreateForm(__classid(TAbout_form), &About_form);
          Application->CreateForm(__classid(TDni_form), &Dni_form);
          Application->CreateForm(__classid(TExpose_form), &Expose_form);
          Application->CreateForm(__classid(TZeus_form), &Zeus_form);
          Application->CreateForm(__classid(TClock_form), &Clock_form);
-         Application->CreateForm(__classid(TResizerForm), &ResizerForm);
+         Application->CreateForm(__classid(TResizer_form), &Resizer_form);
          Application->CreateForm(__classid(TForm3), &Form3);
          Application->CreateForm(__classid(TUruchom), &Uruchom);
          Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
          Application->CreateForm(__classid(TForm6), &Form6);
          Application->CreateForm(__classid(TForm7), &Form7);
          Application->CreateForm(__classid(TForm2), &Form2);
-         Application->CreateForm(__classid(TNumpad), &Numpad);
          Application->ShowMainForm = false;
 		Main_form->tform_Initialize();
 		Lupa_form->tform_Initialize();
