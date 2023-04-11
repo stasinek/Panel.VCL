@@ -32,6 +32,7 @@ _ReSharper*/
 *.dll
 *.obj
 *.~*
+*.*~
 *.exe
 *.tds
 *.ils
@@ -43,3 +44,4 @@ journal*.*
 *.csm
 *.#??
 /Win32/*
+*.il?
