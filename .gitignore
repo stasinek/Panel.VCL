@@ -2,7 +2,6 @@
 *.~*
 *.exe
 *.tds
-*.ils
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
@@ -19,7 +18,6 @@ Thumbs.db
 *.tlh
 *.bak
 *.cache
-*.ilk
 *.log
 [Bb]in
 [Dd]ebug*/
@@ -35,13 +33,9 @@ _ReSharper*/
 *.*~
 *.exe
 *.tds
-*.ils
-*.ilf
-*.ilc
-*.ild
 journal*.*
 *.map
+*.il?
 *.csm
 *.#??
 /Win32/*
-*.il?
