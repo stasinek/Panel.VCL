@@ -1,12 +1,13 @@
+//---------------------------------------------------------------------------
 #include <vcl.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "Size_frm.h"
 #include "Zoom_frm.h"
 #include "Atab_frm.h"
 #include "Tips_frm.h"
 #include "Main_frm.h"
 #include "Zeus_frm.h"
-#pragma hdrstop
-//---------------------------------------------------------------------------
 #include "Lupa_frm.h"
 //---------------------------------------------------------------------------
 #pragma link "framepan"

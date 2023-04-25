@@ -1,11 +1,11 @@
 //---------------------------------------------------------------------------
 #include <vcl.h>
+#include <time.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Clock_frm.h"
 #include "Main_frm.h"
 #include "Unit5.h"
-#include <time.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma link "CCALENDR"

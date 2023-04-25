@@ -1,14 +1,16 @@
+//---------------------------------------------------------------------------
 #include <vcl.h>
 #include <Winspool.h>
 #include <Windows.h>
-#include "Size_frm.h"
-#include "Main_frm.h"
 #pragma hdrstop
 //---------------------------------------------------------------------------
+#include "Size_frm.h"
+#include "Main_frm.h"
 #include "Move_frm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+//---------------------------------------------------------------------------
 TMove_form *Move_form;
 //---------------------------------------------------------------------------
 __fastcall TMove_form::TMove_form(TComponent* Owner)

@@ -1,4 +1,8 @@
+//---------------------------------------------------------------------------
 #include <vcl.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
+#include "./../../FORM_TEMPLATES/About_frm.h"
 #include "Tips_frm.h"
 #include "Size_frm.h"
 #include "Zoom_frm.h"
@@ -6,27 +10,18 @@
 #include "Desk_frm.h"
 #include "Zeus_frm.h"
 #include "Expose_frm.h"
-#include "./../../FORM_TEMPLATES/About_frm.h"
 #include "Dni_frm.h"
 #include "Clock_frm.h"
 #include "Unit1.h"
 #include "Unit3.h"
 #include "Unit4.h"
 #include "Unit5.h"
-#pragma hdrstop
-//---------------------------------------------------------------------------
 #include "Main_frm.h"
 //---------------------------------------------------------------------------
 #pragma link "systray"
 #pragma link "framepan"
-#pragma package(smart_init)
-#pragma link "framepan"
-#pragma link "systray"
-#pragma link "framepan"
-#pragma link "systray"
-#pragma link "framepan"
-#pragma link "systray"
 #pragma resource "*.dfm"
+#pragma package(smart_init)
 //---------------------------------------------------------------------------
 
  TMain_form *Main_form;
