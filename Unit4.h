@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
-
-#ifndef Unit4H
-#define Unit4H
+#ifndef __Unit4_H__
+#define __Unit4_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -9,6 +8,7 @@
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
 #include "FRAMEPAN.h"
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TUruchom : public TForm
 {

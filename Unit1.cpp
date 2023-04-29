@@ -113,14 +113,11 @@ if (ChangeDisplaySettingsEx(dev,&DevMode,NULL,CDS_TEST,NULL)==DISP_CHANGE_SUCCES
 }
 //---------------------------------------------------------------------------
 
-
-
 void __fastcall TResizer_form::SpeedButton3Click(TObject *Sender)
 {
 About_form->ShowModal();
 }
 //---------------------------------------------------------------------------
-
 
 void __fastcall TResizer_form::ComboBox2Change(TObject *Sender)
 {
@@ -137,16 +134,16 @@ DevMode.dmSize = sizeof (DEVMODE);
 static char *dev = new char[256];
 strcpy(dev,"\\\\.\\DISPLAY");
 strcat(dev,ComboBox2->Text.c_str());
-if (EnumDisplaySettingsEx(dev,ENUM_CURRENT_SETTINGS,&DevMode,EDS_RAWMODE)==0) ShowMessage("Nie mo¿na pobrac ustawien");
-//
+if (EnumDisplaySettingsEx(dev,ENUM_CURRENT_SETTINGS,&DevMode,EDS_RAWMODE)==0) {
+    ShowMessage("Nie mo¿na pobrac ustawien");
+    }
 ComboBox1->Text = AnsiString(DevMode.dmPelsWidth) + "x" + AnsiString(DevMode.dmPelsHeight);
 ComboBox4->Text = DevMode.dmDisplayFrequency;
 ComboBox3->Text = DevMode.dmBitsPerPel;
 
 for (int i = 0; i < ComboBox1->Items->Count;i++) {
- if (ComboBox1->Text==ComboBox1->Items->Strings[i]) { ComboBox1->ItemIndex=i; break;}
-}
-
+     if (ComboBox1->Text==ComboBox1->Items->Strings[i]) { ComboBox1->ItemIndex=i; break;}
+    }
 }
 //---------------------------------------------------------------------------
 

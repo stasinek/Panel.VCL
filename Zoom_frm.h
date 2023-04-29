@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------
-#ifndef Zoom_frmH
-#define Zoom_frmH
+#ifndef __Zoom_frm_H__
+#define __Zoom_frm_H__
 //----------------------------------------------------------------------------
 #include <vcl\System.hpp>
 #include <vcl\Windows.hpp>
@@ -13,6 +13,7 @@
 #include <vcl\Buttons.hpp>
 #include <vcl\ExtCtrls.hpp>
 #include <ComCtrls.hpp>
+#pragma hdrstop
 //----------------------------------------------------------------------------
 class TZoom_form : public TForm
 {

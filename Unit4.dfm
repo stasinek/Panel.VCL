@@ -1,6 +1,6 @@
 object Uruchom: TUruchom
-  Left = 239
-  Top = 201
+  Left = 120
+  Top = 350
   BorderStyle = bsNone
   Caption = 'Uruchom'
   ClientHeight = 111
@@ -24,7 +24,6 @@ object Uruchom: TUruchom
     Caption = 'Ramka1'
     ControlStyle = [csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]
     Parent = Owner
-    ScalingFlags = [sfLeft, sfTop, sfWidth, sfHeight, sfFont]
   end
   object TabControl1: TTabControl
     Left = 0

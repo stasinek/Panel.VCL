@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
-
-#ifndef Zeus_frmH
-#define Zeus_frmH
+#ifndef Zeus_frm_H__
+#define Zeus_frm_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -12,11 +11,12 @@
 #include <Registry.hpp>
 #include <Menus.hpp>
 #include <Graphics.hpp>
-#include "Core.h"
 #include "framepan.h"
 #include <jpeg.hpp>
 #include <CheckLst.hpp>
 #include <ComCtrls.hpp>
+#pragma hdrstop
+#include "Core.h"
 //---------------------------------------------------------------------------
 class TZeus_form : public TForm
 {

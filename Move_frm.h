@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
-
-#ifndef Move_frmH
-#define Move_frmH
+#ifndef __Move_frm_H__
+#define __Move_frm_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -9,6 +8,7 @@
 #include <Forms.hpp>
 #include <Buttons.hpp>
 #include <ExtCtrls.hpp>
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TMove_form : public TForm
 {

@@ -9,18 +9,18 @@
       ..\..\..\x86_win32_classes\tsoft_WindowsMover.obj 
       ..\..\..\x86_win32_classes\tsoft_WindowsSnap.obj 
       ..\..\..\x86_win32_classes\tsoft_WindowsTile.obj 
-      ..\..\..\x86_win32_classes\tsoft_Context.obj Dni_frm.obj Desk_frm.obj 
-      Lupa_frm.obj Main_frm.obj Tips_frm.obj Zoom_frm.obj Atab_frm.obj 
-      Move_frm.obj Size_frm.obj Expose_frm.obj Zeus_frm.obj Clock_frm.obj 
+      ..\..\..\x86_win32_classes\tsoft_Context.obj Desk_frm.obj Lupa_frm.obj 
+      Main_frm.obj Tips_frm.obj Zoom_frm.obj Atab_frm.obj Move_frm.obj 
+      Size_frm.obj Expose_frm.obj Zeus_frm.obj Clock_frm.obj Dni_frm.obj 
       Unit1.obj Unit3.obj Unit4.obj Unit5.obj Idle_frm.obj Idlecheck_frm.obj 
       Unit2.obj"/>
     <RESFILES value="Panel.res Panel.manifest.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
     <DEFFILE value=""/>
-    <RESDEPEN value="$(RESFILES) ..\..\FORM_TEMPLATES\About_frm.dfm Dni_frm.dfm Desk_frm.dfm 
-      Lupa_frm.dfm Main_frm.dfm Tips_frm.dfm Zoom_frm.dfm Atab_frm.dfm 
-      Move_frm.dfm Size_frm.dfm Expose_frm.dfm Zeus_frm.dfm Clock_frm.dfm 
+    <RESDEPEN value="$(RESFILES) ..\..\FORM_TEMPLATES\About_frm.dfm Desk_frm.dfm Lupa_frm.dfm 
+      Main_frm.dfm Tips_frm.dfm Zoom_frm.dfm Atab_frm.dfm Move_frm.dfm 
+      Size_frm.dfm Expose_frm.dfm Zeus_frm.dfm Clock_frm.dfm Dni_frm.dfm 
       Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm Idle_frm.dfm Idlecheck_frm.dfm 
       Unit2.dfm"/>
     <LIBFILES value=""/>

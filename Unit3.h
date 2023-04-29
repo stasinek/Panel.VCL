@@ -1,7 +1,6 @@
 //---------------------------------------------------------------------------
-
-#ifndef Unit3H
-#define Unit3H
+#ifndef __Unit3_H__
+#define __Unit3_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -12,6 +11,7 @@
 #include <Mask.hpp>
 #include <Graphics.hpp>
 #include <ComCtrls.hpp>
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TForm3 : public TForm
 {

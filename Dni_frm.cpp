@@ -1,10 +1,20 @@
 //---------------------------------------------------------------------------
 #include <windows.h>
 #include <stdio.h>
+#include <vcl.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Dni_frm.h"
 #include "Main_frm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "bargraph"
+#pragma link "framepan"
+#pragma link "advbar"
+#pragma link "advbar"
+#pragma link "BARGRAPH"
+#pragma link "ADVBAR"
+#pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 /*void x() {
 struct _MEMORYSTATUS status;
@@ -36,22 +46,6 @@ if (liczba >= 1073741824)
 else
     return "?TB";
 }
-//---------------------------------------------------------------------------
-#include <vcl.h>
-//---------------------------------------------------------------------------
-#pragma hdrstop
-//---------------------------------------------------------------------------
-#include "Dni_frm.h"
-#include "Main_frm.h"
-//---------------------------------------------------------------------------
-#pragma package(smart_init)
-#pragma link "bargraph"
-#pragma link "framepan"
-#pragma link "advbar"
-#pragma link "advbar"
-#pragma link "BARGRAPH"
-#pragma link "ADVBAR"
-#pragma resource "*.dfm"
 //---------------------------------------------------------------------------
 TDni_form *Dni_form;
 //---------------------------------------------------------------------------

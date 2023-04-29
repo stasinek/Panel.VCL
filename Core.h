@@ -1,13 +1,17 @@
+//---------------------------------------------------------------------------
 #ifndef __Core_HDR__
 #define __Core_HDR__
-#include "windows.h"
-#include "wingdi.h"
-#include "winuser.h"
+//---------------------------------------------------------------------------
+#include <windows.h>
+#include <wingdi.h>
+#include <winuser.h>
+#include <Registry.hpp>
+#include <vcl.h>
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsMover.h"
 #include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsCollector.h"
 #include ".\\..\\..\\..\\x86_win32_classes\\tsoft_WindowsTile.h"
-#include <Registry.hpp>
-#include <vcl.h>
 //---------------------------------------------------------------------------
 // Definitions for Borland C++ 5 (it's older than Windows 2000 SP4, XP)
 #ifndef WS_EX_COMPOSITED
@@ -35,6 +39,7 @@ LONG alpha,clickthrough,zoomed,visible,zorder,interval,sight,zoom,central;
 RECT rect, clientrect, deskrect[5], deskhdcc;
 } TForm_Options, *LPTForm_Options;
 //---------------------------------------------------------------------------
+int __fastcall GetWindowsVersion();
 class TForm_Helper {
 private:
 TForm *Owner;

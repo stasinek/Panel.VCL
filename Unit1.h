@@ -1,6 +1,6 @@
 //---------------------------------------------------------------------------
-#ifndef Unit1H
-#define Unit1H
+#ifndef __Unit1_H__
+#define __Unit1_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
@@ -9,6 +9,7 @@
 #include <ExtCtrls.hpp>
 #include <Buttons.hpp>
 #include <Graphics.hpp>
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TResizer_form : public TForm
 {

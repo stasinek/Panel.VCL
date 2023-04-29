@@ -1,12 +1,13 @@
 //---------------------------------------------------------------------------
-
-#ifndef Expose_frmH
-#define Expose_frmH
+#ifndef __Expose_frm_H__
+#define __Expose_frm_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
+#pragma hdrstop
+//---------------------------------------------------------------------------
 #include "Core.h"
 //---------------------------------------------------------------------------
 class TExpose_form : public TForm

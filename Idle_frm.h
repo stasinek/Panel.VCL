@@ -1,13 +1,13 @@
 //---------------------------------------------------------------------------
-
-#ifndef Idle_frmH
-#define Idle_frmH
+#ifndef __Idle_frm_H__
+#define __Idle_frm_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ComCtrls.hpp>
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TForm6 : public TForm
 {

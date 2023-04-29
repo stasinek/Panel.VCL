@@ -1,13 +1,13 @@
 //---------------------------------------------------------------------------
-
-#ifndef Unit2H
-#define Unit2H
+#ifndef __Unit2_H__
+#define __Unit2_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <Mask.hpp>
+#pragma hdrstop
 //---------------------------------------------------------------------------
 class TForm2 : public TForm
 {

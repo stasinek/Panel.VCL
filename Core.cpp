@@ -6,9 +6,25 @@ ts::WindowsTILES *Tiles;
 struct __KeyPressed KeyPressed;
 //---------------------------------------------------------------------------
 
+int __fastcall GetWindowsVersion()
+{
+DWORD dwVersion = 0;
+DWORD dwMajorVersion = 0;
+DWORD dwMinorVersion = 0;
+DWORD dwBuild = 0;
+dwVersion = GetVersion();
+// Get the Windows version.
+dwMajorVersion = (DWORD)(LOBYTE(LOWORD(dwVersion)));
+dwMinorVersion = (DWORD)(HIBYTE(LOWORD(dwVersion)));
+// Get the build number.
+if (dwVersion < 0x80000000)
+    dwBuild = (DWORD)(HIWORD(dwVersion));
+}
+//---------------------------------------------------------------------------
+
 void __fastcall TForm_Helper::Load(String aform_Name)
 {
-if (!KluczRejestuSystemuWindows->OpenKey("Software\\TSoft\\Panel\\" + aform_Name,true))
+if (!KluczRejestuSystemuWindows->OpenKey("Software\\SSTSOFT\\Panel\\" + aform_Name,true))
     return;
 
 if (KluczRejestuSystemuWindows->ValueExists("clientrect"))

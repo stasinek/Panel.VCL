@@ -23,10 +23,10 @@ object Dni_form: TDni_form
     BevelOuter = bvLowered
     TabOrder = 0
     object AdvancedBar1: TAdvancedBar
-      Left = 200
-      Top = 13
-      Width = 253
-      Height = 24
+      Left = 16
+      Top = 14
+      Width = 433
+      Height = 22
       TextBackColor = clHighlight
       TextSuffix = '%'
     end
@@ -51,14 +51,11 @@ object Dni_form: TDni_form
     Caption = 'Panel2'
     TabOrder = 1
     object BarGraph1: TBarGraph
-      Left = 193
-      Top = 1
-      Width = 366
-      Height = 335
-      Align = alClient
-      BorderKind = bNone
-      BorderSize = bDouble
-      Color = clGray
+      Left = 200
+      Top = 8
+      Width = 353
+      Height = 321
+      Color = clBlack
       GridColor = clGreen
     end
     object ListBox1: TListBox

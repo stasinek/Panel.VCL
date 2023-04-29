@@ -1,4 +1,9 @@
+//---------------------------------------------------------------------------
 #include "Core.h"
+//HELP Viewer
+#include "HTMLHelpViewer.hpp"
+#pragma link "HTMLHelpViewer"
+#pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Tips_frm.h"
 #include "Atab_frm.h"
@@ -8,12 +13,11 @@
 #include "Desk_frm.h"
 #include "Main_frm.h"
 #include "Move_frm.h"
-#include "Dni_frm.h"
-#include "Zeus_frm.h"
 #include "Clock_frm.h"
+#include "Dni_frm.h"
 #include "Expose_frm.h"
-//---------------------------------------------------------------------------
-#pragma hdrstop
+#include "Zeus_frm.h"
+#include "Unit1.h"
 //---------------------------------------------------------------------------
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", About_form);
 USEUNIT("Core.cpp");
@@ -22,7 +26,6 @@ USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
 USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
-USEFORM("Dni_frm.cpp", Dni_form);
 USEFORM("Desk_frm.cpp", Desk_form);
 USEFORM("Lupa_frm.cpp", Lupa_form);
 USEFORM("Main_frm.cpp", Main_form);
@@ -34,6 +37,7 @@ USEFORM("Size_frm.cpp", Size_form);
 USEFORM("Expose_frm.cpp", Expose_form);
 USEFORM("Zeus_frm.cpp", Zeus_form);
 USEFORM("Clock_frm.cpp", Clock_form);
+USEFORM("Dni_frm.cpp", Dni_form);
 USEFORM("Unit1.cpp", Resizer_form);
 USEFORM("Unit3.cpp", Form3);
 USEFORM("Unit4.cpp", Uruchom);
@@ -44,59 +48,68 @@ USEFORM("Unit2.cpp", Form2);
 USERES("Panel.res");
 USERC("Panel.manifest.rc");
 //---------------------------------------------------------------------------
-LRESULT WindowSwitcherProc(INT aCode, INT aEdge) {
+LRESULT WindowSwitcherProc(INT aCode, INT aEdge)
+{
 //------------------------------------
+register HANDLE newapp_handle;
 register __int8 ac = (KeyPressed.Ctrl==true) && (KeyPressed.Alt==true);
-register HANDLE h;
-
-if (!ac) return 0;
-
+//------------------------------------
+if (!ac) {
+        return 0; // CTRL + ALT must be held down previously, otherwise, get out
+}
 if (aCode==VK_TAB && aEdge==WM_KEYDOWN) {
 
-		 if (IsWindowVisible(Atab_form->Handle)==false)
+		 if (IsWindowVisible(Atab_form->Handle)==false) // if ALT+TAB windows is invisible Show it
 			{ShowWindow(Atab_form->Handle,SW_SHOW);
 			 Atab_form->tform_Start();
 			}
 		 else
-			{Atab_form->tform_Switch();
+			{Atab_form->tform_Switch(); // if ALT+TAB is already visible, switch to the next application
 			}
 		 KeyPressed.Locked = 1;
 		 return 1;
 }
-if (KeyPressed.Locked==1)    {
+if (KeyPressed.Locked==1) {
 
-		 ShowWindow(Atab_form->Handle,SW_HIDE);
-		 if (Atab_form->curicon!=Atab_form->oldicon)
-			{h = Atab_form->apps.Windows[Atab_form->oldicon];
-			 ShowWindow(h,SW_SHOW); BringWindowToTop(h);
+	    ShowWindow(Atab_form->Handle,SW_HIDE); // if ALT+TAB was pressed, hide ALT+TAB window
+		 if (Atab_form->curicon!=Atab_form->oldicon) // bring selected application
+			{newapp_handle = Atab_form->apps.Windows[Atab_form->oldicon];
+			 ShowWindow(newapp_handle,SW_SHOW);
+             BringWindowToTop(newapp_handle);
 			}
 		 KeyPressed.Locked = 0;
 		 return 1;
 }
-
 return 0;
 }
 //---------------------------------------------------------------------------
 
-LRESULT ShortcutProc(INT aCode, INT aEdge) {
-
+LRESULT ShortcutProc(INT aCode, INT aEdge)
+{
+//------------------------------------
 static HWND lastwindow = NULL;
 static HWND forewindow;
 static LONG classstyle, wexstyle;
 static DWORD last_time = time(NULL);
 static DWORD current_time;
-
-current_time = time(NULL); if (current_time - last_time > 60 * 100)
+//------------------------------------
+    current_time = time(NULL);
+if (current_time - last_time > 60 * 100)
 {
 // sprawdzanie list autoubijania po czasie.
 }
-
+//------------------------------------
 switch (aCode) {
 //------------------------------------
 case VK_END: // kill application on top
 //------------------------------------
 if (Desktop->Action(KILL_PROCESS,GetForegroundWindow(),0,0))
-	 Tips_form->Execute("Process: KILLED!",true,false);
+	 Tips_form->Execute("PANEL->Process: KILLED!",true,false);
+return true;
+//------------------------------------
+case VK_F1: // show help window
+//------------------------------------
+	 Tips_form->Execute("PANEL->Help: TODO, not yet implemented",true,true);
 return true;
 //------------------------------------
 case VK_F5: // idle app
@@ -141,16 +154,31 @@ Desk_form->Desktop_Switch(3,true);
 Tips_form->Execute("Desktop: 3",true,false);
 return true;
 //------------------------------------
-case '4': // switch to desk 3
+case '4': // switch to desk 4
 //------------------------------------
 Desk_form->Desktop_Switch(4,true);
 Tips_form->Execute("Desktop: 4",true,false);
 return true;
 //------------------------------------
-case '5': // switch to desk share
+case '5': // switch to desk shared
+Tips_form->Execute("Desktop: Desk 5 is not implemented",true,false);
+return true;
+case '6': // switch to desk shared
+Tips_form->Execute("Desktop: Desk 6 is not implemented",true,false);
+return true;
+case '7': // switch to desk shared
+Tips_form->Execute("Desktop: Desk 7 is not implemented",true,false);
+return true;
+case '8': // switch to desk shared
+Tips_form->Execute("Desktop: Desk 8 is not implemented",true,false);
+return true;
+case '9': // switch to desk shared
+Tips_form->Execute("Desktop: Desk 9 is not implemented",true,false);
+return true;
+case '0': // switch to desk shared
 //------------------------------------
 Desk_form->Desktop_Switch(0,true);
-Tips_form->Execute("Desktop: *",true,false);
+Tips_form->Execute("Desktop: SHARED",true,false);
 return true;
 //------------------------------------
 case VK_ADD: // increse zoom factor
@@ -267,6 +295,11 @@ else {
 		}
 return true;
 //------------------------------------
+case 'R': // show zoom window
+//------------------------------------
+Resizer_form->Show();
+return true;
+//------------------------------------
 case VK_LWIN: // ctose this app
 //------------------------------------
 //
@@ -274,7 +307,7 @@ Tips_form->Execute("Panel.VCL - Appliacation is being closed. Hope to see You la
 Main_form->Helper->Save("Main");
 Desk_form->Helper->Save("Desk");
 Lupa_form->Helper->Save("Lupa");
-Sleep(600);
+Sleep(1000);
 Application->Terminate();
 return true;
 // nic nie znaleziono, koniec
@@ -402,27 +435,27 @@ try
 		Application->HintPause = 300;
 		Application->HintHidePause = 30000;
 		Application->CreateForm(__classid(TTips_form), &Tips_form);
-         Application->CreateForm(__classid(TZoom_form), &Zoom_form);
-         Application->CreateForm(__classid(TSize_form), &Size_form);
-         Application->CreateForm(__classid(TLupa_form), &Lupa_form);
-         Application->CreateForm(__classid(TDesk_form), &Desk_form);
-         Application->CreateForm(__classid(TMain_form), &Main_form);
-         Application->CreateForm(__classid(TAtab_form), &Atab_form);
-         Application->CreateForm(__classid(TMove_form), &Move_form);
-         Application->CreateForm(__classid(TSize_form), &Size_form);
-         Application->CreateForm(__classid(TAbout_form), &About_form);
-         Application->CreateForm(__classid(TDni_form), &Dni_form);
-         Application->CreateForm(__classid(TExpose_form), &Expose_form);
-         Application->CreateForm(__classid(TZeus_form), &Zeus_form);
-         Application->CreateForm(__classid(TClock_form), &Clock_form);
-         Application->CreateForm(__classid(TResizer_form), &Resizer_form);
-         Application->CreateForm(__classid(TForm3), &Form3);
-         Application->CreateForm(__classid(TUruchom), &Uruchom);
-         Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
-         Application->CreateForm(__classid(TForm6), &Form6);
-         Application->CreateForm(__classid(TForm7), &Form7);
-         Application->CreateForm(__classid(TForm2), &Form2);
-         Application->ShowMainForm = false;
+        Application->CreateForm(__classid(TZoom_form), &Zoom_form);
+        Application->CreateForm(__classid(TSize_form), &Size_form);
+        Application->CreateForm(__classid(TLupa_form), &Lupa_form);
+        Application->CreateForm(__classid(TDesk_form), &Desk_form);
+        Application->CreateForm(__classid(TMain_form), &Main_form);
+        Application->CreateForm(__classid(TAtab_form), &Atab_form);
+        Application->CreateForm(__classid(TMove_form), &Move_form);
+        Application->CreateForm(__classid(TSize_form), &Size_form);
+        Application->CreateForm(__classid(TAbout_form), &About_form);
+        Application->CreateForm(__classid(TDni_form), &Dni_form);
+        Application->CreateForm(__classid(TExpose_form), &Expose_form);
+        Application->CreateForm(__classid(TZeus_form), &Zeus_form);
+        Application->CreateForm(__classid(TClock_form), &Clock_form);
+        Application->CreateForm(__classid(TResizer_form), &Resizer_form);
+        Application->CreateForm(__classid(TForm3), &Form3);
+        Application->CreateForm(__classid(TUruchom), &Uruchom);
+        Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
+        Application->CreateForm(__classid(TForm6), &Form6);
+        Application->CreateForm(__classid(TForm7), &Form7);
+        Application->CreateForm(__classid(TForm2), &Form2);
+        Application->ShowMainForm = false;
 		Main_form->tform_Initialize();
 		Lupa_form->tform_Initialize();
 		Desk_form->tform_Initialize();

@@ -2,8 +2,6 @@
 #ifndef Dni_frmH
 #define Dni_frmH
 //---------------------------------------------------------------------------
-#include "bargraph.h"
-#include "framepan.h"
 #include <checklst.hpp>
 #include <Registry.hpp>
 #include <Menus.hpp>
@@ -11,12 +9,11 @@
 #include <Classes.hpp>
 #include <StdCtrls.hpp>
 #include <ExtCtrls.hpp>
-#include "../Packages/advbar.h"
 #include <Grids.hpp>
 #include "../../../x86_win32_classes/tsoft_WindowsMover.h"
-#include "advbar.h"
 #include "BARGRAPH.h"
 #include "ADVBAR.h"
+#include "framepan.h"
 //---------------------------------------------------------------------------
 typedef struct __wpis
 { int session;
@@ -31,8 +28,8 @@ __published:	// IDE-managed Components
     TPanel *Panel1;
     TButton *Button1;
     TPanel *Panel2;
-    TBarGraph *BarGraph1;
     TListBox *ListBox1;
+    TBarGraph *BarGraph1;
     TAdvancedBar *AdvancedBar1;
     void __fastcall Timer1Timer(TObject *Sender);
     void __fastcall MenuItem11Click(TObject *Sender);
@@ -41,8 +38,7 @@ __published:	// IDE-managed Components
     void __fastcall FormDestroy(TObject *Sender);
     void __fastcall FormHide(TObject *Sender);
 	void __fastcall MenuItem12Click(TObject *Sender);
-        void __fastcall ListBox1MouseUp(TObject *Sender,
-          TMouseButton Button, TShiftState Shift, int X, int Y);
+    void __fastcall ListBox1MouseUp(TObject *Sender,TMouseButton Button, TShiftState Shift, int X, int Y);
     void __fastcall Button1Click(TObject *Sender);
     
 private:	// User declarations

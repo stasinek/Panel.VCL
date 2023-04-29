@@ -1230,6 +1230,12 @@ object Main_form: TMain_form
     object SubMenuTools: TMenuItem
       Caption = 'Show other tools'
       GroupIndex = 2
+      object MenuItemInfo: TMenuItem
+        Caption = 'About this app'
+        GroupIndex = 2
+        ShortCut = 49264
+        OnClick = MenuItemInfoClick
+      end
       object N5: TMenuItem
         Caption = '-'
         GroupIndex = 2
@@ -1243,6 +1249,7 @@ object Main_form: TMain_form
       object Alarm1: TMenuItem
         Caption = 'Set Alarm'
         GroupIndex = 2
+        ShortCut = 49217
         OnClick = Alarm1Click
       end
       object Pozycjakursora1: TMenuItem
@@ -1266,26 +1273,23 @@ object Main_form: TMain_form
       object ShowResolution1: TMenuItem
         Caption = 'Change Screen Resolution'
         GroupIndex = 2
+        ShortCut = 49234
         OnClick = ShowResolution1Click
       end
       object N4: TMenuItem
         Caption = '-'
         GroupIndex = 2
       end
-      object MenuItemInfo: TMenuItem
-        Caption = 'About this app'
+      object EXPERIMENTALExpose1: TMenuItem
+        Caption = 'EXPERIMENTAL Expose'
         GroupIndex = 2
-        ShortCut = 49264
-        OnClick = MenuItemInfoClick
+        ShortCut = 49221
+        OnClick = EXPERIMENTALExpose1Click
       end
       object ShowZeus1: TMenuItem
         Caption = 'EXPERIMENTAL Zeus'
         GroupIndex = 2
-      end
-      object EXPERIMENTALExpose1: TMenuItem
-        Caption = 'EXPERIMENTAL Expose'
-        GroupIndex = 2
-        OnClick = EXPERIMENTALExpose1Click
+        ShortCut = 49242
       end
     end
     object N1: TMenuItem
