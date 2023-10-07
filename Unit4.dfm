@@ -19,7 +19,7 @@ object Uruchom: TUruchom
     Width = 754
     Height = 126
     Align = alTop
-    BorderKind = bRaised
+    BorderKind = abkRaised
     Color = clNone
     Caption = 'Ramka1'
     ControlStyle = [csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]

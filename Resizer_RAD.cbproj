@@ -4,7 +4,7 @@
         <ProjectVersion>19.2</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <AppType>Application</AppType>
-        <MainSource>Panel RAD.cpp</MainSource>
+        <MainSource>Resizer_RAD.cpp</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
@@ -42,16 +42,16 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
-        <ILINK_LibraryPath>C:\SRC\OBSOLETE\PROGS\Panel.VCL\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+        <ILINK_LibraryPath>..\..\FORM_TEMPLATES\;..\..\PACKAGES;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <AllPackageLibs>rtl.lib;vcl.lib;sstdcl50_RAD.lib</AllPackageLibs>
         <Multithreaded>true</Multithreaded>
         <ProjectType>CppVCLApplication</ProjectType>
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <_TCHARMapping>char</_TCHARMapping>
-        <SanitizedProjectName>Panel_RAD</SanitizedProjectName>
-        <IncludePath>C:\SRC\OBSOLETE\PROGS\Panel.VCL\;$(IncludePath)</IncludePath>
+        <SanitizedProjectName>Resizer_RAD</SanitizedProjectName>
+        <IncludePath>..\..\FORM_TEMPLATES\;..\..\PACKAGES;$(IncludePath)</IncludePath>
         <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
         <DynamicRTL>true</DynamicRTL>
         <UsePackages>true</UsePackages>
@@ -66,7 +66,6 @@
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
         <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
-        <BCC_PCHName_Clang>Project_PCH1.h</BCC_PCHName_Clang>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
@@ -95,6 +94,9 @@
         <ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <ILINK_LibraryPath>..\..\PACKAGES;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <LinkPackageStatics>sstdcl50_RAD.lib</LinkPackageStatics>
+        <IncludePath>..\..\PACKAGES;$(IncludePath)</IncludePath>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
@@ -111,20 +113,27 @@
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="Panel RAD.cpp">
-            <BuildOrder>0</BuildOrder>
+        <CppCompile Include="..\..\FORM_TEMPLATES\About_frm.cpp">
+            <Form>About_form</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>..\..\FORM_TEMPLATES\About_frm.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <PCHCompile Include="Project_PCH1.h">
+        <PCHCompile Include="Panel_PCH.h">
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
-        <CppCompile Include="UnitX.cpp">
-            <Form>Form2</Form>
+        <CppCompile Include="Resizer_RAD.cpp">
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="Unit1.cpp">
+            <Form>Resizer_form</Form>
             <FormType>dfm</FormType>
-            <DependentOn>UnitX.h</DependentOn>
+            <DependentOn>Unit1.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
-        <FormResources Include="UnitX.dfm"/>
+        <FormResources Include="Unit1.dfm"/>
+        <FormResources Include="..\..\FORM_TEMPLATES\About_frm.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -143,7 +152,7 @@
         <BorlandProject>
             <CPlusPlusBuilder.Personality>
                 <Source>
-                    <Source Name="MainSource">Panel RAD.cpp</Source>
+                    <Source Name="MainSource">Resizer_RAD.cpp</Source>
                 </Source>
                 <ProjectProperties>
                     <ProjectProperties Name="AutoShowDeps">True</ProjectProperties>
@@ -152,11 +161,6 @@
                     <ProjectProperties Name="IndexFiles">False</ProjectProperties>
                 </ProjectProperties>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclbindcomp240.bpl">Embarcadero LiveBindings Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\ExpertsUI240.bpl">Embarcadero Experts UI Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\ExpertsCreators240.bpl">Embarcadero Experts Creators Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclIndyCore240.bpl">Indy 10 Core Design Time</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclnet240.bpl">Embarcadero Internet Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclrtl240.bpl">Embarcadero - RTL Component Editors</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclmlwiz240.bpl">Embarcadero Markup Language Wizards</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclfmxstd240.bpl">Embarcadero FMX Standard Components</Excluded_Packages>

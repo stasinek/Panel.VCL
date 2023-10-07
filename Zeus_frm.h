@@ -12,7 +12,7 @@
 #include <Menus.hpp>
 #include <Graphics.hpp>
 #include "framepan.h"
-#include <jpeg.hpp>
+//#include <jpeg.hpp>
 #include <CheckLst.hpp>
 #include <ComCtrls.hpp>
 #pragma hdrstop

@@ -32,7 +32,7 @@ object Move_form: TMove_form
   end
   object Button1: TButton
     Left = 8
-    Top = 28
+    Top = 16
     Width = 64
     Height = 48
     Caption = '1'
@@ -47,7 +47,7 @@ object Move_form: TMove_form
   end
   object Button2: TButton
     Left = 72
-    Top = 8
+    Top = 16
     Width = 64
     Height = 48
     Caption = '2'
@@ -62,7 +62,7 @@ object Move_form: TMove_form
   end
   object Button3: TButton
     Left = 136
-    Top = 28
+    Top = 16
     Width = 64
     Height = 48
     Caption = '3'
@@ -76,10 +76,10 @@ object Move_form: TMove_form
     OnClick = Button3Click
   end
   object Button5: TButton
-    Left = 56
-    Top = 48
-    Width = 93
-    Height = 57
+    Left = 8
+    Top = 64
+    Width = 193
+    Height = 49
     Caption = 'X'
     Font.Charset = EASTEUROPE_CHARSET
     Font.Color = clWindowText

@@ -95,10 +95,16 @@ void __fastcall TResizer_form::SpeedButton2Click(TObject *Sender)
 {
 DEVMODE DevMode; // >>
 DevMode.dmSize = sizeof (DEVMODE);
-
-static char *dev = new char[256];
+static char dev[MAX_PATH];
 strcpy(dev,"\\\\.\\DISPLAY");
-strcat(dev,ComboBox2->Text.c_str());
+static char helper[MAX_PATH];
+#if __BORLANDC__ > 0x551
+wcstombs(helper, ComboBox2->Text.c_str(),ComboBox2->Text.Length());
+#else
+memmove(helper,ComboBox2->Text.c_str(),ComboBox2->Text.Length()+1);
+#endif
+strcat(dev,helper);
+
 if (EnumDisplaySettingsEx(dev,ENUM_CURRENT_SETTINGS,&DevMode,EDS_RAWMODE)==0) ShowMessage("Nie mo¿na pobrac ustawien");
 //
 DevMode.dmPelsWidth        = ComboBox1->Text.SubString(1,ComboBox1->Text.Pos("x") - 1).ToInt();
@@ -131,9 +137,16 @@ DevMode.dmSize = sizeof (DEVMODE);
   _In_   DWORD dwFlags
 );*/
 
-static char *dev = new char[256];
+static char dev[MAX_PATH];
 strcpy(dev,"\\\\.\\DISPLAY");
-strcat(dev,ComboBox2->Text.c_str());
+static char helper[MAX_PATH];
+#if __BORLANDC__ <= 0x551
+strcpy(helper,ComboBox2->Text.c_str());
+#else
+wcstombs(helper, ComboBox2->Text.c_str(),ComboBox2->Text.Length());
+#endif
+strcat(dev,helper);
+
 if (EnumDisplaySettingsEx(dev,ENUM_CURRENT_SETTINGS,&DevMode,EDS_RAWMODE)==0) {
     ShowMessage("Nie mo¿na pobrac ustawien");
     }

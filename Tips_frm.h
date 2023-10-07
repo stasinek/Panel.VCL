@@ -1,5 +1,5 @@
-#ifndef Tips_frm_H
-#define Tips_frm_H
+#ifndef __TIPS_FRM_H__
+#define __TIPS_FRM_H__
 //---------------------------------------------------------------------------
 #include <Classes.hpp>
 #include <Controls.hpp>

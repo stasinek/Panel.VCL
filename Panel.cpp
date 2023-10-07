@@ -1,8 +1,8 @@
 //---------------------------------------------------------------------------
 #include "Core.h"
 //HELP Viewer
-#include "HTMLHelpViewer.hpp"
-#pragma link "HTMLHelpViewer"
+//#include "HTMLHelpViewer.hpp"
+//#pragma link "HTMLHelpViewer"
 #pragma hdrstop
 //---------------------------------------------------------------------------
 #include "Tips_frm.h"
@@ -475,3 +475,5 @@ CloseHandle(hMutex);
 return 0;
 }
 //---------------------------------------------------------------------------
+
+

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.180,C:\SRC\OBSOLETE\PROGS\Panel.VCL\Project.cbproj=C:\Users\stasiek\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.967,C:\SRC\OBSOLETE\PROGS\Panel.VCL\UnitX.cpp=C:\Users\stasiek\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.967,C:\SRC\OBSOLETE\PROGS\Panel.VCL\UnitX.h=C:\Users\stasiek\Embarcadero\Studio\Projects\Unit2.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.798,=C:\Users\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.912,C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel RAD.cbproj=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Project.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.868,=C:\Users\stasiek\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.967,C:\SRC\OBSOLETE\PROGS\Panel.VCL\UnitX.dfm=C:\Users\stasiek\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.373,C:\SRC\OBSOLETE\PROGS\Panel.VCL\Project_PCH1.h=C:\Users\stasiek\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>2023-05-07 10:44:36.024,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_PCH.h=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Project_PCH1.h</Transaction>
+    <Transaction>2023-05-07 10:45:04.267,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cbproj=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel RAD.cbproj</Transaction>
+    <Transaction>2023-05-07 10:45:38.686,C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\UnitX.cpp=</Transaction>
+  </Transactions>
+</BorlandProject>
