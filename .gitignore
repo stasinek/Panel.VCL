@@ -1,6 +1,7 @@
 *.obj
 *.~*
 *.exe
+*.*~
 *.tds
 #ignore thumbnails created by windows
 Thumbs.db
@@ -29,14 +30,9 @@ _ReSharper*/
 [Tt]est[Rr]esult*
 *.dll
 *.obj
-*.~*
-*.*~
-*.exe
-*.tds
 journal*.*
 *.map
 *.il?
-*.ilf
 *.csm
 *.#??
 *.i
