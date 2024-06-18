@@ -6,35 +6,37 @@ File_3=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLI
 File_4=TSourceModule,'D:\stasiek\My Projects\OBSOLETE\PROGS\Koperek.VCL\LIB\DLLIO\TSoft_build_conf.h',0,1,1,20,1,0,0,,
 
 [Modules]
-Module0=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cbproj
-Module1=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_PCH.h
+Module0=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cbproj
+Module1=default.htm
 Count=2
 EditWindowCount=1
 
-[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cbproj]
+[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cbproj]
 ModuleType=TBaseProject
 
-[C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_PCH.h]
-ModuleType=TSourceModule
+[default.htm]
+ModuleType=TURLModule
 
 [EditWindow0]
 ViewCount=2
-CurrentEditView=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
+CurrentEditView=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
 View0=0
 View1=1
 PercentageSizes=1
 Create=1
 Visible=1
 Docked=0
-State=0
-Left=1688
-Top=1503
+State=2
+Left=578
+Top=1697
 Width=6523
 Height=8303
-MaxLeft=-8
-MaxTop=-13
-ClientWidth=6461
-ClientHeight=7953
+MaxLeft=-31
+MaxTop=1031
+MaxWidth=6523
+MaxHeight=8303
+ClientWidth=10000
+ClientHeight=7992
 DockedToMainForm=0
 TopPanelSize=0
 LeftPanelSize=0
@@ -42,29 +44,22 @@ RightPanelSize=0
 BottomPanelSize=0
 BottomMiddlePanelSize=1412
 BottomMiddlePanelClients=DockSite0,MessageView
-BottomMiddelPanelData=0000080001020100000009000000446F636B536974653062280000000000000284050000000000000100000000622800000F0000004D65737361676556696577466F726DFFFFFFFF
+BottomMiddelPanelData=0000080001020100000009000000446F636B5369746530803E0000000000000284050000000000000100000000803E00000F0000004D65737361676556696577466F726DFFFFFFFF
 
 [View0]
-CustomEditViewType=TEditView
-Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_PCH.h
-CursorX=11
-CursorY=2
-TopLine=1
-LeftCol=1
-Elisions=
-Bookmarks=
-EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_PCH.h
+CustomEditViewType=TWelcomePageView
+WelcomePageURL=bds:/default.htm
 
 [View1]
 CustomEditViewType=TEditView
-Module=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
-CursorX=11
-CursorY=1
+Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
+CursorX=17
+CursorY=5
 TopLine=1
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=C:\Users\stasiek\MEGA\MEGAsync\My Projects\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
+EditViewName=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel_RAD.cpp
 
 [UndockedDesigner]
 Count=0
@@ -104,14 +99,16 @@ PercentageSizes=1
 Create=1
 Visible=1
 Docked=0
-State=0
+State=2
 Left=0
 Top=0
 Width=10000
 Height=1813
 MaxLeft=-8
 MaxTop=-13
-ClientWidth=9938
+MaxWidth=10000
+MaxHeight=1813
+ClientWidth=10000
 ClientHeight=1464
 BottomPanelSize=0
 
@@ -142,11 +139,11 @@ Docked=1
 State=0
 Left=0
 Top=18
-Width=6461
+Width=10000
 Height=1231
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=6461
+ClientWidth=10000
 ClientHeight=1231
 TBDockHeight=1231
 LRDockWidth=3523
@@ -357,8 +354,8 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=0
-Top=1503
+Left=78
+Top=2098
 Width=1688
 Height=3381
 MaxLeft=-8
@@ -403,8 +400,8 @@ Create=1
 Visible=1
 Docked=0
 State=0
-Left=8211
-Top=1516
+Left=7797
+Top=2034
 Width=1789
 Height=8290
 MaxLeft=-8

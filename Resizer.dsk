@@ -11,30 +11,37 @@ File_8=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Dni_
 File_9=SourceModule,'D:\My Projects\aktualne prc++\OBSOLETE_BCB\PROGS\Panel\Core.cpp',0,1,1,3,4,0,0
 
 [Modules]
-Module0=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
+Module0=C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
 Module1=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
-Count=2
+Module2=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr
+Count=3
 EditWindowCount=1
+
+[C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
 
 [C:\SRC\OBSOLETE\PROGS\Panel.VCL\Resizer.bpr]
 ModuleType=SourceModule
 FormState=0
 FormOnTop=0
 
-[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Program Files\Borland\CBuilder5\Projects\ProjectGroup1.bpg]
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
 [EditWindow0]
-ViewCount=2
-CurrentView=0
+ViewCount=3
+CurrentView=2
 View0=0
 View1=1
+View2=2
 MessageView=MessageView@EditWindow0
 Create=1
 Visible=1
@@ -66,6 +73,13 @@ LeftCol=1
 Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit1.cpp
 CursorX=29
 CursorY=6
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=C:\SRC\OBSOLETE\FORM_TEMPLATES\About_frm.cpp
+CursorX=1
+CursorY=1
 TopLine=1
 LeftCol=1
 
@@ -157,10 +171,26 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=Caption
+SelectedItem=Color
 ExpandedItems=
 HiddenCategories=
 ShowStatusBar=1
+
+[CallStackWindow]
+Create=1
+Visible=0
+State=0
+Left=493
+Top=319
+Width=294
+Height=161
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=286
+ClientHeight=137
+TBDockHeight=161
+LRDockWidth=294
+Dockable=1
 
 [MessageView@EditWindow0]
 Create=1

@@ -32,7 +32,11 @@ _ReSharper*/
 *.obj
 journal*.*
 *.map
-*.il?
+*.ilk
+*.ild
+*.ilc
+*.ilf
+*.ils
 *.csm
 *.#??
 *.i

@@ -40,8 +40,7 @@ object Main_form: TMain_form
       Width = 641
       Height = 36
       Align = alClient
-      BorderKind = bRaised
-      BorderSize = bDouble
+      BorderKind = abkRaised
       Color = clNone
       Caption = 'Ramka1'
       ControlStyle = [csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]

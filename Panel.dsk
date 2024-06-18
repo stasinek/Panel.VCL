@@ -3,20 +3,16 @@ File_0=SourceModule,'C:\SRC\x86_win32_classes\tsoft_WindowsSnap.h',0,1,1,27,2,0,
 File_1=SourceModule,'c:\program files\borland\cbuilder5\include\vcl\Controls.hpp',0,1,1,1,1,0,0
 
 [Modules]
-Module0=E:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp
+Module0=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel.bpr
 Count=1
 EditWindowCount=1
 
-[E:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp]
+[C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
 ModuleType=SourceModule
-FormState=1
-FormOnTop=1
-
-[C:\Windows\SYSTEM32\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
-[E:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel.bpr]
+[C:\SRC\ProjectGroup1.bpg]
 FormState=0
 FormOnTop=0
 
@@ -38,12 +34,12 @@ ClientWidth=907
 ClientHeight=455
 LeftPanelSize=0
 RightPanelSize=0
-BottomPanelSize=0
+BottomPanelSize=52
 BottomPanelClients=MessageView@EditWindow0
-BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
+BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
 
 [View0]
-Module=E:\SRC\OBSOLETE\PROGS\Panel.VCL\Unit4.cpp
+Module=C:\SRC\OBSOLETE\PROGS\Panel.VCL\Panel.cpp
 CursorX=1
 CursorY=1
 TopLine=1
@@ -136,7 +132,7 @@ LRDockWidth=190
 Dockable=1
 SplitPos=85
 ArrangeBy=Name
-SelectedItem=Caption
+SelectedItem=
 ExpandedItems=Anchors,Constraints,Font,Font.Style
 HiddenCategories=Legacy
 ShowStatusBar=1
@@ -159,15 +155,15 @@ Dockable=1
 
 [MessageView@EditWindow0]
 Create=1
-Visible=0
+Visible=1
 State=0
-Left=-171
-Top=-524
-Width=443
+Left=12
+Top=0
+Width=895
 Height=52
 MaxLeft=-1
 MaxTop=-1
-ClientWidth=443
+ClientWidth=895
 ClientHeight=52
 TBDockHeight=52
 LRDockWidth=443
