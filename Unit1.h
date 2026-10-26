@@ -9,6 +9,7 @@
 #include <ExtCtrls.hpp>
 #include <Buttons.hpp>
 #include <Graphics.hpp>
+#include "FRAMEPAN.h"
 #pragma hdrstop
 //---------------------------------------------------------------------------
 class TResizer_form : public TForm
@@ -26,8 +27,8 @@ __published:	// IDE-managed Components
         TLabel *Label2;
         TComboBox *ComboBox2;
         TSpeedButton *SpeedButton4;
-        TSpeedButton *SpeedButton2;
         TSpeedButton *SpeedButton3;
+    TButton *SpeedButton2;
         void __fastcall SpeedButton1Click(TObject *Sender);
         void __fastcall Button2Click(TObject *Sender);
         void __fastcall Button3Click(TObject *Sender);

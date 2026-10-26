@@ -5,15 +5,14 @@
     <VERSION value="BCB.05.03"/>
     <PROJECT value="Panel.exe"/>
     <OBJFILES value="Panel.obj ..\..\FORM_TEMPLATES\About_frm.obj Core.obj 
-      ..\..\..\x86_win32_classes\tsoft_WindowsCollector.obj 
-      ..\..\..\x86_win32_classes\tsoft_WindowsMover.obj 
-      ..\..\..\x86_win32_classes\tsoft_WindowsSnap.obj 
-      ..\..\..\x86_win32_classes\tsoft_WindowsTile.obj 
-      ..\..\..\x86_win32_classes\tsoft_Context.obj Desk_frm.obj Lupa_frm.obj 
-      Main_frm.obj Tips_frm.obj Zoom_frm.obj Atab_frm.obj Move_frm.obj 
-      Size_frm.obj Expose_frm.obj Zeus_frm.obj Clock_frm.obj Dni_frm.obj 
-      Unit1.obj Unit3.obj Unit4.obj Unit5.obj Idle_frm.obj Idlecheck_frm.obj 
-      Unit2.obj"/>
+      ..\..\..\classes\tsoft_WindowsCollector.obj 
+      ..\..\..\classes\tsoft_WindowsMover.obj 
+      ..\..\..\classes\tsoft_WindowsSnap.obj 
+      ..\..\..\classes\tsoft_WindowsTile.obj ..\..\..\classes\tsoft_Context.obj 
+      Desk_frm.obj Lupa_frm.obj Main_frm.obj Tips_frm.obj Zoom_frm.obj 
+      Atab_frm.obj Move_frm.obj Size_frm.obj Expose_frm.obj Zeus_frm.obj 
+      Clock_frm.obj Dni_frm.obj Unit1.obj Unit3.obj Unit5.obj Idle_frm.obj 
+      Idlecheck_frm.obj Unit2.obj Unit4.obj"/>
     <RESFILES value="Panel.res Panel.manifest.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -21,13 +20,13 @@
     <RESDEPEN value="$(RESFILES) ..\..\FORM_TEMPLATES\About_frm.dfm Desk_frm.dfm Lupa_frm.dfm 
       Main_frm.dfm Tips_frm.dfm Zoom_frm.dfm Atab_frm.dfm Move_frm.dfm 
       Size_frm.dfm Expose_frm.dfm Zeus_frm.dfm Clock_frm.dfm Dni_frm.dfm 
-      Unit1.dfm Unit3.dfm Unit4.dfm Unit5.dfm Idle_frm.dfm Idlecheck_frm.dfm 
-      Unit2.dfm"/>
+      Unit1.dfm Unit3.dfm Unit5.dfm Idle_frm.dfm Idlecheck_frm.dfm Unit2.dfm 
+      Unit4.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="sstdcl50.lib bcbsmp50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib Vcl50.lib Vclx50.lib bcbsmp50.lib sstdcl50.lib"/>
+    <LIBRARIES value="dclusr50.lib sstdcl50.lib bcbsmp50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib Vcl50.lib Vclx50.lib bcbsmp50.lib sstdcl50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi Vclx50.bpi"/>
-    <PATHCPP value=".;..\..\FORM_TEMPLATES;..\..\..\x86_win32_classes"/>
+    <PATHCPP value=".;..\..\FORM_TEMPLATES;..\..\..\classes"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
     <PATHASM value=".;"/>
@@ -37,8 +36,8 @@
     <USERDEFINES value="_DEBUG"/>
     <SYSDEFINES value="NO_STRICT;USEPACKAGES"/>
     <MAINSOURCE value="Panel.cpp"/>
-    <INCLUDEPATH value="..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl"/>
-    <LIBPATH value="..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj;$(BCB)\Lib\Obj"/>
+    <INCLUDEPATH value="..\..\..\_classes;..\..\..\2_classes;..\..\..\32_classes;..\..\..\n32_classes;..\..\..\in32_classes;..\..\..\win32_classes;..\..\..\_win32_classes;..\..\..\6_win32_classes;..\..\..\86_win32_classes;..\..\..\classes;..\..\..\xclasses;..\..\..\x8classes;..\..\..\x86classes;..\..\..\x86_classes;..\..\..\x86_wclasses;..\..\..\x86_wiclasses;..\..\..\x86_winclasses;..\..\..\x86_win3classes;..\..\..\x86_win32classes;..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl"/>
+    <LIBPATH value="..\..\..\_classes;..\..\..\2_classes;..\..\..\32_classes;..\..\..\n32_classes;..\..\..\in32_classes;..\..\..\win32_classes;..\..\..\_win32_classes;..\..\..\6_win32_classes;..\..\..\86_win32_classes;..\..\..\classes;..\..\..\xclasses;..\..\..\x8classes;..\..\..\x86classes;..\..\..\x86_classes;..\..\..\x86_wclasses;..\..\..\x86_wiclasses;..\..\..\x86_winclasses;..\..\..\x86_win3classes;..\..\..\x86_win32classes;..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj;$(BCB)\Lib\Obj"/>
     <WARNINGS value="-w-par"/>
   </MACROS>
   <OPTIONS>
@@ -61,7 +60,7 @@ AutoIncBuild=1
 MajorVer=4
 MinorVer=3
 Release=1
-Build=53
+Build=54
 Debug=0
 PreRelease=1
 Special=0
@@ -73,7 +72,7 @@ CodePage=1250
 [Version Info Keys]
 CompanyName=SSTSOFT
 FileDescription=
-FileVersion=4.3.1.53
+FileVersion=4.3.1.54
 InternalName=Panel
 LegalCopyright=Stanislaw Stasiak 2000-2018
 LegalTrademarks=
@@ -89,55 +88,57 @@ $(BCB)\Bin\dclocx50.bpl=Borland Sample Imported ActiveX Controls
 $(BCB)\Bin\bcb2kaxserver50.bpl=Borland C++Builder COM Server Components Sample Package
 
 [HistoryLists\hlIncludePath]
-Count=22
-Item0=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl
-Item1=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl;..\..\PACKAGES
-Item2=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl
-Item3=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;
-Item4=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes\;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\;D:\x86_win32_classes\;C:\Program Files\Borland\CBuilder5\Projects\;..\..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item5=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL;D:\x86_win32_classes;C:\Program Files\Borland\CBuilder5\Projects;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item6=..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item7=..\..;..\;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item8=..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item9=..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item10=..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
-Item11=..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;...\Packages;..\Libraries;..\Classes;.\Forms
-Item12=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;...\Packages;..\Libraries;..\Classes;.\Forms
-Item13=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item14=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item15=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item16=$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item17=C:\Program Files\Borland\CBuilder6\Projects;..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes
-Item18=..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes
-Item19=..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries
-Item20=$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries
-Item21=$(BCB)\include;$(BCB)\include\vcl
+Count=23
+Item0=..\..\..\_classes;..\..\..\2_classes;..\..\..\32_classes;..\..\..\n32_classes;..\..\..\in32_classes;..\..\..\win32_classes;..\..\..\_win32_classes;..\..\..\6_win32_classes;..\..\..\86_win32_classes;..\..\..\classes;..\..\..\xclasses;..\..\..\x8classes;..\..\..\x86classes;..\..\..\x86_classes;..\..\..\x86_wclasses;..\..\..\x86_wiclasses;..\..\..\x86_winclasses;..\..\..\x86_win3classes;..\..\..\x86_win32classes;..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl
+Item1=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl
+Item2=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl;..\..\PACKAGES
+Item3=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;$(BCB)\Include;$(BCB)\Include\Vcl
+Item4=..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;
+Item5=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes\;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\;D:\x86_win32_classes\;C:\Program Files\Borland\CBuilder5\Projects\;..\..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item6=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL;D:\x86_win32_classes;C:\Program Files\Borland\CBuilder5\Projects;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item7=..\..;..;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item8=..\..;..\;..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item9=..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item10=..\Rozdz;..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item11=..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\PACKAGES;..\..\Libraries;..\..\FORM_TEMPLATES
+Item12=..\..\..\x86_win32_classes;..\..\Classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;...\Packages;..\Libraries;..\Classes;.\Forms
+Item13=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;...\Packages;..\Libraries;..\Classes;.\Forms
+Item14=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;.\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item15=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item16=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item17=$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item18=C:\Program Files\Borland\CBuilder6\Projects;..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes
+Item19=..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries;..\..\Classes
+Item20=..\..\Forms;$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries
+Item21=$(BCB)\include;$(BCB)\include\vcl;..\..\Packages;..\..\Libraries
+Item22=$(BCB)\include;$(BCB)\include\vcl
 
 [HistoryLists\hlLibraryPath]
-Count=23
-Item0=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj;$(BCB)\Lib\Obj
-Item1=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj
-Item2=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;..\..\PACKAGES;$(BCB)\Obj
-Item3=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;..\..\PACKAGES
-Item4=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES
-Item5=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;
-Item6=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes\;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\;D:\x86_win32_classes\;C:\Program Files\Borland\CBuilder5\Projects\;..\..\FORM_TEMPLATES;..\..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item7=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL;D:\x86_win32_classes;C:\Program Files\Borland\CBuilder5\Projects;..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item8=..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item9=..\..\FORM_TEMPLATES;..\..;..\;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item10=..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item11=..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item12=..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
-Item13=..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item14=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item15=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item16=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
-Item17=C:\Program Files\Borland\CBuilder6\Projects;..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes
-Item18=..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes
-Item19=..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries
-Item20=$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries
-Item21=$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages
-Item22=$(BCB)\lib\obj;$(BCB)\lib
+Count=24
+Item0=..\..\..\_classes;..\..\..\2_classes;..\..\..\32_classes;..\..\..\n32_classes;..\..\..\in32_classes;..\..\..\win32_classes;..\..\..\_win32_classes;..\..\..\6_win32_classes;..\..\..\86_win32_classes;..\..\..\classes;..\..\..\xclasses;..\..\..\x8classes;..\..\..\x86classes;..\..\..\x86_classes;..\..\..\x86_wclasses;..\..\..\x86_wiclasses;..\..\..\x86_winclasses;..\..\..\x86_win3classes;..\..\..\x86_win32classes;..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj;$(BCB)\Lib\Obj
+Item1=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj;$(BCB)\Lib\Obj
+Item2=..\..\..\x86_win32_classes;..\..\PACKAGES;..\..\FORM_TEMPLATES;$(BCB)\Lib;$(BCB)\Obj
+Item3=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;..\..\PACKAGES;$(BCB)\Obj
+Item4=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;..\..\PACKAGES
+Item5=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES
+Item6=$(BCB)\Lib;..\..\..\x86_win32_classes;..\..\FORM_TEMPLATES;
+Item7=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes\;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL\;D:\x86_win32_classes\;C:\Program Files\Borland\CBuilder5\Projects\;..\..\FORM_TEMPLATES;..\..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item8=FORM_TEMPLATES;..\..\..\FORM_TEMPLATES;..\;..\..\OBSOLETE\PROGS\Panel.VCL;..\..\x86_win32_classes;....\x86_win32_classes;...\x86_win32_classes;..\x86_win32_classes;C:\x86_win32_classes;x86_win32_classes;C:\;D:\stasiek\My Projects\OBSOLETE\PROGS\Panel.VCL;D:\x86_win32_classes;C:\Program Files\Borland\CBuilder5\Projects;..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item9=..\..\FORM_TEMPLATES;..\..;..;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item10=..\..\FORM_TEMPLATES;..\..;..\;..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item11=..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects\;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item12=..\Rozdz;..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item13=..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Forms
+Item14=..\..\..\x86_win32_classes;modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item15=modul_licznika;C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item16=C:\Program Files\Borland\CBuilder6\Projects;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item17=$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes;..\..\Forms
+Item18=C:\Program Files\Borland\CBuilder6\Projects;..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes
+Item19=..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries;..\..\Classes
+Item20=..\..\Forms;$(BCB)\Projects\Lib;$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries
+Item21=$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages;..\..\Libraries
+Item22=$(BCB)\lib\obj;$(BCB)\lib;..\..\Packages
+Item23=$(BCB)\lib\obj;$(BCB)\lib
 
 [HistoryLists\hlDebugSourcePath]
 Count=1

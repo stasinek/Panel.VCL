@@ -11,8 +11,8 @@
     <DEFFILE value=""/>
     <RESDEPEN value="$(RESFILES) ..\..\FORM_TEMPLATES\About_frm.dfm Unit1.dfm"/>
     <LIBFILES value=""/>
-    <LIBRARIES value="sstdcl50.lib Vcl50.lib vcl.lib"/>
-    <SPARELIBS value="vcl.lib Vcl50.lib sstdcl50.lib"/>
+    <LIBRARIES value="dclusr50.lib sstdcl50.lib Vcl50.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib Vcl50.lib sstdcl50.lib dclusr50.lib"/>
     <PACKAGES value="Vcl50.bpi sstdcl50.bpi Vclx50.bpi bcbsmp50.bpi dclocx50.bpi 
       bcb2kaxserver50.bpi"/>
     <PATHCPP value=".;..\..\FORM_TEMPLATES"/>

@@ -7,6 +7,7 @@
 #include "./../../FORM_TEMPLATES/About_frm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+#pragma link "FRAMEPAN"
 #pragma resource "*.dfm"
 TResizer_form *Resizer_form;
 //---------------------------------------------------------------------------

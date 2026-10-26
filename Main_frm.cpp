@@ -84,6 +84,7 @@ updateing = 0;
 hInst = (HINSTANCE)HInstance;
 ::SetStretchBltMode(this->Canvas->Handle, STRETCH_DELETESCANS);
 Ruszacz = new ts::WindowsMover();
+//SysTray1->SetWndHandle(this->Handle);
 SysTray1->Icon->Handle = LoadIconA(hInst,IDI_APPLICATION);
 SysTray1->AddIcon();
 MainTimer->Enabled = true;
@@ -339,7 +340,6 @@ Desk_form->Desktop_Switch(4,true);
 void __fastcall TMain_form::SpeedButtonDesk5Click(TObject*)
 {
 Desk_form->Desktop_Switch(0,true);
-
 }
 //---------------------------------------------------------------------------
 
@@ -642,5 +642,6 @@ else this->Hide();
     
 }
 //---------------------------------------------------------------------------
+
 
 

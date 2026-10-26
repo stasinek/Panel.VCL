@@ -1,6 +1,6 @@
 object Uruchom: TUruchom
-  Left = 120
-  Top = 350
+  Left = 170
+  Top = 198
   BorderStyle = bsNone
   Caption = 'Uruchom'
   ClientHeight = 111
@@ -15,16 +15,6 @@ object Uruchom: TUruchom
   Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
-  object Ramka1: TRamka
-    Width = 754
-    Height = 126
-    Align = alTop
-    BorderKind = abkRaised
-    Color = clNone
-    Caption = 'Ramka1'
-    ControlStyle = [csCaptureMouse, csClickEvents, csFramed, csSetCaption, csDoubleClicks, csReplicatable]
-    Parent = Owner
-  end
   object TabControl1: TTabControl
     Left = 0
     Top = 24

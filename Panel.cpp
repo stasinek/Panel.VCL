@@ -21,11 +21,11 @@
 //---------------------------------------------------------------------------
 USEFORM("..\..\FORM_TEMPLATES\About_frm.cpp", About_form);
 USEUNIT("Core.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsCollector.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsMover.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsSnap.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_WindowsTile.cpp");
-USEUNIT("..\..\..\x86_win32_classes\tsoft_Context.cpp");
+USEUNIT("..\..\..\classes\tsoft_WindowsCollector.cpp");
+USEUNIT("..\..\..\classes\tsoft_WindowsMover.cpp");
+USEUNIT("..\..\..\classes\tsoft_WindowsSnap.cpp");
+USEUNIT("..\..\..\classes\tsoft_WindowsTile.cpp");
+USEUNIT("..\..\..\classes\tsoft_Context.cpp");
 USEFORM("Desk_frm.cpp", Desk_form);
 USEFORM("Lupa_frm.cpp", Lupa_form);
 USEFORM("Main_frm.cpp", Main_form);
@@ -40,11 +40,11 @@ USEFORM("Clock_frm.cpp", Clock_form);
 USEFORM("Dni_frm.cpp", Dni_form);
 USEFORM("Unit1.cpp", Resizer_form);
 USEFORM("Unit3.cpp", Form3);
-USEFORM("Unit4.cpp", Uruchom);
 USEFORM("Unit5.cpp", Alarm_form);
 USEFORM("Idle_frm.cpp", Form6);
 USEFORM("Idlecheck_frm.cpp", Form7);
 USEFORM("Unit2.cpp", Form2);
+USEFORM("Unit4.cpp", Uruchom);
 USERES("Panel.res");
 USERC("Panel.manifest.rc");
 //---------------------------------------------------------------------------
@@ -439,7 +439,6 @@ try
         Application->CreateForm(__classid(TSize_form), &Size_form);
         Application->CreateForm(__classid(TLupa_form), &Lupa_form);
         Application->CreateForm(__classid(TDesk_form), &Desk_form);
-        Application->CreateForm(__classid(TMain_form), &Main_form);
         Application->CreateForm(__classid(TAtab_form), &Atab_form);
         Application->CreateForm(__classid(TMove_form), &Move_form);
         Application->CreateForm(__classid(TSize_form), &Size_form);
@@ -450,11 +449,12 @@ try
         Application->CreateForm(__classid(TClock_form), &Clock_form);
         Application->CreateForm(__classid(TResizer_form), &Resizer_form);
         Application->CreateForm(__classid(TForm3), &Form3);
-        Application->CreateForm(__classid(TUruchom), &Uruchom);
         Application->CreateForm(__classid(TAlarm_form), &Alarm_form);
         Application->CreateForm(__classid(TForm6), &Form6);
         Application->CreateForm(__classid(TForm7), &Form7);
         Application->CreateForm(__classid(TForm2), &Form2);
+        Application->CreateForm(__classid(TMain_form), &Main_form);
+        Application->CreateForm(__classid(TUruchom), &Uruchom);
         Application->ShowMainForm = false;
 		Main_form->tform_Initialize();
 		Lupa_form->tform_Initialize();

@@ -9,9 +9,9 @@
 #include <vcl.h>
 #pragma hdrstop
 //---------------------------------------------------------------------------
-#include "../../../X86_WIN32_CLASSES/tsoft_WindowsMover.h"
-#include "../../../X86_WIN32_CLASSES/tsoft_WindowsCollector.h"
-#include "../../../X86_WIN32_CLASSES/tsoft_WindowsTile.h"
+#include "../../../CLASSES/tsoft_WindowsMover.h"
+#include "../../../CLASSES/tsoft_WindowsCollector.h"
+#include "../../../CLASSES/tsoft_WindowsTile.h"
 //---------------------------------------------------------------------------
 // Definitions for Borland C++ 5 (it's older than Windows 2000 SP4, XP)
 #ifndef WS_EX_COMPOSITED

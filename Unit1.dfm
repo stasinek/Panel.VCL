@@ -5,7 +5,7 @@ object Resizer_form: TResizer_form
   BorderStyle = bsDialog
   Caption = 'Zmiana parametrów ekranu.'
   ClientHeight = 183
-  ClientWidth = 312
+  ClientWidth = 311
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -22,14 +22,14 @@ object Resizer_form: TResizer_form
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 312
+    Width = 311
     Height = 41
     Align = alTop
     BevelOuter = bvNone
     FullRepaint = False
     TabOrder = 0
     object SpeedButton1: TSpeedButton
-      Left = 272
+      Left = 271
       Top = 4
       Width = 36
       Height = 29
@@ -113,7 +113,7 @@ object Resizer_form: TResizer_form
       Font.Style = [fsBold]
       ItemHeight = 13
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 3
       Text = '60'
       Items.Strings = (
         '50'
@@ -143,7 +143,7 @@ object Resizer_form: TResizer_form
       Font.Style = [fsBold]
       ItemHeight = 13
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 2
       Text = '32'
       Items.Strings = (
         '8'
@@ -164,7 +164,7 @@ object Resizer_form: TResizer_form
       Font.Style = [fsBold]
       ItemHeight = 13
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 1
       Text = '1024x768'
       Items.Strings = (
         '320x200'
@@ -217,7 +217,7 @@ object Resizer_form: TResizer_form
       Height = 21
       Hint = 'Monitor nr.'
       ItemHeight = 13
-      TabOrder = 3
+      TabOrder = 0
       Text = '1'
       OnChange = ComboBox2Change
       Items.Strings = (
@@ -229,7 +229,7 @@ object Resizer_form: TResizer_form
   object Panel2: TPanel
     Left = 0
     Top = 41
-    Width = 312
+    Width = 311
     Height = 142
     Align = alClient
     BevelInner = bvRaised
@@ -239,7 +239,7 @@ object Resizer_form: TResizer_form
     object Image1: TImage
       Left = 8
       Top = 8
-      Width = 297
+      Width = 296
       Height = 87
       Anchors = [akLeft, akTop, akRight, akBottom]
     end
@@ -251,35 +251,6 @@ object Resizer_form: TResizer_form
       Hint = 'Pokaz liste'
       Caption = 'LISTA'
       Enabled = False
-    end
-    object SpeedButton2: TSpeedButton
-      Left = 240
-      Top = 102
-      Width = 66
-      Height = 27
-      Hint = 'SET'
-      Anchors = [akRight, akBottom]
-      Caption = 'SET'
-      Glyph.Data = {
-        06020000424D0602000000000000760000002800000028000000140000000100
-        0400000000009001000000000000000000001000000000000000000000000000
-        8000008000000080800080000000800080008080000080808000C0C0C0000000
-        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFF
-        FFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFFFFFFFFFFFFFFF444FFFFFFFF
-        FFFFFFFF777FFFFFFFFFFFFFFFF4F4444FFFFFFFFFFFFF7F7777FFFFFFFFFFFF
-        FFF4F44444FFFFFFFFFFFF7F77777FFFFFFFFFFFF4F4F444444FFFFFFFFF7F7F
-        777777FFFFFFF4F4F4F4F4444444FFFF7F7F7F7F7777777FFFFFF4F4F4F4F444
-        44444FFF7F7F7F7F77777777FFFFF4F4F4F4F444444444FF7F7F7F7F77777777
-        7FFFF4F4F4F4F444444444FF7F7F7F7F777777777FFFF4F4F4F4F44444444FFF
-        7F7F7F7F77777777FFFFFFFFF4F4F4444444FFFFFFFF7F7F7777777FFFFFFFFF
-        FFF4F444444FFFFFFFFFFF7F777777FFFFFFFFFFFFF4F44444FFFFFFFFFFFF7F
-        77777FFFFFFFFFFFFFFFF4444FFFFFFFFFFFFFFF7777FFFFFFFFFFFFFFFFF444
-        FFFFFFFFFFFFFFFF777FFFFFFFFFFFFFFFFFF44FFFFFFFFFFFFFFFFF77FFFFFF
-        FFFFFFFFFFFFF4FFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-        FFFFFFFFFFFFFFFFFFFF}
-      NumGlyphs = 2
-      OnClick = SpeedButton2Click
     end
     object SpeedButton3: TSpeedButton
       Left = 7
@@ -298,7 +269,7 @@ object Resizer_form: TResizer_form
       OnClick = SpeedButton3Click
     end
     object Button2: TButton
-      Left = 130
+      Left = 129
       Top = 102
       Width = 49
       Height = 27
@@ -315,7 +286,7 @@ object Resizer_form: TResizer_form
       OnClick = Button2Click
     end
     object Button3: TButton
-      Left = 186
+      Left = 185
       Top = 102
       Width = 49
       Height = 27
@@ -330,6 +301,17 @@ object Resizer_form: TResizer_form
       ParentFont = False
       TabOrder = 1
       OnClick = Button3Click
+    end
+    object SpeedButton2: TButton
+      Left = 240
+      Top = 102
+      Width = 65
+      Height = 27
+      Caption = 'SET'
+      Default = True
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
     end
   end
 end

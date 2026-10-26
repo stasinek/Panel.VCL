@@ -10,7 +10,7 @@
 #include <StdCtrls.hpp>
 #include <ExtCtrls.hpp>
 #include <Grids.hpp>
-#include "../../../x86_win32_classes/tsoft_WindowsMover.h"
+#include "../../../classes/tsoft_WindowsMover.h"
 #include "BARGRAPH.h"
 #include "ADVBAR.h"
 #include "framepan.h"
